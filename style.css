@@ -1,12 +1,48 @@
-body{
+body, html{
     margin: 0;
     padding: 0;
-    background: #dcdcDC
+    background: #dcdcDC;
+    width: 100%;
+    height: 100%;
+}
+
+.section-top{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    animation: slide 10s infinite;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-20%, -80%);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.content h1{
+    font-size: 60px;
+    letter-spacing: 16px;
+     
+}
+
+.content a{
+    background: #0984e3;
+    padding: 10px 24px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+    margin: 50px;
 }
 
 .container{
     text-align: center;
-    margin: 36px;
+    margin: 80px;
+    height: 20%;
 }
 
 .btn{
@@ -22,7 +58,12 @@ body{
     overflow: hidden;
 }
 
-.goodreads, .wordpress{
+.goodreads{
+    border:1px solid #553b08; 
+    color: #553b08;
+} 
+
+.wordpress{
     color: #3498db;
 }
 
@@ -30,7 +71,11 @@ body{
     color: #fff;
 }
 
-.goodreads:hover, .wordpress:hover{
+.goodreads:hover{
+    color: #ffd480;
+} 
+
+.wordpress:hover{
     color: #fff;
 }
 
@@ -49,7 +94,13 @@ body{
     transition: 0.8s;
 }
 
-.goodreads::before, .github::before {
+.goodreads::before{
+    background: #553b08;
+    top: 0;
+    border-radius: 0 0 50% 50%; 
+} 
+
+.github::before {
     top: 0;
     border-radius: 0 0 50% 50%;
 }
