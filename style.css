@@ -80,6 +80,18 @@ a.prog:hover{
     color: black;
 }
 
+a.misc{
+    border-radius: 25px;
+    background: none;
+    border: solid red;
+    color: red;
+}
+
+a.misc:hover{
+    background: red;
+    color: black;
+}
+
 .social{
     background: none;
     position: absolute;
