@@ -1,0 +1,90 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    background: #dcdcDC;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    text-align: center;
+    margin: 80px;
+    height: 20%;
+}
+
+.btn{
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: 'montserrat';
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.goodreads{
+    border:1px solid #553b08; 
+    color: #553b08;
+} 
+
+.wordpress{
+    color: #3498db;
+}
+
+.github, .project{
+    color: #fff;
+}
+
+.goodreads:hover{
+    color: #ffd480;
+} 
+
+.wordpress:hover{
+    color: #fff;
+}
+
+.github:hover, .project:hover{
+    color: #3498db;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.goodreads::before{
+    background: #553b08;
+    top: 0;
+    border-radius: 0 0 50% 50%; 
+} 
+
+.github::before {
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.wordpress::before, .project::before {
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.github::before, .project::before {
+    height: 180%;
+}
+
+.goodreads:hover:before, .wordpress:hover::before {
+    height: 180%;
+}
+
+.github:hover:before, .project:hover::before {
+    height: 0%;
+}
