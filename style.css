@@ -103,8 +103,8 @@ a.misc:hover{
 
 .socbtn{
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     background: wheat;
     margin: 25px;
     border-radius: 30%;
@@ -114,21 +114,21 @@ a.misc:hover{
 }
 
 .socbtn i{
-    line-height: 90px;
+    line-height: 50px;
     font-size: 26px;
     transition: .2s linear;
 }
 
 .socbtn:hover i{
-    transform: scale(2.3);
+    transform: scale(2);
     color: wheat;
 }
 
 .socbtn::before{
     content: "";
     position: absolute;
-    width: 120%;
-    height: 120%;
+    width: 130%;
+    height: 130%;
     background: black;
     transform: rotate(45deg);
     left: -110%;
@@ -138,7 +138,7 @@ a.misc:hover{
 .socbtn:hover::before {
     animation: aaa 0.7s 1;
     top: -10%;
-    left: -10%;
+    left: -20%;
 }
 
 @keyframes aaa{

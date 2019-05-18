@@ -34,8 +34,8 @@ img {
 }
 
 .goodreads{
-    border:1px solid #553b08; 
-    color: #553b08;
+    border:1px solid #563210; 
+    color: #F7F8F2;
 } 
 
 .wordpress{
@@ -47,7 +47,7 @@ img {
 }
 
 .goodreads:hover{
-    color: #ffd480;
+    color: #563210;
 } 
 
 .wordpress:hover{
@@ -70,7 +70,7 @@ img {
 }
 
 .goodreads::before{
-    background: #553b08;
+    background: #F7F8F2;
     top: 0;
     border-radius: 0 0 50% 50%; 
 } 
