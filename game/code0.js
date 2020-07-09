@@ -5,13 +5,35 @@ gdjs.New_32sceneCode.GDInteractibleObjects1= [];
 gdjs.New_32sceneCode.GDInteractibleObjects2= [];
 gdjs.New_32sceneCode.GDHUDObjects1= [];
 gdjs.New_32sceneCode.GDHUDObjects2= [];
+gdjs.New_32sceneCode.GDHUD_95InstructionObjects1= [];
+gdjs.New_32sceneCode.GDHUD_95InstructionObjects2= [];
 
 gdjs.New_32sceneCode.conditionTrue_0 = {val:false};
 gdjs.New_32sceneCode.condition0IsTrue_0 = {val:false};
 gdjs.New_32sceneCode.condition1IsTrue_0 = {val:false};
 
 
-gdjs.New_32sceneCode.mapOfGDgdjs_46New_9532sceneCode_46GDMapObjects1Objects = Hashtable.newFrom({"Map": gdjs.New_32sceneCode.GDMapObjects1});gdjs.New_32sceneCode.mapOfGDgdjs_46New_9532sceneCode_46GDMapObjects1Objects = Hashtable.newFrom({"Map": gdjs.New_32sceneCode.GDMapObjects1});gdjs.New_32sceneCode.eventsList0x5b7a18 = function(runtimeScene) {
+gdjs.New_32sceneCode.mapOfGDgdjs_46New_9532sceneCode_46GDMapObjects1Objects = Hashtable.newFrom({"Map": gdjs.New_32sceneCode.GDMapObjects1});gdjs.New_32sceneCode.mapOfGDgdjs_46New_9532sceneCode_46GDInteractibleObjects1Objects = Hashtable.newFrom({"Interactible": gdjs.New_32sceneCode.GDInteractibleObjects1});gdjs.New_32sceneCode.eventsList0x682a54 = function(runtimeScene) {
+
+{
+
+gdjs.New_32sceneCode.GDInteractibleObjects1.createFrom(runtimeScene.getObjects("Interactible"));
+
+gdjs.New_32sceneCode.condition0IsTrue_0.val = false;
+{
+gdjs.New_32sceneCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.New_32sceneCode.mapOfGDgdjs_46New_9532sceneCode_46GDInteractibleObjects1Objects, runtimeScene, true, false);
+}if (gdjs.New_32sceneCode.condition0IsTrue_0.val) {
+/* Reuse gdjs.New_32sceneCode.GDHUDObjects1 */
+{for(var i = 0, len = gdjs.New_32sceneCode.GDHUDObjects1.length ;i < len;++i) {
+    gdjs.New_32sceneCode.GDHUDObjects1[i].setString("Room 1");
+}
+}}
+
+}
+
+
+}; //End of gdjs.New_32sceneCode.eventsList0x682a54
+gdjs.New_32sceneCode.mapOfGDgdjs_46New_9532sceneCode_46GDMapObjects1Objects = Hashtable.newFrom({"Map": gdjs.New_32sceneCode.GDMapObjects1});gdjs.New_32sceneCode.eventsList0x5b7a18 = function(runtimeScene) {
 
 {
 
@@ -25,7 +47,10 @@ gdjs.New_32sceneCode.GDHUDObjects1.createFrom(runtimeScene.getObjects("HUD"));
 {for(var i = 0, len = gdjs.New_32sceneCode.GDHUDObjects1.length ;i < len;++i) {
     gdjs.New_32sceneCode.GDHUDObjects1[i].setString("Map");
 }
-}}
+}
+{ //Subevents
+gdjs.New_32sceneCode.eventsList0x682a54(runtimeScene);} //End of subevents
+}
 
 }
 
@@ -59,6 +84,8 @@ gdjs.New_32sceneCode.GDInteractibleObjects1.length = 0;
 gdjs.New_32sceneCode.GDInteractibleObjects2.length = 0;
 gdjs.New_32sceneCode.GDHUDObjects1.length = 0;
 gdjs.New_32sceneCode.GDHUDObjects2.length = 0;
+gdjs.New_32sceneCode.GDHUD_95InstructionObjects1.length = 0;
+gdjs.New_32sceneCode.GDHUD_95InstructionObjects2.length = 0;
 
 gdjs.New_32sceneCode.eventsList0x5b7a18(runtimeScene);
 return;
