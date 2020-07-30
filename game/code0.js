@@ -1,50 +1,58 @@
-gdjs.ReceptionCode = {};
-gdjs.ReceptionCode.GDTitleObjects1= [];
-gdjs.ReceptionCode.GDTitleObjects2= [];
-gdjs.ReceptionCode.GDDeskObjects1= [];
-gdjs.ReceptionCode.GDDeskObjects2= [];
+gdjs.MainMenuCode = {};
+gdjs.MainMenuCode.GDHUD_95LocationNameObjects1= [];
+gdjs.MainMenuCode.GDHUD_95LocationNameObjects2= [];
+gdjs.MainMenuCode.GDHUD_95DescriptionObjects1= [];
+gdjs.MainMenuCode.GDHUD_95DescriptionObjects2= [];
+gdjs.MainMenuCode.GDTitleObjects1= [];
+gdjs.MainMenuCode.GDTitleObjects2= [];
+gdjs.MainMenuCode.GDDeskObjects1= [];
+gdjs.MainMenuCode.GDDeskObjects2= [];
 
-gdjs.ReceptionCode.conditionTrue_0 = {val:false};
-gdjs.ReceptionCode.condition0IsTrue_0 = {val:false};
-gdjs.ReceptionCode.condition1IsTrue_0 = {val:false};
-gdjs.ReceptionCode.condition2IsTrue_0 = {val:false};
+gdjs.MainMenuCode.conditionTrue_0 = {val:false};
+gdjs.MainMenuCode.condition0IsTrue_0 = {val:false};
+gdjs.MainMenuCode.condition1IsTrue_0 = {val:false};
+gdjs.MainMenuCode.condition2IsTrue_0 = {val:false};
 
 
-gdjs.ReceptionCode.mapOfGDgdjs_46ReceptionCode_46GDDeskObjects1Objects = Hashtable.newFrom({"Desk": gdjs.ReceptionCode.GDDeskObjects1});gdjs.ReceptionCode.eventsList0x5b7a18 = function(runtimeScene) {
+gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDDeskObjects1Objects = Hashtable.newFrom({"Desk": gdjs.MainMenuCode.GDDeskObjects1});gdjs.MainMenuCode.eventsList0x5b7a18 = function(runtimeScene) {
 
 {
 
-gdjs.ReceptionCode.GDDeskObjects1.createFrom(runtimeScene.getObjects("Desk"));
+gdjs.MainMenuCode.GDDeskObjects1.createFrom(runtimeScene.getObjects("Desk"));
 
-gdjs.ReceptionCode.condition0IsTrue_0.val = false;
-gdjs.ReceptionCode.condition1IsTrue_0.val = false;
+gdjs.MainMenuCode.condition0IsTrue_0.val = false;
+gdjs.MainMenuCode.condition1IsTrue_0.val = false;
 {
-gdjs.ReceptionCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.ReceptionCode.mapOfGDgdjs_46ReceptionCode_46GDDeskObjects1Objects, runtimeScene, true, false);
-}if ( gdjs.ReceptionCode.condition0IsTrue_0.val ) {
+gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDDeskObjects1Objects, runtimeScene, true, false);
+}if ( gdjs.MainMenuCode.condition0IsTrue_0.val ) {
 {
-gdjs.ReceptionCode.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+gdjs.MainMenuCode.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }}
-if (gdjs.ReceptionCode.condition1IsTrue_0.val) {
+if (gdjs.MainMenuCode.condition1IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Intro", false);
 }}
 
 }
 
 
-}; //End of gdjs.ReceptionCode.eventsList0x5b7a18
+}; //End of gdjs.MainMenuCode.eventsList0x5b7a18
 
 
-gdjs.ReceptionCode.func = function(runtimeScene) {
+gdjs.MainMenuCode.func = function(runtimeScene) {
 runtimeScene.getOnceTriggers().startNewFrame();
 
-gdjs.ReceptionCode.GDTitleObjects1.length = 0;
-gdjs.ReceptionCode.GDTitleObjects2.length = 0;
-gdjs.ReceptionCode.GDDeskObjects1.length = 0;
-gdjs.ReceptionCode.GDDeskObjects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95LocationNameObjects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95LocationNameObjects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95DescriptionObjects2.length = 0;
+gdjs.MainMenuCode.GDTitleObjects1.length = 0;
+gdjs.MainMenuCode.GDTitleObjects2.length = 0;
+gdjs.MainMenuCode.GDDeskObjects1.length = 0;
+gdjs.MainMenuCode.GDDeskObjects2.length = 0;
 
-gdjs.ReceptionCode.eventsList0x5b7a18(runtimeScene);
+gdjs.MainMenuCode.eventsList0x5b7a18(runtimeScene);
 return;
 
 }
 
-gdjs['ReceptionCode'] = gdjs.ReceptionCode;
+gdjs['MainMenuCode'] = gdjs.MainMenuCode;

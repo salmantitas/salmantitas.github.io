@@ -1,4 +1,10 @@
 gdjs.IntroCode = {};
+gdjs.IntroCode.GDHUD_95LocationNameObjects1= [];
+gdjs.IntroCode.GDHUD_95LocationNameObjects2= [];
+gdjs.IntroCode.GDHUD_95LocationNameObjects3= [];
+gdjs.IntroCode.GDHUD_95DescriptionObjects1= [];
+gdjs.IntroCode.GDHUD_95DescriptionObjects2= [];
+gdjs.IntroCode.GDHUD_95DescriptionObjects3= [];
 gdjs.IntroCode.GDtext1Objects1= [];
 gdjs.IntroCode.GDtext1Objects2= [];
 gdjs.IntroCode.GDtext1Objects3= [];
@@ -21,7 +27,7 @@ gdjs.IntroCode.condition1IsTrue_0 = {val:false};
 gdjs.IntroCode.condition2IsTrue_0 = {val:false};
 
 
-gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList0x7687d4 = function(runtimeScene) {
+gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList0x782c64 = function(runtimeScene) {
 
 {
 
@@ -58,7 +64,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(r
 }
 
 
-}; //End of gdjs.IntroCode.eventsList0x7687d4
+}; //End of gdjs.IntroCode.eventsList0x782c64
 gdjs.IntroCode.eventsList0x5b7a18 = function(runtimeScene) {
 
 {
@@ -106,7 +112,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonRelease
 gdjs.IntroCode.condition1IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects, runtimeScene, true, false);
 }}
 if (gdjs.IntroCode.condition1IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Top Floor", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Reception", false);
 }}
 
 }
@@ -122,7 +128,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedT
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "textTimer");
 }
 { //Subevents
-gdjs.IntroCode.eventsList0x7687d4(runtimeScene);} //End of subevents
+gdjs.IntroCode.eventsList0x782c64(runtimeScene);} //End of subevents
 }
 
 }
@@ -134,6 +140,12 @@ gdjs.IntroCode.eventsList0x7687d4(runtimeScene);} //End of subevents
 gdjs.IntroCode.func = function(runtimeScene) {
 runtimeScene.getOnceTriggers().startNewFrame();
 
+gdjs.IntroCode.GDHUD_95LocationNameObjects1.length = 0;
+gdjs.IntroCode.GDHUD_95LocationNameObjects2.length = 0;
+gdjs.IntroCode.GDHUD_95LocationNameObjects3.length = 0;
+gdjs.IntroCode.GDHUD_95DescriptionObjects1.length = 0;
+gdjs.IntroCode.GDHUD_95DescriptionObjects2.length = 0;
+gdjs.IntroCode.GDHUD_95DescriptionObjects3.length = 0;
 gdjs.IntroCode.GDtext1Objects1.length = 0;
 gdjs.IntroCode.GDtext1Objects2.length = 0;
 gdjs.IntroCode.GDtext1Objects3.length = 0;
