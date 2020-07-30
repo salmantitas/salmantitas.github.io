@@ -24,7 +24,7 @@ gdjs.IntroCode.condition1IsTrue_0 = {val:false};
 gdjs.IntroCode.condition2IsTrue_0 = {val:false};
 
 
-gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList0x7a7dbc = function(runtimeScene) {
+gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList0x7abc74 = function(runtimeScene) {
 
 {
 
@@ -43,7 +43,7 @@ gdjs.IntroCode.GDTypingTextObjects1.createFrom(runtimeScene.getObjects("TypingTe
 }
 
 
-}; //End of gdjs.IntroCode.eventsList0x7a7dbc
+}; //End of gdjs.IntroCode.eventsList0x7abc74
 gdjs.IntroCode.eventsList0x5b7a18 = function(runtimeScene) {
 
 {
@@ -102,7 +102,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedT
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "textTimer");
 }
 { //Subevents
-gdjs.IntroCode.eventsList0x7a7dbc(runtimeScene);} //End of subevents
+gdjs.IntroCode.eventsList0x7abc74(runtimeScene);} //End of subevents
 }
 
 }
