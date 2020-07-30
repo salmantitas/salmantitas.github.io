@@ -5,6 +5,12 @@ gdjs.IntroCode.GDHUD_95LocationNameObjects3= [];
 gdjs.IntroCode.GDHUD_95DescriptionObjects1= [];
 gdjs.IntroCode.GDHUD_95DescriptionObjects2= [];
 gdjs.IntroCode.GDHUD_95DescriptionObjects3= [];
+gdjs.IntroCode.GDHUD_95ObjectNameObjects1= [];
+gdjs.IntroCode.GDHUD_95ObjectNameObjects2= [];
+gdjs.IntroCode.GDHUD_95ObjectNameObjects3= [];
+gdjs.IntroCode.GDBackToReceptionObjects1= [];
+gdjs.IntroCode.GDBackToReceptionObjects2= [];
+gdjs.IntroCode.GDBackToReceptionObjects3= [];
 gdjs.IntroCode.GDtext1Objects1= [];
 gdjs.IntroCode.GDtext1Objects2= [];
 gdjs.IntroCode.GDtext1Objects3= [];
@@ -27,7 +33,7 @@ gdjs.IntroCode.condition1IsTrue_0 = {val:false};
 gdjs.IntroCode.condition2IsTrue_0 = {val:false};
 
 
-gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList0x782c64 = function(runtimeScene) {
+gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList0x680654 = function(runtimeScene) {
 
 {
 
@@ -64,7 +70,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(r
 }
 
 
-}; //End of gdjs.IntroCode.eventsList0x782c64
+}; //End of gdjs.IntroCode.eventsList0x680654
 gdjs.IntroCode.eventsList0x5b7a18 = function(runtimeScene) {
 
 {
@@ -80,6 +86,8 @@ gdjs.IntroCode.GDplayObjects1.length = 0;
 }{runtimeScene.getVariables().get("charPos").setNumber(0);
 }{runtimeScene.getVariables().get("lineState").setString("");
 }{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects, 365, 540, "");
+}{runtimeScene.getGame().getVariables().get("chippyOfficeDoorLock").setNumber(1);
+}{runtimeScene.getGame().getVariables().get("chippyOfficeKeyFound").setNumber(0);
 }}
 
 }
@@ -128,7 +136,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedT
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "textTimer");
 }
 { //Subevents
-gdjs.IntroCode.eventsList0x782c64(runtimeScene);} //End of subevents
+gdjs.IntroCode.eventsList0x680654(runtimeScene);} //End of subevents
 }
 
 }
@@ -146,6 +154,12 @@ gdjs.IntroCode.GDHUD_95LocationNameObjects3.length = 0;
 gdjs.IntroCode.GDHUD_95DescriptionObjects1.length = 0;
 gdjs.IntroCode.GDHUD_95DescriptionObjects2.length = 0;
 gdjs.IntroCode.GDHUD_95DescriptionObjects3.length = 0;
+gdjs.IntroCode.GDHUD_95ObjectNameObjects1.length = 0;
+gdjs.IntroCode.GDHUD_95ObjectNameObjects2.length = 0;
+gdjs.IntroCode.GDHUD_95ObjectNameObjects3.length = 0;
+gdjs.IntroCode.GDBackToReceptionObjects1.length = 0;
+gdjs.IntroCode.GDBackToReceptionObjects2.length = 0;
+gdjs.IntroCode.GDBackToReceptionObjects3.length = 0;
 gdjs.IntroCode.GDtext1Objects1.length = 0;
 gdjs.IntroCode.GDtext1Objects2.length = 0;
 gdjs.IntroCode.GDtext1Objects3.length = 0;
