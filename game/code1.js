@@ -5,6 +5,8 @@ gdjs.IntroCode.GDHUD_95DescriptionObjects1= [];
 gdjs.IntroCode.GDHUD_95DescriptionObjects2= [];
 gdjs.IntroCode.GDHUD_95ObjectNameObjects1= [];
 gdjs.IntroCode.GDHUD_95ObjectNameObjects2= [];
+gdjs.IntroCode.GDHUD_95TimerObjects1= [];
+gdjs.IntroCode.GDHUD_95TimerObjects2= [];
 gdjs.IntroCode.GDBackToReceptionObjects1= [];
 gdjs.IntroCode.GDBackToReceptionObjects2= [];
 gdjs.IntroCode.GDtext1Objects1= [];
@@ -24,7 +26,7 @@ gdjs.IntroCode.condition1IsTrue_0 = {val:false};
 gdjs.IntroCode.condition2IsTrue_0 = {val:false};
 
 
-gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList0x7abc74 = function(runtimeScene) {
+gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList0 = function(runtimeScene) {
 
 {
 
@@ -43,8 +45,7 @@ gdjs.IntroCode.GDTypingTextObjects1.createFrom(runtimeScene.getObjects("TypingTe
 }
 
 
-}; //End of gdjs.IntroCode.eventsList0x7abc74
-gdjs.IntroCode.eventsList0x5b7a18 = function(runtimeScene) {
+};gdjs.IntroCode.eventsList1 = function(runtimeScene) {
 
 {
 
@@ -60,7 +61,9 @@ gdjs.IntroCode.GDplayObjects1.length = 0;
 }{runtimeScene.getVariables().get("lineState").setString("");
 }{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects, 365, 540, "");
 }{runtimeScene.getGame().getVariables().get("chippyOfficeDoorLocked").setNumber(1);
+}{runtimeScene.getGame().getVariables().get("sparePartsDoorLocked").setNumber(1);
 }{runtimeScene.getGame().getVariables().get("chippyOfficeKeyFound").setNumber(0);
+}{runtimeScene.getGame().getVariables().get("countdown").setNumber(60 * 60 * 60);
 }}
 
 }
@@ -97,19 +100,18 @@ if (gdjs.IntroCode.condition1IsTrue_0.val) {
 
 gdjs.IntroCode.condition0IsTrue_0.val = false;
 {
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 0.5, "textTimer");
+gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 0.3, "textTimer");
 }if (gdjs.IntroCode.condition0IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "textTimer");
 }
 { //Subevents
-gdjs.IntroCode.eventsList0x7abc74(runtimeScene);} //End of subevents
+gdjs.IntroCode.eventsList0(runtimeScene);} //End of subevents
 }
 
 }
 
 
-}; //End of gdjs.IntroCode.eventsList0x5b7a18
-
+};
 
 gdjs.IntroCode.func = function(runtimeScene) {
 runtimeScene.getOnceTriggers().startNewFrame();
@@ -120,6 +122,8 @@ gdjs.IntroCode.GDHUD_95DescriptionObjects1.length = 0;
 gdjs.IntroCode.GDHUD_95DescriptionObjects2.length = 0;
 gdjs.IntroCode.GDHUD_95ObjectNameObjects1.length = 0;
 gdjs.IntroCode.GDHUD_95ObjectNameObjects2.length = 0;
+gdjs.IntroCode.GDHUD_95TimerObjects1.length = 0;
+gdjs.IntroCode.GDHUD_95TimerObjects2.length = 0;
 gdjs.IntroCode.GDBackToReceptionObjects1.length = 0;
 gdjs.IntroCode.GDBackToReceptionObjects2.length = 0;
 gdjs.IntroCode.GDtext1Objects1.length = 0;
@@ -133,7 +137,7 @@ gdjs.IntroCode.GDComputerObjects2.length = 0;
 gdjs.IntroCode.GDTypingTextObjects1.length = 0;
 gdjs.IntroCode.GDTypingTextObjects2.length = 0;
 
-gdjs.IntroCode.eventsList0x5b7a18(runtimeScene);
+gdjs.IntroCode.eventsList1(runtimeScene);
 return;
 
 }
