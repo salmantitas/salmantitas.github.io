@@ -39,6 +39,11 @@ gdjs.IntroCode.GDTypingTextObjects4= [];
 gdjs.IntroCode.conditionTrue_0 = {val:false};
 gdjs.IntroCode.condition0IsTrue_0 = {val:false};
 gdjs.IntroCode.condition1IsTrue_0 = {val:false};
+gdjs.IntroCode.condition2IsTrue_0 = {val:false};
+gdjs.IntroCode.conditionTrue_1 = {val:false};
+gdjs.IntroCode.condition0IsTrue_1 = {val:false};
+gdjs.IntroCode.condition1IsTrue_1 = {val:false};
+gdjs.IntroCode.condition2IsTrue_1 = {val:false};
 
 
 gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList0 = function(runtimeScene) {
@@ -95,7 +100,24 @@ gdjs.IntroCode.eventsList1(runtimeScene);} //End of subevents
 
 gdjs.IntroCode.condition0IsTrue_0.val = false;
 {
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.input.anyKeyPressed(runtimeScene);
+{gdjs.IntroCode.conditionTrue_1 = gdjs.IntroCode.condition0IsTrue_0;
+gdjs.IntroCode.condition0IsTrue_1.val = false;
+gdjs.IntroCode.condition1IsTrue_1.val = false;
+{
+gdjs.IntroCode.condition0IsTrue_1.val = gdjs.evtTools.input.anyKeyPressed(runtimeScene);
+if( gdjs.IntroCode.condition0IsTrue_1.val ) {
+    gdjs.IntroCode.conditionTrue_1.val = true;
+}
+}
+{
+gdjs.IntroCode.condition1IsTrue_1.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+if( gdjs.IntroCode.condition1IsTrue_1.val ) {
+    gdjs.IntroCode.conditionTrue_1.val = true;
+}
+}
+{
+}
+}
 }if (gdjs.IntroCode.condition0IsTrue_0.val) {
 gdjs.IntroCode.GDTypingTextObjects2.createFrom(runtimeScene.getObjects("TypingText"));
 {for(var i = 0, len = gdjs.IntroCode.GDTypingTextObjects2.length ;i < len;++i) {
