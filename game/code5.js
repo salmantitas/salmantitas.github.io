@@ -1,11 +1,11 @@
 gdjs.Monster_32PuzzleCode = {};
-gdjs.Monster_32PuzzleCode.forEachIndex2 = 0;
+gdjs.Monster_32PuzzleCode.forEachIndex3 = 0;
 
-gdjs.Monster_32PuzzleCode.forEachObjects2 = [];
+gdjs.Monster_32PuzzleCode.forEachObjects3 = [];
 
-gdjs.Monster_32PuzzleCode.forEachTemporary2 = null;
+gdjs.Monster_32PuzzleCode.forEachTemporary3 = null;
 
-gdjs.Monster_32PuzzleCode.forEachTotalCount2 = 0;
+gdjs.Monster_32PuzzleCode.forEachTotalCount3 = 0;
 
 gdjs.Monster_32PuzzleCode.GDHUD_95LocationNameObjects1= [];
 gdjs.Monster_32PuzzleCode.GDHUD_95LocationNameObjects2= [];
@@ -105,6 +105,64 @@ if (gdjs.Monster_32PuzzleCode.condition1IsTrue_0.val) {
 
 };gdjs.Monster_32PuzzleCode.mapOfGDgdjs_46Monster_9532PuzzleCode_46GDMonsterSlotObjects1Objects = Hashtable.newFrom({"MonsterSlot": gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1});gdjs.Monster_32PuzzleCode.mapOfGDgdjs_46Monster_9532PuzzleCode_46GDSubmitObjects1Objects = Hashtable.newFrom({"Submit": gdjs.Monster_32PuzzleCode.GDSubmitObjects1});gdjs.Monster_32PuzzleCode.eventsList2 = function(runtimeScene) {
 
+};gdjs.Monster_32PuzzleCode.eventsList3 = function(runtimeScene) {
+
+};gdjs.Monster_32PuzzleCode.eventsList4 = function(runtimeScene) {
+
+{
+
+gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.createFrom(runtimeScene.getObjects("MonsterSlot"));
+
+for(gdjs.Monster_32PuzzleCode.forEachIndex3 = 0;gdjs.Monster_32PuzzleCode.forEachIndex3 < gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.length;++gdjs.Monster_32PuzzleCode.forEachIndex3) {
+gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.length = 0;
+
+
+gdjs.Monster_32PuzzleCode.forEachTemporary3 = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[gdjs.Monster_32PuzzleCode.forEachIndex3];
+gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.push(gdjs.Monster_32PuzzleCode.forEachTemporary3);
+gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
+{
+for(var i = 0, k = 0, l = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.length;i<l;++i) {
+    if ( gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3[i].getVariableNumber(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3[i].getVariables().getFromIndex(0)) == (gdjs.RuntimeObject.getVariableNumber(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3[i].getVariables().getFromIndex(1))) ) {
+        gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = true;
+        gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3[k] = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3[i];
+        ++k;
+    }
+}
+gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.length = k;}if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
+{runtimeScene.getVariables().get("solved").mul(1);
+}}
+}
+
+}
+
+
+{
+
+gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.createFrom(runtimeScene.getObjects("MonsterSlot"));
+
+for(gdjs.Monster_32PuzzleCode.forEachIndex3 = 0;gdjs.Monster_32PuzzleCode.forEachIndex3 < gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.length;++gdjs.Monster_32PuzzleCode.forEachIndex3) {
+gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.length = 0;
+
+
+gdjs.Monster_32PuzzleCode.forEachTemporary3 = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[gdjs.Monster_32PuzzleCode.forEachIndex3];
+gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.push(gdjs.Monster_32PuzzleCode.forEachTemporary3);
+gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
+{
+for(var i = 0, k = 0, l = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.length;i<l;++i) {
+    if ( !(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3[i].getVariableNumber(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3[i].getVariables().getFromIndex(0)) == (gdjs.RuntimeObject.getVariableNumber(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3[i].getVariables().getFromIndex(1)))) ) {
+        gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = true;
+        gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3[k] = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3[i];
+        ++k;
+    }
+}
+gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.length = k;}if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
+{runtimeScene.getVariables().get("solved").mul(0);
+}}
+}
+
+}
+
+
 {
 
 
@@ -119,7 +177,23 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVaria
 }
 
 
-};gdjs.Monster_32PuzzleCode.eventsList3 = function(runtimeScene) {
+{
+
+
+gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
+{
+gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = !(gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("solved")) == 1);
+}if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
+gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.createFrom(runtimeScene.getObjects("MonsterSlot"));
+{for(var i = 0, len = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.length ;i < len;++i) {
+    gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1[i].returnVariable(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1[i].getVariables().getFromIndex(0)).setNumber(0);
+}
+}}
+
+}
+
+
+};gdjs.Monster_32PuzzleCode.eventsList5 = function(runtimeScene) {
 
 {
 
@@ -128,19 +202,16 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
 {
 gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
-
+{runtimeScene.getVariables().get("solved").setNumber(1);
+}
 { //Subevents
-gdjs.Monster_32PuzzleCode.eventsList2(runtimeScene);} //End of subevents
+gdjs.Monster_32PuzzleCode.eventsList4(runtimeScene);} //End of subevents
 }
 
 }
 
 
-};gdjs.Monster_32PuzzleCode.mapOfGDgdjs_46Monster_9532PuzzleCode_46GDSubmitObjects1Objects = Hashtable.newFrom({"Submit": gdjs.Monster_32PuzzleCode.GDSubmitObjects1});gdjs.Monster_32PuzzleCode.eventsList4 = function(runtimeScene) {
-
-};gdjs.Monster_32PuzzleCode.eventsList5 = function(runtimeScene) {
-
-};gdjs.Monster_32PuzzleCode.eventsList6 = function(runtimeScene) {
+};gdjs.Monster_32PuzzleCode.mapOfGDgdjs_46Monster_9532PuzzleCode_46GDSubmitObjects1Objects = Hashtable.newFrom({"Submit": gdjs.Monster_32PuzzleCode.GDSubmitObjects1});gdjs.Monster_32PuzzleCode.eventsList6 = function(runtimeScene) {
 
 {
 
@@ -169,8 +240,11 @@ gdjs.Monster_32PuzzleCode.GDHUD_95ObjectNameObjects1.createFrom(runtimeScene.get
 {
 
 
+gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
 {
-{runtimeScene.getVariables().get("solved").setNumber(1);
+gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+}if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
+{runtimeScene.getVariables().get("solved").setNumber(0);
 }}
 
 }
@@ -239,7 +313,7 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnO
 }
 }
 { //Subevents
-gdjs.Monster_32PuzzleCode.eventsList3(runtimeScene);} //End of subevents
+gdjs.Monster_32PuzzleCode.eventsList5(runtimeScene);} //End of subevents
 }
 
 }
@@ -258,60 +332,6 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnO
     gdjs.Monster_32PuzzleCode.GDSubmitObjects1[i].setColor("255;0;0");
 }
 }}
-
-}
-
-
-{
-
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.createFrom(runtimeScene.getObjects("MonsterSlot"));
-
-for(gdjs.Monster_32PuzzleCode.forEachIndex2 = 0;gdjs.Monster_32PuzzleCode.forEachIndex2 < gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.length;++gdjs.Monster_32PuzzleCode.forEachIndex2) {
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.length = 0;
-
-
-gdjs.Monster_32PuzzleCode.forEachTemporary2 = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1[gdjs.Monster_32PuzzleCode.forEachIndex2];
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.push(gdjs.Monster_32PuzzleCode.forEachTemporary2);
-gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
-{
-for(var i = 0, k = 0, l = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.length;i<l;++i) {
-    if ( gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[i].getVariableNumber(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[i].getVariables().getFromIndex(0)) == (gdjs.RuntimeObject.getVariableNumber(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[i].getVariables().getFromIndex(1))) ) {
-        gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = true;
-        gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[k] = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[i];
-        ++k;
-    }
-}
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.length = k;}if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().get("solved").mul(1);
-}}
-}
-
-}
-
-
-{
-
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.createFrom(runtimeScene.getObjects("MonsterSlot"));
-
-for(gdjs.Monster_32PuzzleCode.forEachIndex2 = 0;gdjs.Monster_32PuzzleCode.forEachIndex2 < gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.length;++gdjs.Monster_32PuzzleCode.forEachIndex2) {
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.length = 0;
-
-
-gdjs.Monster_32PuzzleCode.forEachTemporary2 = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1[gdjs.Monster_32PuzzleCode.forEachIndex2];
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.push(gdjs.Monster_32PuzzleCode.forEachTemporary2);
-gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
-{
-for(var i = 0, k = 0, l = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.length;i<l;++i) {
-    if ( !(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[i].getVariableNumber(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[i].getVariables().getFromIndex(0)) == (gdjs.RuntimeObject.getVariableNumber(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[i].getVariables().getFromIndex(1)))) ) {
-        gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = true;
-        gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[k] = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2[i];
-        ++k;
-    }
-}
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.length = k;}if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().get("solved").mul(0);
-}}
-}
 
 }
 

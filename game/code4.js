@@ -35,6 +35,9 @@ gdjs.CafeteriaCode.GDMonsterPuzzleObjects3= [];
 gdjs.CafeteriaCode.GDMemoryMatchObjects1= [];
 gdjs.CafeteriaCode.GDMemoryMatchObjects2= [];
 gdjs.CafeteriaCode.GDMemoryMatchObjects3= [];
+gdjs.CafeteriaCode.GDMapObjects1= [];
+gdjs.CafeteriaCode.GDMapObjects2= [];
+gdjs.CafeteriaCode.GDMapObjects3= [];
 
 gdjs.CafeteriaCode.conditionTrue_0 = {val:false};
 gdjs.CafeteriaCode.condition0IsTrue_0 = {val:false};
@@ -71,7 +74,52 @@ gdjs.CafeteriaCode.GDHUD_95TimerObjects1.createFrom(runtimeScene.getObjects("HUD
 }
 
 
-};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects2ObjectsGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects2Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects2, "MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects2});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects1ObjectsGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects1Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects1, "MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects1});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects2Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects2});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects1Objects = Hashtable.newFrom({"MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects1});gdjs.CafeteriaCode.eventsList1 = function(runtimeScene) {
+};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMapObjects2Objects = Hashtable.newFrom({"Map": gdjs.CafeteriaCode.GDMapObjects2});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMapObjects1Objects = Hashtable.newFrom({"Map": gdjs.CafeteriaCode.GDMapObjects1});gdjs.CafeteriaCode.eventsList1 = function(runtimeScene) {
+
+{
+
+gdjs.CafeteriaCode.GDMapObjects2.createFrom(runtimeScene.getObjects("Map"));
+
+gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
+{
+gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMapObjects2Objects, runtimeScene, true, false);
+}if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
+gdjs.CafeteriaCode.GDHUD_95LocationNameObjects2.createFrom(runtimeScene.getObjects("HUD_LocationName"));
+gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects2.createFrom(runtimeScene.getObjects("HUD_ObjectName"));
+/* Reuse gdjs.CafeteriaCode.GDMapObjects2 */
+{for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95LocationNameObjects2.length ;i < len;++i) {
+    gdjs.CafeteriaCode.GDHUD_95LocationNameObjects2[i].setString((gdjs.RuntimeObject.getVariableString(((gdjs.CafeteriaCode.GDMapObjects2.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.CafeteriaCode.GDMapObjects2[0].getVariables()).get("name"))));
+}
+}{for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects2.length ;i < len;++i) {
+    gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects2[i].setString("");
+}
+}}
+
+}
+
+
+{
+
+gdjs.CafeteriaCode.GDMapObjects1.createFrom(runtimeScene.getObjects("Map"));
+
+gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
+{
+gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMapObjects1Objects, runtimeScene, true, true);
+}if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
+gdjs.CafeteriaCode.GDHUD_95LocationNameObjects1.createFrom(runtimeScene.getObjects("HUD_LocationName"));
+gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1.createFrom(runtimeScene.getObjects("HUD_ObjectName"));
+{for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1.length ;i < len;++i) {
+    gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1[i].setString("");
+}
+}{for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95LocationNameObjects1.length ;i < len;++i) {
+    gdjs.CafeteriaCode.GDHUD_95LocationNameObjects1[i].setString("");
+}
+}}
+
+}
+
+
+};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects2ObjectsGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects2Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects2, "MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects2});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects1ObjectsGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects1Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects1, "MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects1});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects2Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects2});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects1Objects = Hashtable.newFrom({"MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects1});gdjs.CafeteriaCode.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -116,7 +164,7 @@ gdjs.CafeteriaCode.condition1IsTrue_0.val = false;
 gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects1Objects, runtimeScene, true, false);
 }if ( gdjs.CafeteriaCode.condition0IsTrue_0.val ) {
 {
-gdjs.CafeteriaCode.condition1IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("monsterPuzzleSolved")) == 0;
+gdjs.CafeteriaCode.condition1IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("monsterSolved")) == 0;
 }}
 if (gdjs.CafeteriaCode.condition1IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Monster Puzzle", false);
@@ -125,16 +173,16 @@ if (gdjs.CafeteriaCode.condition1IsTrue_0.val) {
 }
 
 
-};gdjs.CafeteriaCode.eventsList2 = function(runtimeScene) {
+};gdjs.CafeteriaCode.eventsList3 = function(runtimeScene) {
 
 {
 
 
-gdjs.CafeteriaCode.eventsList1(runtimeScene);
+gdjs.CafeteriaCode.eventsList2(runtimeScene);
 }
 
 
-};gdjs.CafeteriaCode.eventsList3 = function(runtimeScene) {
+};gdjs.CafeteriaCode.eventsList4 = function(runtimeScene) {
 
 {
 
@@ -171,13 +219,13 @@ gdjs.CafeteriaCode.GDHUD_95DescriptionObjects1.createFrom(runtimeScene.getObject
 }
 }
 { //Subevents
-gdjs.CafeteriaCode.eventsList2(runtimeScene);} //End of subevents
+gdjs.CafeteriaCode.eventsList3(runtimeScene);} //End of subevents
 }
 
 }
 
 
-};gdjs.CafeteriaCode.eventsList4 = function(runtimeScene) {
+};gdjs.CafeteriaCode.eventsList5 = function(runtimeScene) {
 
 {
 
@@ -234,13 +282,13 @@ for(var i = 0, len = gdjs.CafeteriaCode.GDMonsterPuzzleObjects1.length ;i < len;
 }
 }
 { //Subevents
-gdjs.CafeteriaCode.eventsList3(runtimeScene);} //End of subevents
+gdjs.CafeteriaCode.eventsList4(runtimeScene);} //End of subevents
 }
 
 }
 
 
-};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDBackToReceptionObjects1Objects = Hashtable.newFrom({"BackToReception": gdjs.CafeteriaCode.GDBackToReceptionObjects1});gdjs.CafeteriaCode.eventsList5 = function(runtimeScene) {
+};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDBackToReceptionObjects1Objects = Hashtable.newFrom({"BackToReception": gdjs.CafeteriaCode.GDBackToReceptionObjects1});gdjs.CafeteriaCode.eventsList6 = function(runtimeScene) {
 
 {
 
@@ -261,7 +309,7 @@ if (gdjs.CafeteriaCode.condition1IsTrue_0.val) {
 }
 
 
-};gdjs.CafeteriaCode.eventsList6 = function(runtimeScene) {
+};gdjs.CafeteriaCode.eventsList7 = function(runtimeScene) {
 
 {
 
@@ -297,7 +345,7 @@ gdjs.CafeteriaCode.eventsList0(runtimeScene);
 {
 
 
-gdjs.CafeteriaCode.eventsList4(runtimeScene);
+gdjs.CafeteriaCode.eventsList1(runtimeScene);
 }
 
 
@@ -305,6 +353,13 @@ gdjs.CafeteriaCode.eventsList4(runtimeScene);
 
 
 gdjs.CafeteriaCode.eventsList5(runtimeScene);
+}
+
+
+{
+
+
+gdjs.CafeteriaCode.eventsList6(runtimeScene);
 }
 
 
@@ -381,8 +436,11 @@ gdjs.CafeteriaCode.GDMonsterPuzzleObjects3.length = 0;
 gdjs.CafeteriaCode.GDMemoryMatchObjects1.length = 0;
 gdjs.CafeteriaCode.GDMemoryMatchObjects2.length = 0;
 gdjs.CafeteriaCode.GDMemoryMatchObjects3.length = 0;
+gdjs.CafeteriaCode.GDMapObjects1.length = 0;
+gdjs.CafeteriaCode.GDMapObjects2.length = 0;
+gdjs.CafeteriaCode.GDMapObjects3.length = 0;
 
-gdjs.CafeteriaCode.eventsList6(runtimeScene);
+gdjs.CafeteriaCode.eventsList7(runtimeScene);
 return;
 
 }
