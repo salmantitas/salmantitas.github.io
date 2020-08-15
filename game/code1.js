@@ -19,6 +19,22 @@ gdjs.IntroCode.GDBackToReceptionObjects1= [];
 gdjs.IntroCode.GDBackToReceptionObjects2= [];
 gdjs.IntroCode.GDBackToReceptionObjects3= [];
 gdjs.IntroCode.GDBackToReceptionObjects4= [];
+gdjs.IntroCode.GDBackToCafeteriaObjects1= [];
+gdjs.IntroCode.GDBackToCafeteriaObjects2= [];
+gdjs.IntroCode.GDBackToCafeteriaObjects3= [];
+gdjs.IntroCode.GDBackToCafeteriaObjects4= [];
+gdjs.IntroCode.GDInventoryBackgroundObjects1= [];
+gdjs.IntroCode.GDInventoryBackgroundObjects2= [];
+gdjs.IntroCode.GDInventoryBackgroundObjects3= [];
+gdjs.IntroCode.GDInventoryBackgroundObjects4= [];
+gdjs.IntroCode.GDInventorySlotObjects1= [];
+gdjs.IntroCode.GDInventorySlotObjects2= [];
+gdjs.IntroCode.GDInventorySlotObjects3= [];
+gdjs.IntroCode.GDInventorySlotObjects4= [];
+gdjs.IntroCode.GDInventoryKeyObjects1= [];
+gdjs.IntroCode.GDInventoryKeyObjects2= [];
+gdjs.IntroCode.GDInventoryKeyObjects3= [];
+gdjs.IntroCode.GDInventoryKeyObjects4= [];
 gdjs.IntroCode.GDtext1Objects1= [];
 gdjs.IntroCode.GDtext1Objects2= [];
 gdjs.IntroCode.GDtext1Objects3= [];
@@ -134,6 +150,22 @@ gdjs.IntroCode.GDTypingTextObjects2.createFrom(runtimeScene.getObjects("TypingTe
 {
 
 
+gdjs.IntroCode.condition0IsTrue_0.val = false;
+{
+gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+}if (gdjs.IntroCode.condition0IsTrue_0.val) {
+{runtimeScene.getVariables().get("click").setNumber(0);
+}{runtimeScene.getVariables().get("charPos").setNumber(0);
+}{runtimeScene.getVariables().get("lineState").setString("");
+}{runtimeScene.getVariables().get("typing").setNumber(1);
+}}
+
+}
+
+
+{
+
+
 
 }
 
@@ -194,18 +226,24 @@ gdjs.IntroCode.GDplayObjects1.length = 0;
 {
 
 
+
+}
+
+
+{
+
+
 gdjs.IntroCode.condition0IsTrue_0.val = false;
 {
 gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 }if (gdjs.IntroCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().get("click").setNumber(0);
-}{runtimeScene.getVariables().get("charPos").setNumber(0);
-}{runtimeScene.getVariables().get("lineState").setString("");
-}{runtimeScene.getGame().getVariables().get("chippyOfficeDoorLocked").setNumber(1);
+{runtimeScene.getGame().getVariables().get("chippyOfficeDoorLocked").setNumber(1);
 }{runtimeScene.getGame().getVariables().get("sparePartsDoorLocked").setNumber(1);
 }{runtimeScene.getGame().getVariables().get("chippyOfficeKeyFound").setNumber(0);
+}{runtimeScene.getGame().getVariables().get("motherboardDoorLocked").setNumber(1);
+}{runtimeScene.getGame().getVariables().get("accountingDoorLocked").setNumber(1);
 }{runtimeScene.getGame().getVariables().get("countdown").setNumber(60 * 60 * 60);
-}{runtimeScene.getVariables().get("typing").setNumber(1);
+}{runtimeScene.getGame().getVariables().get("monsterSolved").setNumber(0);
 }}
 
 }
@@ -280,6 +318,22 @@ gdjs.IntroCode.GDBackToReceptionObjects1.length = 0;
 gdjs.IntroCode.GDBackToReceptionObjects2.length = 0;
 gdjs.IntroCode.GDBackToReceptionObjects3.length = 0;
 gdjs.IntroCode.GDBackToReceptionObjects4.length = 0;
+gdjs.IntroCode.GDBackToCafeteriaObjects1.length = 0;
+gdjs.IntroCode.GDBackToCafeteriaObjects2.length = 0;
+gdjs.IntroCode.GDBackToCafeteriaObjects3.length = 0;
+gdjs.IntroCode.GDBackToCafeteriaObjects4.length = 0;
+gdjs.IntroCode.GDInventoryBackgroundObjects1.length = 0;
+gdjs.IntroCode.GDInventoryBackgroundObjects2.length = 0;
+gdjs.IntroCode.GDInventoryBackgroundObjects3.length = 0;
+gdjs.IntroCode.GDInventoryBackgroundObjects4.length = 0;
+gdjs.IntroCode.GDInventorySlotObjects1.length = 0;
+gdjs.IntroCode.GDInventorySlotObjects2.length = 0;
+gdjs.IntroCode.GDInventorySlotObjects3.length = 0;
+gdjs.IntroCode.GDInventorySlotObjects4.length = 0;
+gdjs.IntroCode.GDInventoryKeyObjects1.length = 0;
+gdjs.IntroCode.GDInventoryKeyObjects2.length = 0;
+gdjs.IntroCode.GDInventoryKeyObjects3.length = 0;
+gdjs.IntroCode.GDInventoryKeyObjects4.length = 0;
 gdjs.IntroCode.GDtext1Objects1.length = 0;
 gdjs.IntroCode.GDtext1Objects2.length = 0;
 gdjs.IntroCode.GDtext1Objects3.length = 0;
