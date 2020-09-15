@@ -78,7 +78,7 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.runtime
 
 
 {
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1.createFrom(runtimeScene.getObjects("HUD_Timer"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_Timer"), gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1);
 {for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1.length ;i < len;++i) {
     gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1[i].setString(gdjs.evtTools.common.toString(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown"))));
 }
@@ -91,7 +91,7 @@ gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1.createFrom(runtimeScene.
 
 {
 
-gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects1.createFrom(runtimeScene.getObjects("BackToReception"));
+gdjs.copyArray(runtimeScene.getObjects("BackToReception"), gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects1);
 
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 gdjs.Puzzle_32Robot_32PictureCode.condition1IsTrue_0.val = false;
@@ -160,8 +160,8 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Right");
 }if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects2.createFrom(runtimeScene.getObjects("HUD_Description"));
-gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects2.createFrom(gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects2);
+gdjs.copyArray(gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1, gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects2);
 
 {for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects2.length ;i < len;++i) {
     gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects2[i].setString((gdjs.RuntimeObject.getVariableString(((gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects2.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects2[0].getVariables()).get("description"))));
@@ -178,7 +178,7 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1.createFrom(runtimeScene.getObjects("HUD_Description"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1);
 /* Reuse gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1 */
 {for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
     gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1[i].setString((gdjs.RuntimeObject.getVariableString(((gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1[0].getVariables()).get("use"))));
@@ -202,7 +202,7 @@ gdjs.Puzzle_32Robot_32PictureCode.eventsList3(runtimeScene);} //End of subevents
 
 {
 
-gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects2.createFrom(runtimeScene.getObjects("RobotPictureKey"));
+gdjs.copyArray(runtimeScene.getObjects("RobotPictureKey"), gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects2);
 
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
@@ -219,13 +219,13 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.input.c
 
 {
 
-gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1.createFrom(runtimeScene.getObjects("RobotPictureKey"));
+gdjs.copyArray(runtimeScene.getObjects("RobotPictureKey"), gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1);
 
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDRobotPictureKeyObjects1Objects, runtimeScene, true, false);
 }if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects1.createFrom(runtimeScene.getObjects("HUD_ObjectName"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_ObjectName"), gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects1);
 /* Reuse gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1 */
 {for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects1.length ;i < len;++i) {
     gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects1[i].setString((gdjs.RuntimeObject.getVariableString(((gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1[0].getVariables()).get("name"))));
@@ -327,7 +327,7 @@ gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2.length = k;}if (gdjs.P
 
 {
 
-gdjs.Puzzle_32Robot_32PictureCode.GDInventoryBackgroundObjects2.createFrom(runtimeScene.getObjects("InventoryBackground"));
+gdjs.copyArray(runtimeScene.getObjects("InventoryBackground"), gdjs.Puzzle_32Robot_32PictureCode.GDInventoryBackgroundObjects2);
 
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
@@ -349,7 +349,7 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.input.c
 
 {
 
-gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects3.createFrom(gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2);
+gdjs.copyArray(gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2, gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects3);
 
 
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
@@ -407,7 +407,7 @@ gdjs.Puzzle_32Robot_32PictureCode.eventsList7(runtimeScene);
 
 {
 
-gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2.createFrom(runtimeScene.getObjects("InventorySlot"));
+gdjs.copyArray(runtimeScene.getObjects("InventorySlot"), gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2);
 
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
@@ -427,7 +427,7 @@ gdjs.Puzzle_32Robot_32PictureCode.eventsList8(runtimeScene);} //End of subevents
 
 {
 
-gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2.createFrom(runtimeScene.getObjects("InventorySlot"));
+gdjs.copyArray(runtimeScene.getObjects("InventorySlot"), gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2);
 
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
@@ -447,7 +447,7 @@ gdjs.Puzzle_32Robot_32PictureCode.eventsList9(runtimeScene);} //End of subevents
 
 {
 
-gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects1.createFrom(runtimeScene.getObjects("InventorySlot"));
+gdjs.copyArray(runtimeScene.getObjects("InventorySlot"), gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects1);
 
 for(gdjs.Puzzle_32Robot_32PictureCode.forEachIndex2 = 0;gdjs.Puzzle_32Robot_32PictureCode.forEachIndex2 < gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects1.length;++gdjs.Puzzle_32Robot_32PictureCode.forEachIndex2) {
 gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2.length = 0;
@@ -492,10 +492,10 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 }if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1.createFrom(runtimeScene.getObjects("HUD_Description"));
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95LocationNameObjects1.createFrom(runtimeScene.getObjects("HUD_LocationName"));
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects1.createFrom(runtimeScene.getObjects("HUD_ObjectName"));
-gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1.createFrom(runtimeScene.getObjects("RobotPictureKey"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_LocationName"), gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95LocationNameObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_ObjectName"), gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects1);
+gdjs.copyArray(runtimeScene.getObjects("RobotPictureKey"), gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1);
 {for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
     gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1[i].setString("");
 }

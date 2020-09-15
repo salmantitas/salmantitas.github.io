@@ -73,7 +73,7 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.ti
 
 
 {
-gdjs.Monster_32PuzzleCode.GDHUD_95TimerObjects1.createFrom(runtimeScene.getObjects("HUD_Timer"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_Timer"), gdjs.Monster_32PuzzleCode.GDHUD_95TimerObjects1);
 {for(var i = 0, len = gdjs.Monster_32PuzzleCode.GDHUD_95TimerObjects1.length ;i < len;++i) {
     gdjs.Monster_32PuzzleCode.GDHUD_95TimerObjects1[i].setString(gdjs.evtTools.common.toString(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown"))));
 }
@@ -86,7 +86,7 @@ gdjs.Monster_32PuzzleCode.GDHUD_95TimerObjects1.createFrom(runtimeScene.getObjec
 
 {
 
-gdjs.Monster_32PuzzleCode.GDBackToCafeteriaObjects1.createFrom(runtimeScene.getObjects("BackToCafeteria"));
+gdjs.copyArray(runtimeScene.getObjects("BackToCafeteria"), gdjs.Monster_32PuzzleCode.GDBackToCafeteriaObjects1);
 
 gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
 gdjs.Monster_32PuzzleCode.condition1IsTrue_0.val = false;
@@ -111,7 +111,7 @@ if (gdjs.Monster_32PuzzleCode.condition1IsTrue_0.val) {
 
 {
 
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.createFrom(runtimeScene.getObjects("MonsterSlot"));
+gdjs.copyArray(runtimeScene.getObjects("MonsterSlot"), gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2);
 
 for(gdjs.Monster_32PuzzleCode.forEachIndex3 = 0;gdjs.Monster_32PuzzleCode.forEachIndex3 < gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.length;++gdjs.Monster_32PuzzleCode.forEachIndex3) {
 gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.length = 0;
@@ -138,7 +138,7 @@ gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.length = k;}if (gdjs.Monster_32P
 
 {
 
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.createFrom(runtimeScene.getObjects("MonsterSlot"));
+gdjs.copyArray(runtimeScene.getObjects("MonsterSlot"), gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2);
 
 for(gdjs.Monster_32PuzzleCode.forEachIndex3 = 0;gdjs.Monster_32PuzzleCode.forEachIndex3 < gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects2.length;++gdjs.Monster_32PuzzleCode.forEachIndex3) {
 gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects3.length = 0;
@@ -184,7 +184,7 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
 {
 gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = !(gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("solved")) == 1);
 }if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.createFrom(runtimeScene.getObjects("MonsterSlot"));
+gdjs.copyArray(runtimeScene.getObjects("MonsterSlot"), gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1);
 {for(var i = 0, len = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.length ;i < len;++i) {
     gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1[i].returnVariable(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1[i].getVariables().getFromIndex(0)).setNumber(0);
 }
@@ -220,9 +220,9 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
 {
 gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 }if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
-gdjs.Monster_32PuzzleCode.GDHUD_95DescriptionObjects1.createFrom(runtimeScene.getObjects("HUD_Description"));
-gdjs.Monster_32PuzzleCode.GDHUD_95LocationNameObjects1.createFrom(runtimeScene.getObjects("HUD_LocationName"));
-gdjs.Monster_32PuzzleCode.GDHUD_95ObjectNameObjects1.createFrom(runtimeScene.getObjects("HUD_ObjectName"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.Monster_32PuzzleCode.GDHUD_95DescriptionObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_LocationName"), gdjs.Monster_32PuzzleCode.GDHUD_95LocationNameObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_ObjectName"), gdjs.Monster_32PuzzleCode.GDHUD_95ObjectNameObjects1);
 {for(var i = 0, len = gdjs.Monster_32PuzzleCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
     gdjs.Monster_32PuzzleCode.GDHUD_95DescriptionObjects1[i].setString("");
 }
@@ -266,7 +266,7 @@ gdjs.Monster_32PuzzleCode.eventsList1(runtimeScene);
 
 {
 
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.createFrom(runtimeScene.getObjects("MonsterSlot"));
+gdjs.copyArray(runtimeScene.getObjects("MonsterSlot"), gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1);
 
 gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
 gdjs.Monster_32PuzzleCode.condition1IsTrue_0.val = false;
@@ -290,7 +290,7 @@ if (gdjs.Monster_32PuzzleCode.condition1IsTrue_0.val) {
 
 
 {
-gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.createFrom(runtimeScene.getObjects("MonsterSlot"));
+gdjs.copyArray(runtimeScene.getObjects("MonsterSlot"), gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1);
 {for(var i = 0, len = gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.length ;i < len;++i) {
     gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1[i].setAnimation((gdjs.RuntimeObject.getVariableNumber(gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1[i].getVariables().getFromIndex(0))));
 }
@@ -301,7 +301,7 @@ gdjs.Monster_32PuzzleCode.GDMonsterSlotObjects1.createFrom(runtimeScene.getObjec
 
 {
 
-gdjs.Monster_32PuzzleCode.GDSubmitObjects1.createFrom(runtimeScene.getObjects("Submit"));
+gdjs.copyArray(runtimeScene.getObjects("Submit"), gdjs.Monster_32PuzzleCode.GDSubmitObjects1);
 
 gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
 {
@@ -321,7 +321,7 @@ gdjs.Monster_32PuzzleCode.eventsList5(runtimeScene);} //End of subevents
 
 {
 
-gdjs.Monster_32PuzzleCode.GDSubmitObjects1.createFrom(runtimeScene.getObjects("Submit"));
+gdjs.copyArray(runtimeScene.getObjects("Submit"), gdjs.Monster_32PuzzleCode.GDSubmitObjects1);
 
 gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = false;
 {
@@ -349,7 +349,7 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnO
 
 
 {
-gdjs.Monster_32PuzzleCode.GDtestTextObjects1.createFrom(runtimeScene.getObjects("testText"));
+gdjs.copyArray(runtimeScene.getObjects("testText"), gdjs.Monster_32PuzzleCode.GDtestTextObjects1);
 {for(var i = 0, len = gdjs.Monster_32PuzzleCode.GDtestTextObjects1.length ;i < len;++i) {
     gdjs.Monster_32PuzzleCode.GDtestTextObjects1[i].setString(gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().get("solved")));
 }

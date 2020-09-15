@@ -32,7 +32,7 @@ gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDDeskObjects1Objects = Hashtable
 
 {
 
-gdjs.MainMenuCode.GDDeskObjects1.createFrom(runtimeScene.getObjects("Desk"));
+gdjs.copyArray(runtimeScene.getObjects("Desk"), gdjs.MainMenuCode.GDDeskObjects1);
 
 gdjs.MainMenuCode.condition0IsTrue_0.val = false;
 gdjs.MainMenuCode.condition1IsTrue_0.val = false;

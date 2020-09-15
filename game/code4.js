@@ -65,7 +65,7 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElap
 
 
 {
-gdjs.CafeteriaCode.GDHUD_95TimerObjects1.createFrom(runtimeScene.getObjects("HUD_Timer"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_Timer"), gdjs.CafeteriaCode.GDHUD_95TimerObjects1);
 {for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95TimerObjects1.length ;i < len;++i) {
     gdjs.CafeteriaCode.GDHUD_95TimerObjects1[i].setString(gdjs.evtTools.common.toString(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown"))));
 }
@@ -78,14 +78,14 @@ gdjs.CafeteriaCode.GDHUD_95TimerObjects1.createFrom(runtimeScene.getObjects("HUD
 
 {
 
-gdjs.CafeteriaCode.GDMapObjects2.createFrom(runtimeScene.getObjects("Map"));
+gdjs.copyArray(runtimeScene.getObjects("Map"), gdjs.CafeteriaCode.GDMapObjects2);
 
 gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
 {
 gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMapObjects2Objects, runtimeScene, true, false);
 }if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
-gdjs.CafeteriaCode.GDHUD_95LocationNameObjects2.createFrom(runtimeScene.getObjects("HUD_LocationName"));
-gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects2.createFrom(runtimeScene.getObjects("HUD_ObjectName"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_LocationName"), gdjs.CafeteriaCode.GDHUD_95LocationNameObjects2);
+gdjs.copyArray(runtimeScene.getObjects("HUD_ObjectName"), gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects2);
 /* Reuse gdjs.CafeteriaCode.GDMapObjects2 */
 {for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95LocationNameObjects2.length ;i < len;++i) {
     gdjs.CafeteriaCode.GDHUD_95LocationNameObjects2[i].setString((gdjs.RuntimeObject.getVariableString(((gdjs.CafeteriaCode.GDMapObjects2.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.CafeteriaCode.GDMapObjects2[0].getVariables()).get("name"))));
@@ -100,14 +100,14 @@ gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects2.createFrom(runtimeScene.getObjects
 
 {
 
-gdjs.CafeteriaCode.GDMapObjects1.createFrom(runtimeScene.getObjects("Map"));
+gdjs.copyArray(runtimeScene.getObjects("Map"), gdjs.CafeteriaCode.GDMapObjects1);
 
 gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
 {
 gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMapObjects1Objects, runtimeScene, true, true);
 }if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
-gdjs.CafeteriaCode.GDHUD_95LocationNameObjects1.createFrom(runtimeScene.getObjects("HUD_LocationName"));
-gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1.createFrom(runtimeScene.getObjects("HUD_ObjectName"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_LocationName"), gdjs.CafeteriaCode.GDHUD_95LocationNameObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_ObjectName"), gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1);
 {for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1.length ;i < len;++i) {
     gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1[i].setString("");
 }
@@ -130,7 +130,7 @@ gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1.createFrom(runtimeScene.getObjects
 
 {
 
-gdjs.CafeteriaCode.GDMemoryMatchObjects2.createFrom(gdjs.CafeteriaCode.GDMemoryMatchObjects1);
+gdjs.copyArray(gdjs.CafeteriaCode.GDMemoryMatchObjects1, gdjs.CafeteriaCode.GDMemoryMatchObjects2);
 
 
 gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
@@ -191,10 +191,10 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
 {
 gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Right");
 }if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
-gdjs.CafeteriaCode.GDHUD_95DescriptionObjects2.createFrom(runtimeScene.getObjects("HUD_Description"));
-gdjs.CafeteriaCode.GDMemoryMatchObjects2.createFrom(gdjs.CafeteriaCode.GDMemoryMatchObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.CafeteriaCode.GDHUD_95DescriptionObjects2);
+gdjs.copyArray(gdjs.CafeteriaCode.GDMemoryMatchObjects1, gdjs.CafeteriaCode.GDMemoryMatchObjects2);
 
-gdjs.CafeteriaCode.GDMonsterPuzzleObjects2.createFrom(gdjs.CafeteriaCode.GDMonsterPuzzleObjects1);
+gdjs.copyArray(gdjs.CafeteriaCode.GDMonsterPuzzleObjects1, gdjs.CafeteriaCode.GDMonsterPuzzleObjects2);
 
 {for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95DescriptionObjects2.length ;i < len;++i) {
     gdjs.CafeteriaCode.GDHUD_95DescriptionObjects2[i].setString((gdjs.RuntimeObject.getVariableString(((gdjs.CafeteriaCode.GDMonsterPuzzleObjects2.length === 0 ) ? ((gdjs.CafeteriaCode.GDMemoryMatchObjects2.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.CafeteriaCode.GDMemoryMatchObjects2[0].getVariables()) : gdjs.CafeteriaCode.GDMonsterPuzzleObjects2[0].getVariables()).get("description"))));
@@ -211,7 +211,7 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
 {
 gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
-gdjs.CafeteriaCode.GDHUD_95DescriptionObjects1.createFrom(runtimeScene.getObjects("HUD_Description"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.CafeteriaCode.GDHUD_95DescriptionObjects1);
 /* Reuse gdjs.CafeteriaCode.GDMemoryMatchObjects1 */
 /* Reuse gdjs.CafeteriaCode.GDMonsterPuzzleObjects1 */
 {for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
@@ -236,8 +236,8 @@ gdjs.CafeteriaCode.eventsList3(runtimeScene);} //End of subevents
 
 {
 
-gdjs.CafeteriaCode.GDMemoryMatchObjects2.createFrom(runtimeScene.getObjects("MemoryMatch"));
-gdjs.CafeteriaCode.GDMonsterPuzzleObjects2.createFrom(runtimeScene.getObjects("MonsterPuzzle"));
+gdjs.copyArray(runtimeScene.getObjects("MemoryMatch"), gdjs.CafeteriaCode.GDMemoryMatchObjects2);
+gdjs.copyArray(runtimeScene.getObjects("MonsterPuzzle"), gdjs.CafeteriaCode.GDMonsterPuzzleObjects2);
 
 gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
 {
@@ -258,14 +258,14 @@ for(var i = 0, len = gdjs.CafeteriaCode.GDMonsterPuzzleObjects2.length ;i < len;
 
 {
 
-gdjs.CafeteriaCode.GDMemoryMatchObjects1.createFrom(runtimeScene.getObjects("MemoryMatch"));
-gdjs.CafeteriaCode.GDMonsterPuzzleObjects1.createFrom(runtimeScene.getObjects("MonsterPuzzle"));
+gdjs.copyArray(runtimeScene.getObjects("MemoryMatch"), gdjs.CafeteriaCode.GDMemoryMatchObjects1);
+gdjs.copyArray(runtimeScene.getObjects("MonsterPuzzle"), gdjs.CafeteriaCode.GDMonsterPuzzleObjects1);
 
 gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
 {
 gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects1ObjectsGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects1Objects, runtimeScene, true, false);
 }if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
-gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1.createFrom(runtimeScene.getObjects("HUD_ObjectName"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_ObjectName"), gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1);
 /* Reuse gdjs.CafeteriaCode.GDMemoryMatchObjects1 */
 /* Reuse gdjs.CafeteriaCode.GDMonsterPuzzleObjects1 */
 {for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1.length ;i < len;++i) {
@@ -292,7 +292,7 @@ gdjs.CafeteriaCode.eventsList4(runtimeScene);} //End of subevents
 
 {
 
-gdjs.CafeteriaCode.GDBackToReceptionObjects1.createFrom(runtimeScene.getObjects("BackToReception"));
+gdjs.copyArray(runtimeScene.getObjects("BackToReception"), gdjs.CafeteriaCode.GDBackToReceptionObjects1);
 
 gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
 gdjs.CafeteriaCode.condition1IsTrue_0.val = false;
@@ -318,9 +318,9 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
 {
 gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 }if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
-gdjs.CafeteriaCode.GDHUD_95DescriptionObjects1.createFrom(runtimeScene.getObjects("HUD_Description"));
-gdjs.CafeteriaCode.GDHUD_95LocationNameObjects1.createFrom(runtimeScene.getObjects("HUD_LocationName"));
-gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1.createFrom(runtimeScene.getObjects("HUD_ObjectName"));
+gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.CafeteriaCode.GDHUD_95DescriptionObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_LocationName"), gdjs.CafeteriaCode.GDHUD_95LocationNameObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_ObjectName"), gdjs.CafeteriaCode.GDHUD_95ObjectNameObjects1);
 {for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
     gdjs.CafeteriaCode.GDHUD_95DescriptionObjects1[i].setString("");
 }
@@ -370,7 +370,7 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
 {
 gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("monsterSolved")) == 0;
 }if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
-gdjs.CafeteriaCode.GDCodeObjects1.createFrom(runtimeScene.getObjects("Code"));
+gdjs.copyArray(runtimeScene.getObjects("Code"), gdjs.CafeteriaCode.GDCodeObjects1);
 {for(var i = 0, len = gdjs.CafeteriaCode.GDCodeObjects1.length ;i < len;++i) {
     gdjs.CafeteriaCode.GDCodeObjects1[i].hide();
 }
@@ -386,7 +386,7 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
 {
 gdjs.CafeteriaCode.condition0IsTrue_0.val = !(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("monsterSolved")) == 0);
 }if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
-gdjs.CafeteriaCode.GDCodeObjects1.createFrom(runtimeScene.getObjects("Code"));
+gdjs.copyArray(runtimeScene.getObjects("Code"), gdjs.CafeteriaCode.GDCodeObjects1);
 {for(var i = 0, len = gdjs.CafeteriaCode.GDCodeObjects1.length ;i < len;++i) {
     gdjs.CafeteriaCode.GDCodeObjects1[i].hide(false);
 }

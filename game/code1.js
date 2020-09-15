@@ -83,7 +83,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonRelease
 
 
 {
-gdjs.IntroCode.GDTypingTextObjects3.createFrom(runtimeScene.getObjects("TypingText"));
+gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTextObjects3);
 {for(var i = 0, len = gdjs.IntroCode.GDTypingTextObjects3.length ;i < len;++i) {
     gdjs.IntroCode.GDTypingTextObjects3[i].setString(gdjs.IntroCode.GDTypingTextObjects3[i].getString() + (gdjs.evtTools.string.subStr((gdjs.RuntimeObject.getVariableString(gdjs.IntroCode.GDTypingTextObjects3[i].getVariables().getFromIndex(0))), gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("charPos")), 1)));
 }
@@ -135,7 +135,7 @@ if( gdjs.IntroCode.condition1IsTrue_1.val ) {
 }
 }
 }if (gdjs.IntroCode.condition0IsTrue_0.val) {
-gdjs.IntroCode.GDTypingTextObjects2.createFrom(runtimeScene.getObjects("TypingText"));
+gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTextObjects2);
 {for(var i = 0, len = gdjs.IntroCode.GDTypingTextObjects2.length ;i < len;++i) {
     gdjs.IntroCode.GDTypingTextObjects2[i].setString((gdjs.RuntimeObject.getVariableString(gdjs.IntroCode.GDTypingTextObjects2[i].getVariables().getFromIndex(0))));
 }
@@ -187,7 +187,7 @@ gdjs.IntroCode.eventsList2(runtimeScene);} //End of subevents
 
 {
 
-gdjs.IntroCode.GDTypingTextObjects2.createFrom(runtimeScene.getObjects("TypingText"));
+gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTextObjects2);
 
 gdjs.IntroCode.condition0IsTrue_0.val = false;
 {
@@ -241,9 +241,12 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegi
 }{runtimeScene.getGame().getVariables().get("sparePartsDoorLocked").setNumber(1);
 }{runtimeScene.getGame().getVariables().get("chippyOfficeKeyFound").setNumber(0);
 }{runtimeScene.getGame().getVariables().get("motherboardDoorLocked").setNumber(1);
+}{runtimeScene.getGame().getVariables().get("robotControl").setNumber(0);
 }{runtimeScene.getGame().getVariables().get("accountingDoorLocked").setNumber(1);
 }{runtimeScene.getGame().getVariables().get("countdown").setNumber(60 * 60 * 60);
 }{runtimeScene.getGame().getVariables().get("monsterSolved").setNumber(0);
+}{runtimeScene.getGame().getVariables().get("sparePartsSolved").setNumber(0);
+}{runtimeScene.getGame().getVariables().get("motherboardSolved").setNumber(0);
 }}
 
 }
@@ -251,7 +254,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegi
 
 {
 
-gdjs.IntroCode.GDplayObjects1.createFrom(runtimeScene.getObjects("play"));
+gdjs.copyArray(runtimeScene.getObjects("play"), gdjs.IntroCode.GDplayObjects1);
 
 gdjs.IntroCode.condition0IsTrue_0.val = false;
 {
@@ -271,7 +274,7 @@ gdjs.IntroCode.eventsList0(runtimeScene);} //End of subevents
 
 {
 
-gdjs.IntroCode.GDplayObjects1.createFrom(runtimeScene.getObjects("play"));
+gdjs.copyArray(runtimeScene.getObjects("play"), gdjs.IntroCode.GDplayObjects1);
 
 gdjs.IntroCode.condition0IsTrue_0.val = false;
 {
