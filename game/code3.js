@@ -19,14 +19,14 @@ gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects1= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects2= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects3= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects4= [];
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1= [];
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2= [];
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects3= [];
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects4= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects1= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects2= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects3= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects4= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects3= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects4= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToCafeteriaObjects1= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToCafeteriaObjects2= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToCafeteriaObjects3= [];
@@ -43,6 +43,10 @@ gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects1= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects2= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects3= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects4= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects1= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects2= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects3= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects4= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects1= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects2= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects3= [];
@@ -58,7 +62,36 @@ gdjs.Puzzle_32Robot_32PictureCode.condition1IsTrue_0 = {val:false};
 gdjs.Puzzle_32Robot_32PictureCode.condition2IsTrue_0 = {val:false};
 
 
-gdjs.Puzzle_32Robot_32PictureCode.eventsList0 = function(runtimeScene) {
+gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDHUD_9595TimerObjects2Objects = Hashtable.newFrom({"HUD_Timer": gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2});gdjs.Puzzle_32Robot_32PictureCode.eventsList0 = function(runtimeScene) {
+
+{
+
+
+
+}
+
+
+{
+
+
+gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
+{
+gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+}if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
+gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2.length = 0;
+
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "UI");
+}}
+
+}
+
+
+{
+
+
+
+}
+
 
 {
 
@@ -70,6 +103,13 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.runtime
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "gameTimer");
 }{runtimeScene.getGame().getVariables().get("countdown").sub(1);
 }}
+
+}
+
+
+{
+
+
 
 }
 
@@ -135,7 +175,7 @@ gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1.length = k;}if (gdjs
 /* Reuse gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1 */
 {runtimeScene.getVariables().get("picked_item").setString((gdjs.RuntimeObject.getVariableString(((gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1[0].getVariables()).get("use"))));
 }{for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
-    gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1[i].setString("You found a key!");
+    gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1[i].setString("I found a key!");
 }
 }}
 
@@ -567,14 +607,14 @@ gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects1.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects2.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects3.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95ObjectNameObjects4.length = 0;
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1.length = 0;
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2.length = 0;
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects3.length = 0;
-gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects4.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects1.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects2.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects3.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects4.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects3.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects4.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToCafeteriaObjects1.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToCafeteriaObjects2.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDBackToCafeteriaObjects3.length = 0;
@@ -591,6 +631,10 @@ gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects1.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects2.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects3.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects4.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects1.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects2.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects3.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects4.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects1.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects2.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects3.length = 0;

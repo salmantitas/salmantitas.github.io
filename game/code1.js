@@ -11,14 +11,14 @@ gdjs.IntroCode.GDHUD_95ObjectNameObjects1= [];
 gdjs.IntroCode.GDHUD_95ObjectNameObjects2= [];
 gdjs.IntroCode.GDHUD_95ObjectNameObjects3= [];
 gdjs.IntroCode.GDHUD_95ObjectNameObjects4= [];
-gdjs.IntroCode.GDHUD_95TimerObjects1= [];
-gdjs.IntroCode.GDHUD_95TimerObjects2= [];
-gdjs.IntroCode.GDHUD_95TimerObjects3= [];
-gdjs.IntroCode.GDHUD_95TimerObjects4= [];
 gdjs.IntroCode.GDBackToReceptionObjects1= [];
 gdjs.IntroCode.GDBackToReceptionObjects2= [];
 gdjs.IntroCode.GDBackToReceptionObjects3= [];
 gdjs.IntroCode.GDBackToReceptionObjects4= [];
+gdjs.IntroCode.GDHUD_95TimerObjects1= [];
+gdjs.IntroCode.GDHUD_95TimerObjects2= [];
+gdjs.IntroCode.GDHUD_95TimerObjects3= [];
+gdjs.IntroCode.GDHUD_95TimerObjects4= [];
 gdjs.IntroCode.GDBackToCafeteriaObjects1= [];
 gdjs.IntroCode.GDBackToCafeteriaObjects2= [];
 gdjs.IntroCode.GDBackToCafeteriaObjects3= [];
@@ -35,6 +35,10 @@ gdjs.IntroCode.GDInventoryKeyObjects1= [];
 gdjs.IntroCode.GDInventoryKeyObjects2= [];
 gdjs.IntroCode.GDInventoryKeyObjects3= [];
 gdjs.IntroCode.GDInventoryKeyObjects4= [];
+gdjs.IntroCode.GDCorrectObjects1= [];
+gdjs.IntroCode.GDCorrectObjects2= [];
+gdjs.IntroCode.GDCorrectObjects3= [];
+gdjs.IntroCode.GDCorrectObjects4= [];
 gdjs.IntroCode.GDtext1Objects1= [];
 gdjs.IntroCode.GDtext1Objects2= [];
 gdjs.IntroCode.GDtext1Objects3= [];
@@ -100,7 +104,7 @@ gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTex
 
 gdjs.IntroCode.condition0IsTrue_0.val = false;
 {
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 0.1, "textTimer");
+gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 1 * 1 / 20 * 1 / 2, "textTimer");
 }if (gdjs.IntroCode.condition0IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "textTimer");
 }
@@ -247,6 +251,10 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegi
 }{runtimeScene.getGame().getVariables().get("monsterSolved").setNumber(0);
 }{runtimeScene.getGame().getVariables().get("sparePartsSolved").setNumber(0);
 }{runtimeScene.getGame().getVariables().get("motherboardSolved").setNumber(0);
+}{runtimeScene.getGame().getVariables().get("memMatchState").setNumber(0);
+}{runtimeScene.getGame().getVariables().get("timerX").setNumber(375);
+}{runtimeScene.getGame().getVariables().get("timerY").setNumber(14);
+}{gdjs.evtTools.sound.playSound(runtimeScene, "screenla.wav", false, 100, 1);
 }}
 
 }
@@ -313,14 +321,14 @@ gdjs.IntroCode.GDHUD_95ObjectNameObjects1.length = 0;
 gdjs.IntroCode.GDHUD_95ObjectNameObjects2.length = 0;
 gdjs.IntroCode.GDHUD_95ObjectNameObjects3.length = 0;
 gdjs.IntroCode.GDHUD_95ObjectNameObjects4.length = 0;
-gdjs.IntroCode.GDHUD_95TimerObjects1.length = 0;
-gdjs.IntroCode.GDHUD_95TimerObjects2.length = 0;
-gdjs.IntroCode.GDHUD_95TimerObjects3.length = 0;
-gdjs.IntroCode.GDHUD_95TimerObjects4.length = 0;
 gdjs.IntroCode.GDBackToReceptionObjects1.length = 0;
 gdjs.IntroCode.GDBackToReceptionObjects2.length = 0;
 gdjs.IntroCode.GDBackToReceptionObjects3.length = 0;
 gdjs.IntroCode.GDBackToReceptionObjects4.length = 0;
+gdjs.IntroCode.GDHUD_95TimerObjects1.length = 0;
+gdjs.IntroCode.GDHUD_95TimerObjects2.length = 0;
+gdjs.IntroCode.GDHUD_95TimerObjects3.length = 0;
+gdjs.IntroCode.GDHUD_95TimerObjects4.length = 0;
 gdjs.IntroCode.GDBackToCafeteriaObjects1.length = 0;
 gdjs.IntroCode.GDBackToCafeteriaObjects2.length = 0;
 gdjs.IntroCode.GDBackToCafeteriaObjects3.length = 0;
@@ -337,6 +345,10 @@ gdjs.IntroCode.GDInventoryKeyObjects1.length = 0;
 gdjs.IntroCode.GDInventoryKeyObjects2.length = 0;
 gdjs.IntroCode.GDInventoryKeyObjects3.length = 0;
 gdjs.IntroCode.GDInventoryKeyObjects4.length = 0;
+gdjs.IntroCode.GDCorrectObjects1.length = 0;
+gdjs.IntroCode.GDCorrectObjects2.length = 0;
+gdjs.IntroCode.GDCorrectObjects3.length = 0;
+gdjs.IntroCode.GDCorrectObjects4.length = 0;
 gdjs.IntroCode.GDtext1Objects1.length = 0;
 gdjs.IntroCode.GDtext1Objects2.length = 0;
 gdjs.IntroCode.GDtext1Objects3.length = 0;
