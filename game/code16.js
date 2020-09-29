@@ -19,6 +19,8 @@ gdjs.The_32EndCode.GDInventoryKeyObjects1= [];
 gdjs.The_32EndCode.GDInventoryKeyObjects2= [];
 gdjs.The_32EndCode.GDCorrectObjects1= [];
 gdjs.The_32EndCode.GDCorrectObjects2= [];
+gdjs.The_32EndCode.GDFadeObjects1= [];
+gdjs.The_32EndCode.GDFadeObjects2= [];
 gdjs.The_32EndCode.GDEndObjects1= [];
 gdjs.The_32EndCode.GDEndObjects2= [];
 gdjs.The_32EndCode.GDPlayObjects1= [];
@@ -38,7 +40,7 @@ gdjs.The_32EndCode.condition0IsTrue_0.val = false;
 {
 gdjs.The_32EndCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 }if (gdjs.The_32EndCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Reception", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
 }}
 
 }
@@ -69,6 +71,8 @@ gdjs.The_32EndCode.GDInventoryKeyObjects1.length = 0;
 gdjs.The_32EndCode.GDInventoryKeyObjects2.length = 0;
 gdjs.The_32EndCode.GDCorrectObjects1.length = 0;
 gdjs.The_32EndCode.GDCorrectObjects2.length = 0;
+gdjs.The_32EndCode.GDFadeObjects1.length = 0;
+gdjs.The_32EndCode.GDFadeObjects2.length = 0;
 gdjs.The_32EndCode.GDEndObjects1.length = 0;
 gdjs.The_32EndCode.GDEndObjects2.length = 0;
 gdjs.The_32EndCode.GDPlayObjects1.length = 0;

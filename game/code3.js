@@ -47,6 +47,10 @@ gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects1= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects2= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects3= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects4= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDFadeObjects1= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDFadeObjects2= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDFadeObjects3= [];
+gdjs.Puzzle_32Robot_32PictureCode.GDFadeObjects4= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects1= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects2= [];
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects3= [];
@@ -67,6 +71,21 @@ gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode
 {
 
 
+gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
+{
+gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("sec")) < 10;
+}if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
+{runtimeScene.getVariables().get("secText").setString("0" + gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().get("sec")));
+}}
+
+}
+
+
+};gdjs.Puzzle_32Robot_32PictureCode.eventsList1 = function(runtimeScene) {
+
+{
+
+
 
 }
 
@@ -81,6 +100,9 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.runtime
 gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "UI");
+}{for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
+    gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2[i].setColor("255,0,0");
+}
 }}
 
 }
@@ -118,16 +140,33 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.runtime
 
 
 {
-gdjs.copyArray(runtimeScene.getObjects("HUD_Timer"), gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1);
-{for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1.length ;i < len;++i) {
-    gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects1[i].setString(gdjs.evtTools.common.toString(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown"))));
+gdjs.copyArray(runtimeScene.getObjects("HUD_Timer"), gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2);
+{for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
+    gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2[i].setString("00" + ":" + gdjs.evtTools.common.toString(Math.floor((gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown")) / 60))) + ":" + gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().get("secText")));
+}
+}{for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
+    gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95TimerObjects2[i].setColor("255,0,0");
 }
 }}
 
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDBackToReceptionObjects1Objects = Hashtable.newFrom({"BackToReception": gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects1});gdjs.Puzzle_32Robot_32PictureCode.eventsList1 = function(runtimeScene) {
+{
+
+
+{
+{runtimeScene.getVariables().get("sec").setNumber(gdjs.evtTools.common.mod(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown")), 60));
+}{runtimeScene.getVariables().get("secText").setString(gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().get("sec")));
+}
+{ //Subevents
+gdjs.Puzzle_32Robot_32PictureCode.eventsList0(runtimeScene);} //End of subevents
+}
+
+}
+
+
+};gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDBackToReceptionObjects1Objects = Hashtable.newFrom({"BackToReception": gdjs.Puzzle_32Robot_32PictureCode.GDBackToReceptionObjects1});gdjs.Puzzle_32Robot_32PictureCode.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -148,7 +187,7 @@ if (gdjs.Puzzle_32Robot_32PictureCode.condition1IsTrue_0.val) {
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDRobotPictureKeyObjects2Objects = Hashtable.newFrom({"RobotPictureKey": gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects2});gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDRobotPictureKeyObjects1Objects = Hashtable.newFrom({"RobotPictureKey": gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1});gdjs.Puzzle_32Robot_32PictureCode.eventsList2 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDRobotPictureKeyObjects2Objects = Hashtable.newFrom({"RobotPictureKey": gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects2});gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDRobotPictureKeyObjects1Objects = Hashtable.newFrom({"RobotPictureKey": gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1});gdjs.Puzzle_32Robot_32PictureCode.eventsList3 = function(runtimeScene) {
 
 {
 
@@ -182,16 +221,16 @@ gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects1.length = k;}if (gdjs
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.eventsList3 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.eventsList4 = function(runtimeScene) {
 
 {
 
 
-gdjs.Puzzle_32Robot_32PictureCode.eventsList2(runtimeScene);
+gdjs.Puzzle_32Robot_32PictureCode.eventsList3(runtimeScene);
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.eventsList4 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.eventsList5 = function(runtimeScene) {
 
 {
 
@@ -225,13 +264,13 @@ gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.Puzzle_32Robot_3
 }
 }
 { //Subevents
-gdjs.Puzzle_32Robot_32PictureCode.eventsList3(runtimeScene);} //End of subevents
+gdjs.Puzzle_32Robot_32PictureCode.eventsList4(runtimeScene);} //End of subevents
 }
 
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.eventsList5 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.eventsList6 = function(runtimeScene) {
 
 {
 
@@ -278,13 +317,13 @@ gdjs.copyArray(runtimeScene.getObjects("HUD_ObjectName"), gdjs.Puzzle_32Robot_32
 }
 }
 { //Subevents
-gdjs.Puzzle_32Robot_32PictureCode.eventsList4(runtimeScene);} //End of subevents
+gdjs.Puzzle_32Robot_32PictureCode.eventsList5(runtimeScene);} //End of subevents
 }
 
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.eventsList6 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.eventsList7 = function(runtimeScene) {
 
 {
 
@@ -324,7 +363,7 @@ if (gdjs.Puzzle_32Robot_32PictureCode.condition1IsTrue_0.val) {
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.eventsList7 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.eventsList8 = function(runtimeScene) {
 
 {
 
@@ -336,13 +375,13 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.input.w
 {runtimeScene.getVariables().get("i_released").setNumber(1);
 }
 { //Subevents
-gdjs.Puzzle_32Robot_32PictureCode.eventsList6(runtimeScene);} //End of subevents
+gdjs.Puzzle_32Robot_32PictureCode.eventsList7(runtimeScene);} //End of subevents
 }
 
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDInventorySlotObjects2Objects = Hashtable.newFrom({"InventorySlot": gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2});gdjs.Puzzle_32Robot_32PictureCode.eventsList8 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDInventorySlotObjects2Objects = Hashtable.newFrom({"InventorySlot": gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2});gdjs.Puzzle_32Robot_32PictureCode.eventsList9 = function(runtimeScene) {
 
 {
 
@@ -363,7 +402,7 @@ gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2.length = k;}if (gdjs.P
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDInventorySlotObjects2Objects = Hashtable.newFrom({"InventorySlot": gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2});gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDInventoryBackgroundObjects2Objects = Hashtable.newFrom({"InventoryBackground": gdjs.Puzzle_32Robot_32PictureCode.GDInventoryBackgroundObjects2});gdjs.Puzzle_32Robot_32PictureCode.eventsList9 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDInventorySlotObjects2Objects = Hashtable.newFrom({"InventorySlot": gdjs.Puzzle_32Robot_32PictureCode.GDInventorySlotObjects2});gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDInventoryBackgroundObjects2Objects = Hashtable.newFrom({"InventoryBackground": gdjs.Puzzle_32Robot_32PictureCode.GDInventoryBackgroundObjects2});gdjs.Puzzle_32Robot_32PictureCode.eventsList10 = function(runtimeScene) {
 
 {
 
@@ -378,7 +417,7 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.input.c
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDInventoryKeyObjects3Objects = Hashtable.newFrom({"InventoryKey": gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects3});gdjs.Puzzle_32Robot_32PictureCode.eventsList10 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode_46GDInventoryKeyObjects3Objects = Hashtable.newFrom({"InventoryKey": gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects3});gdjs.Puzzle_32Robot_32PictureCode.eventsList11 = function(runtimeScene) {
 
 {
 
@@ -416,7 +455,7 @@ gdjs.Puzzle_32Robot_32PictureCode.GDInventoryKeyObjects3.length = 0;
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.eventsList11 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.eventsList12 = function(runtimeScene) {
 
 {
 
@@ -441,7 +480,7 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.runtime
 {
 
 
-gdjs.Puzzle_32Robot_32PictureCode.eventsList7(runtimeScene);
+gdjs.Puzzle_32Robot_32PictureCode.eventsList8(runtimeScene);
 }
 
 
@@ -459,7 +498,7 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.input.c
 }
 }{}
 { //Subevents
-gdjs.Puzzle_32Robot_32PictureCode.eventsList8(runtimeScene);} //End of subevents
+gdjs.Puzzle_32Robot_32PictureCode.eventsList9(runtimeScene);} //End of subevents
 }
 
 }
@@ -479,7 +518,7 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.input.c
 }
 }
 { //Subevents
-gdjs.Puzzle_32Robot_32PictureCode.eventsList9(runtimeScene);} //End of subevents
+gdjs.Puzzle_32Robot_32PictureCode.eventsList10(runtimeScene);} //End of subevents
 }
 
 }
@@ -516,14 +555,14 @@ if (gdjs.Puzzle_32Robot_32PictureCode.condition1IsTrue_0.val) {
 }{runtimeScene.getVariables().get("picked_item").setString("");
 }
 { //Subevents: 
-gdjs.Puzzle_32Robot_32PictureCode.eventsList10(runtimeScene);} //Subevents end.
+gdjs.Puzzle_32Robot_32PictureCode.eventsList11(runtimeScene);} //Subevents end.
 }
 }
 
 }
 
 
-};gdjs.Puzzle_32Robot_32PictureCode.eventsList12 = function(runtimeScene) {
+};gdjs.Puzzle_32Robot_32PictureCode.eventsList13 = function(runtimeScene) {
 
 {
 
@@ -556,7 +595,7 @@ gdjs.copyArray(runtimeScene.getObjects("RobotPictureKey"), gdjs.Puzzle_32Robot_3
 {
 
 
-gdjs.Puzzle_32Robot_32PictureCode.eventsList0(runtimeScene);
+
 }
 
 
@@ -570,14 +609,34 @@ gdjs.Puzzle_32Robot_32PictureCode.eventsList1(runtimeScene);
 {
 
 
-gdjs.Puzzle_32Robot_32PictureCode.eventsList5(runtimeScene);
+gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
+{
+gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown")) <= 0;
+}if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
+}}
+
 }
 
 
 {
 
 
-gdjs.Puzzle_32Robot_32PictureCode.eventsList11(runtimeScene);
+gdjs.Puzzle_32Robot_32PictureCode.eventsList2(runtimeScene);
+}
+
+
+{
+
+
+gdjs.Puzzle_32Robot_32PictureCode.eventsList6(runtimeScene);
+}
+
+
+{
+
+
+gdjs.Puzzle_32Robot_32PictureCode.eventsList12(runtimeScene);
 }
 
 
@@ -635,6 +694,10 @@ gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects1.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects2.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects3.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDCorrectObjects4.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDFadeObjects1.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDFadeObjects2.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDFadeObjects3.length = 0;
+gdjs.Puzzle_32Robot_32PictureCode.GDFadeObjects4.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects1.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects2.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureObjects3.length = 0;
@@ -644,7 +707,7 @@ gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects2.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects3.length = 0;
 gdjs.Puzzle_32Robot_32PictureCode.GDRobotPictureKeyObjects4.length = 0;
 
-gdjs.Puzzle_32Robot_32PictureCode.eventsList12(runtimeScene);
+gdjs.Puzzle_32Robot_32PictureCode.eventsList13(runtimeScene);
 return;
 
 }

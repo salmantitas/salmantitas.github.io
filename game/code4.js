@@ -39,6 +39,10 @@ gdjs.CafeteriaCode.GDCorrectObjects1= [];
 gdjs.CafeteriaCode.GDCorrectObjects2= [];
 gdjs.CafeteriaCode.GDCorrectObjects3= [];
 gdjs.CafeteriaCode.GDCorrectObjects4= [];
+gdjs.CafeteriaCode.GDFadeObjects1= [];
+gdjs.CafeteriaCode.GDFadeObjects2= [];
+gdjs.CafeteriaCode.GDFadeObjects3= [];
+gdjs.CafeteriaCode.GDFadeObjects4= [];
 gdjs.CafeteriaCode.GDHintsObjects1= [];
 gdjs.CafeteriaCode.GDHintsObjects2= [];
 gdjs.CafeteriaCode.GDHintsObjects3= [];
@@ -71,6 +75,21 @@ gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDHUD_9595TimerObjects2Objects 
 {
 
 
+gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
+{
+gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("sec")) < 10;
+}if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
+{runtimeScene.getVariables().get("secText").setString("0" + gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().get("sec")));
+}}
+
+}
+
+
+};gdjs.CafeteriaCode.eventsList1 = function(runtimeScene) {
+
+{
+
+
 
 }
 
@@ -85,6 +104,9 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJust
 gdjs.CafeteriaCode.GDHUD_95TimerObjects2.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "UI");
+}{for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
+    gdjs.CafeteriaCode.GDHUD_95TimerObjects2[i].setColor("255,0,0");
+}
 }}
 
 }
@@ -122,16 +144,33 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElap
 
 
 {
-gdjs.copyArray(runtimeScene.getObjects("HUD_Timer"), gdjs.CafeteriaCode.GDHUD_95TimerObjects1);
-{for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95TimerObjects1.length ;i < len;++i) {
-    gdjs.CafeteriaCode.GDHUD_95TimerObjects1[i].setString(gdjs.evtTools.common.toString(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown"))));
+gdjs.copyArray(runtimeScene.getObjects("HUD_Timer"), gdjs.CafeteriaCode.GDHUD_95TimerObjects2);
+{for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
+    gdjs.CafeteriaCode.GDHUD_95TimerObjects2[i].setString("00" + ":" + gdjs.evtTools.common.toString(Math.floor((gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown")) / 60))) + ":" + gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().get("secText")));
+}
+}{for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
+    gdjs.CafeteriaCode.GDHUD_95TimerObjects2[i].setColor("255,0,0");
 }
 }}
 
 }
 
 
-};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMapObjects2Objects = Hashtable.newFrom({"Map": gdjs.CafeteriaCode.GDMapObjects2});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMapObjects1Objects = Hashtable.newFrom({"Map": gdjs.CafeteriaCode.GDMapObjects1});gdjs.CafeteriaCode.eventsList1 = function(runtimeScene) {
+{
+
+
+{
+{runtimeScene.getVariables().get("sec").setNumber(gdjs.evtTools.common.mod(gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown")), 60));
+}{runtimeScene.getVariables().get("secText").setString(gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().get("sec")));
+}
+{ //Subevents
+gdjs.CafeteriaCode.eventsList0(runtimeScene);} //End of subevents
+}
+
+}
+
+
+};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMapObjects2Objects = Hashtable.newFrom({"Map": gdjs.CafeteriaCode.GDMapObjects2});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMapObjects1Objects = Hashtable.newFrom({"Map": gdjs.CafeteriaCode.GDMapObjects1});gdjs.CafeteriaCode.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -176,7 +215,7 @@ gdjs.copyArray(runtimeScene.getObjects("HUD_ObjectName"), gdjs.CafeteriaCode.GDH
 }
 
 
-};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects2ObjectsGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects2Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects2, "MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects2});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects1ObjectsGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects1Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects1, "MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects1});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects2Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects2});gdjs.CafeteriaCode.eventsList2 = function(runtimeScene) {
+};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects2ObjectsGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects2Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects2, "MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects2});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects1ObjectsGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects1Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects1, "MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects1});gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMemoryMatchObjects2Objects = Hashtable.newFrom({"MemoryMatch": gdjs.CafeteriaCode.GDMemoryMatchObjects2});gdjs.CafeteriaCode.eventsList3 = function(runtimeScene) {
 
 {
 
@@ -230,7 +269,7 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumb
 }
 
 
-};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects1Objects = Hashtable.newFrom({"MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects1});gdjs.CafeteriaCode.eventsList3 = function(runtimeScene) {
+};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDMonsterPuzzleObjects1Objects = Hashtable.newFrom({"MonsterPuzzle": gdjs.CafeteriaCode.GDMonsterPuzzleObjects1});gdjs.CafeteriaCode.eventsList4 = function(runtimeScene) {
 
 {
 
@@ -250,7 +289,7 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(g
 }if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
 
 { //Subevents
-gdjs.CafeteriaCode.eventsList2(runtimeScene);} //End of subevents
+gdjs.CafeteriaCode.eventsList3(runtimeScene);} //End of subevents
 }
 
 }
@@ -282,16 +321,16 @@ if (gdjs.CafeteriaCode.condition1IsTrue_0.val) {
 }
 
 
-};gdjs.CafeteriaCode.eventsList4 = function(runtimeScene) {
+};gdjs.CafeteriaCode.eventsList5 = function(runtimeScene) {
 
 {
 
 
-gdjs.CafeteriaCode.eventsList3(runtimeScene);
+gdjs.CafeteriaCode.eventsList4(runtimeScene);
 }
 
 
-};gdjs.CafeteriaCode.eventsList5 = function(runtimeScene) {
+};gdjs.CafeteriaCode.eventsList6 = function(runtimeScene) {
 
 {
 
@@ -328,13 +367,13 @@ gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.CafeteriaCode.GD
 }
 }
 { //Subevents
-gdjs.CafeteriaCode.eventsList4(runtimeScene);} //End of subevents
+gdjs.CafeteriaCode.eventsList5(runtimeScene);} //End of subevents
 }
 
 }
 
 
-};gdjs.CafeteriaCode.eventsList6 = function(runtimeScene) {
+};gdjs.CafeteriaCode.eventsList7 = function(runtimeScene) {
 
 {
 
@@ -391,13 +430,13 @@ for(var i = 0, len = gdjs.CafeteriaCode.GDMonsterPuzzleObjects1.length ;i < len;
 }
 }
 { //Subevents
-gdjs.CafeteriaCode.eventsList5(runtimeScene);} //End of subevents
+gdjs.CafeteriaCode.eventsList6(runtimeScene);} //End of subevents
 }
 
 }
 
 
-};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDBackToReceptionObjects1Objects = Hashtable.newFrom({"BackToReception": gdjs.CafeteriaCode.GDBackToReceptionObjects1});gdjs.CafeteriaCode.eventsList7 = function(runtimeScene) {
+};gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDBackToReceptionObjects1Objects = Hashtable.newFrom({"BackToReception": gdjs.CafeteriaCode.GDBackToReceptionObjects1});gdjs.CafeteriaCode.eventsList8 = function(runtimeScene) {
 
 {
 
@@ -418,7 +457,7 @@ if (gdjs.CafeteriaCode.condition1IsTrue_0.val) {
 }
 
 
-};gdjs.CafeteriaCode.eventsList8 = function(runtimeScene) {
+};gdjs.CafeteriaCode.eventsList9 = function(runtimeScene) {
 
 {
 
@@ -500,7 +539,7 @@ gdjs.copyArray(runtimeScene.getObjects("Hints"), gdjs.CafeteriaCode.GDHintsObjec
 }
 
 
-};gdjs.CafeteriaCode.eventsList9 = function(runtimeScene) {
+};gdjs.CafeteriaCode.eventsList10 = function(runtimeScene) {
 
 {
 
@@ -529,7 +568,7 @@ gdjs.copyArray(runtimeScene.getObjects("HUD_ObjectName"), gdjs.CafeteriaCode.GDH
 {
 
 
-gdjs.CafeteriaCode.eventsList0(runtimeScene);
+
 }
 
 
@@ -543,7 +582,20 @@ gdjs.CafeteriaCode.eventsList1(runtimeScene);
 {
 
 
-gdjs.CafeteriaCode.eventsList6(runtimeScene);
+gdjs.CafeteriaCode.condition0IsTrue_0.val = false;
+{
+gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown")) <= 0;
+}if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
+}}
+
+}
+
+
+{
+
+
+gdjs.CafeteriaCode.eventsList2(runtimeScene);
 }
 
 
@@ -551,6 +603,13 @@ gdjs.CafeteriaCode.eventsList6(runtimeScene);
 
 
 gdjs.CafeteriaCode.eventsList7(runtimeScene);
+}
+
+
+{
+
+
+gdjs.CafeteriaCode.eventsList8(runtimeScene);
 }
 
 
@@ -596,7 +655,7 @@ gdjs.copyArray(runtimeScene.getObjects("MonsterPuzzle"), gdjs.CafeteriaCode.GDMo
 {
 
 { //Subevents
-gdjs.CafeteriaCode.eventsList8(runtimeScene);} //End of subevents
+gdjs.CafeteriaCode.eventsList9(runtimeScene);} //End of subevents
 }
 
 }
@@ -647,6 +706,10 @@ gdjs.CafeteriaCode.GDCorrectObjects1.length = 0;
 gdjs.CafeteriaCode.GDCorrectObjects2.length = 0;
 gdjs.CafeteriaCode.GDCorrectObjects3.length = 0;
 gdjs.CafeteriaCode.GDCorrectObjects4.length = 0;
+gdjs.CafeteriaCode.GDFadeObjects1.length = 0;
+gdjs.CafeteriaCode.GDFadeObjects2.length = 0;
+gdjs.CafeteriaCode.GDFadeObjects3.length = 0;
+gdjs.CafeteriaCode.GDFadeObjects4.length = 0;
 gdjs.CafeteriaCode.GDHintsObjects1.length = 0;
 gdjs.CafeteriaCode.GDHintsObjects2.length = 0;
 gdjs.CafeteriaCode.GDHintsObjects3.length = 0;
@@ -668,7 +731,7 @@ gdjs.CafeteriaCode.GDMapObjects2.length = 0;
 gdjs.CafeteriaCode.GDMapObjects3.length = 0;
 gdjs.CafeteriaCode.GDMapObjects4.length = 0;
 
-gdjs.CafeteriaCode.eventsList9(runtimeScene);
+gdjs.CafeteriaCode.eventsList10(runtimeScene);
 return;
 
 }
