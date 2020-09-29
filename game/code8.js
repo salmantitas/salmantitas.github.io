@@ -373,7 +373,7 @@ gdjs.Memory_32Match_324Code.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.
 }if (gdjs.Memory_32Match_324Code.condition0IsTrue_0.val) {
 gdjs.Memory_32Match_324Code.GDBackToCafeteriaObjects2.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Memory_32Match_324Code.mapOfGDgdjs_46Memory_9532Match_95324Code_46GDBackToCafeteriaObjects2Objects, 375, 570, "");
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Memory_32Match_324Code.mapOfGDgdjs_46Memory_9532Match_95324Code_46GDBackToCafeteriaObjects2Objects, 375, 440, "HUD");
 }{for(var i = 0, len = gdjs.Memory_32Match_324Code.GDBackToCafeteriaObjects2.length ;i < len;++i) {
     gdjs.Memory_32Match_324Code.GDBackToCafeteriaObjects2[i].setZOrder(30);
 }
@@ -2315,6 +2315,13 @@ gdjs.Memory_32Match_324Code.condition0IsTrue_0.val = gdjs.evtTools.common.getVar
 }if (gdjs.Memory_32Match_324Code.condition0IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
 }}
+
+}
+
+
+{
+
+
 
 }
 

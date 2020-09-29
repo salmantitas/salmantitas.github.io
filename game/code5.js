@@ -213,7 +213,7 @@ gdjs.Memory_32Match_321Code.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.
 }if (gdjs.Memory_32Match_321Code.condition0IsTrue_0.val) {
 gdjs.Memory_32Match_321Code.GDBackToCafeteriaObjects2.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Memory_32Match_321Code.mapOfGDgdjs_46Memory_9532Match_95321Code_46GDBackToCafeteriaObjects2Objects, 375, 570, "");
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Memory_32Match_321Code.mapOfGDgdjs_46Memory_9532Match_95321Code_46GDBackToCafeteriaObjects2Objects, 375, 440, "HUD");
 }{for(var i = 0, len = gdjs.Memory_32Match_321Code.GDBackToCafeteriaObjects2.length ;i < len;++i) {
     gdjs.Memory_32Match_321Code.GDBackToCafeteriaObjects2[i].setZOrder(30);
 }
@@ -1553,6 +1553,13 @@ gdjs.Memory_32Match_321Code.eventsList24(runtimeScene);
 
 
 };gdjs.Memory_32Match_321Code.eventsList26 = function(runtimeScene) {
+
+{
+
+
+
+}
+
 
 {
 

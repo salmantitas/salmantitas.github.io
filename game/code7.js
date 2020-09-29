@@ -242,7 +242,46 @@ gdjs.Memory_32Match_323Code.condition2IsTrue_1 = {val:false};
 gdjs.Memory_32Match_323Code.condition3IsTrue_1 = {val:false};
 
 
-gdjs.Memory_32Match_323Code.mapOfGDgdjs_46Memory_9532Match_95323Code_46GDHUD_9595TimerObjects2Objects = Hashtable.newFrom({"HUD_Timer": gdjs.Memory_32Match_323Code.GDHUD_95TimerObjects2});gdjs.Memory_32Match_323Code.eventsList0 = function(runtimeScene) {
+gdjs.Memory_32Match_323Code.mapOfGDgdjs_46Memory_9532Match_95323Code_46GDBackToCafeteriaObjects2Objects = Hashtable.newFrom({"BackToCafeteria": gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects2});gdjs.Memory_32Match_323Code.mapOfGDgdjs_46Memory_9532Match_95323Code_46GDBackToCafeteriaObjects1Objects = Hashtable.newFrom({"BackToCafeteria": gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects1});gdjs.Memory_32Match_323Code.eventsList0 = function(runtimeScene) {
+
+{
+
+
+gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = false;
+{
+gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+}if (gdjs.Memory_32Match_323Code.condition0IsTrue_0.val) {
+gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects2.length = 0;
+
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Memory_32Match_323Code.mapOfGDgdjs_46Memory_9532Match_95323Code_46GDBackToCafeteriaObjects2Objects, 375, 440, "HUD");
+}{for(var i = 0, len = gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects2.length ;i < len;++i) {
+    gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects2[i].setZOrder(30);
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("BackToCafeteria"), gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects1);
+
+gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = false;
+gdjs.Memory_32Match_323Code.condition1IsTrue_0.val = false;
+{
+gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.Memory_32Match_323Code.mapOfGDgdjs_46Memory_9532Match_95323Code_46GDBackToCafeteriaObjects1Objects, runtimeScene, true, false);
+}if ( gdjs.Memory_32Match_323Code.condition0IsTrue_0.val ) {
+{
+gdjs.Memory_32Match_323Code.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+}}
+if (gdjs.Memory_32Match_323Code.condition1IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Cafeteria", false);
+}}
+
+}
+
+
+};gdjs.Memory_32Match_323Code.mapOfGDgdjs_46Memory_9532Match_95323Code_46GDHUD_9595TimerObjects2Objects = Hashtable.newFrom({"HUD_Timer": gdjs.Memory_32Match_323Code.GDHUD_95TimerObjects2});gdjs.Memory_32Match_323Code.eventsList1 = function(runtimeScene) {
 
 {
 
@@ -257,7 +296,7 @@ gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = gdjs.evtTools.common.getVar
 }
 
 
-};gdjs.Memory_32Match_323Code.eventsList1 = function(runtimeScene) {
+};gdjs.Memory_32Match_323Code.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -336,47 +375,8 @@ gdjs.copyArray(runtimeScene.getObjects("HUD_Timer"), gdjs.Memory_32Match_323Code
 }{runtimeScene.getVariables().get("secText").setString(gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().get("sec")));
 }
 { //Subevents
-gdjs.Memory_32Match_323Code.eventsList0(runtimeScene);} //End of subevents
+gdjs.Memory_32Match_323Code.eventsList1(runtimeScene);} //End of subevents
 }
-
-}
-
-
-};gdjs.Memory_32Match_323Code.mapOfGDgdjs_46Memory_9532Match_95323Code_46GDBackToCafeteriaObjects2Objects = Hashtable.newFrom({"BackToCafeteria": gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects2});gdjs.Memory_32Match_323Code.mapOfGDgdjs_46Memory_9532Match_95323Code_46GDBackToCafeteriaObjects1Objects = Hashtable.newFrom({"BackToCafeteria": gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects1});gdjs.Memory_32Match_323Code.eventsList2 = function(runtimeScene) {
-
-{
-
-
-gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = false;
-{
-gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-}if (gdjs.Memory_32Match_323Code.condition0IsTrue_0.val) {
-gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects2.length = 0;
-
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Memory_32Match_323Code.mapOfGDgdjs_46Memory_9532Match_95323Code_46GDBackToCafeteriaObjects2Objects, 375, 570, "");
-}{for(var i = 0, len = gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects2.length ;i < len;++i) {
-    gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects2[i].setZOrder(30);
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("BackToCafeteria"), gdjs.Memory_32Match_323Code.GDBackToCafeteriaObjects1);
-
-gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = false;
-gdjs.Memory_32Match_323Code.condition1IsTrue_0.val = false;
-{
-gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.Memory_32Match_323Code.mapOfGDgdjs_46Memory_9532Match_95323Code_46GDBackToCafeteriaObjects1Objects, runtimeScene, true, false);
-}if ( gdjs.Memory_32Match_323Code.condition0IsTrue_0.val ) {
-{
-gdjs.Memory_32Match_323Code.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
-}}
-if (gdjs.Memory_32Match_323Code.condition1IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Cafeteria", false);
-}}
 
 }
 
@@ -2056,7 +2056,21 @@ gdjs.Memory_32Match_323Code.eventsList24(runtimeScene);
 {
 
 
-gdjs.Memory_32Match_323Code.eventsList1(runtimeScene);
+gdjs.Memory_32Match_323Code.eventsList0(runtimeScene);
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+gdjs.Memory_32Match_323Code.eventsList2(runtimeScene);
 }
 
 
@@ -2070,13 +2084,6 @@ gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = gdjs.evtTools.common.getVar
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
 }}
 
-}
-
-
-{
-
-
-gdjs.Memory_32Match_323Code.eventsList2(runtimeScene);
 }
 
 

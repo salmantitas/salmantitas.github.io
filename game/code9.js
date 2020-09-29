@@ -170,7 +170,7 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sc
 }if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
 gdjs.Monster_32PuzzleCode.GDBackToCafeteriaObjects2.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Monster_32PuzzleCode.mapOfGDgdjs_46Monster_9532PuzzleCode_46GDBackToCafeteriaObjects2Objects, 375, 570, "");
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Monster_32PuzzleCode.mapOfGDgdjs_46Monster_9532PuzzleCode_46GDBackToCafeteriaObjects2Objects, 375, 440, "HUD");
 }{for(var i = 0, len = gdjs.Monster_32PuzzleCode.GDBackToCafeteriaObjects2.length ;i < len;++i) {
     gdjs.Monster_32PuzzleCode.GDBackToCafeteriaObjects2[i].setZOrder(30);
 }
@@ -383,6 +383,13 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVaria
 }if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
 }}
+
+}
+
+
+{
+
+
 
 }
 
