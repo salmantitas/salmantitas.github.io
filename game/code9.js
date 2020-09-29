@@ -92,7 +92,7 @@ gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sc
 }if (gdjs.Monster_32PuzzleCode.condition0IsTrue_0.val) {
 gdjs.Monster_32PuzzleCode.GDHUD_95TimerObjects2.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Monster_32PuzzleCode.mapOfGDgdjs_46Monster_9532PuzzleCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "UI");
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Monster_32PuzzleCode.mapOfGDgdjs_46Monster_9532PuzzleCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "HUD");
 }{for(var i = 0, len = gdjs.Monster_32PuzzleCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
     gdjs.Monster_32PuzzleCode.GDHUD_95TimerObjects2[i].setColor("255,0,0");
 }

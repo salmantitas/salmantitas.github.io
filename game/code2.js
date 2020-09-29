@@ -196,7 +196,7 @@ gdjs.ReceptionCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJust
 }if (gdjs.ReceptionCode.condition0IsTrue_0.val) {
 gdjs.ReceptionCode.GDHUD_95TimerObjects2.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.ReceptionCode.mapOfGDgdjs_46ReceptionCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "UI");
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.ReceptionCode.mapOfGDgdjs_46ReceptionCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "HUD");
 }{for(var i = 0, len = gdjs.ReceptionCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
     gdjs.ReceptionCode.GDHUD_95TimerObjects2[i].setColor("255,0,0");
 }
@@ -353,7 +353,7 @@ gdjs.ReceptionCode.condition0IsTrue_0.val = false;
 gdjs.ReceptionCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("sparePartsDoorLocked")) == 0;
 }if (gdjs.ReceptionCode.condition0IsTrue_0.val) {
 /* Reuse gdjs.ReceptionCode.GDSparePartsObjects3 */
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Spare Parts Room", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Drag & Drop", false);
 }{for(var i = 0, len = gdjs.ReceptionCode.GDSparePartsObjects3.length ;i < len;++i) {
     gdjs.ReceptionCode.GDSparePartsObjects3[i].returnVariable(gdjs.ReceptionCode.GDSparePartsObjects3[i].getVariables().getFromIndex(2)).setString("");
 }

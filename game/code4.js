@@ -103,7 +103,7 @@ gdjs.CafeteriaCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJust
 }if (gdjs.CafeteriaCode.condition0IsTrue_0.val) {
 gdjs.CafeteriaCode.GDHUD_95TimerObjects2.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "UI");
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.CafeteriaCode.mapOfGDgdjs_46CafeteriaCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "HUD");
 }{for(var i = 0, len = gdjs.CafeteriaCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
     gdjs.CafeteriaCode.GDHUD_95TimerObjects2[i].setColor("255,0,0");
 }

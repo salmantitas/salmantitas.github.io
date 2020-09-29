@@ -85,7 +85,7 @@ gdjs.Accounting_32OfficeCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene
 }if (gdjs.Accounting_32OfficeCode.condition0IsTrue_0.val) {
 gdjs.Accounting_32OfficeCode.GDHUD_95TimerObjects2.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Accounting_32OfficeCode.mapOfGDgdjs_46Accounting_9532OfficeCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "UI");
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Accounting_32OfficeCode.mapOfGDgdjs_46Accounting_9532OfficeCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "HUD");
 }{for(var i = 0, len = gdjs.Accounting_32OfficeCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
     gdjs.Accounting_32OfficeCode.GDHUD_95TimerObjects2[i].setColor("255,0,0");
 }

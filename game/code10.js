@@ -106,7 +106,7 @@ gdjs.Robot_32CubiclesCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sc
 }if (gdjs.Robot_32CubiclesCode.condition0IsTrue_0.val) {
 gdjs.Robot_32CubiclesCode.GDHUD_95TimerObjects2.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Robot_32CubiclesCode.mapOfGDgdjs_46Robot_9532CubiclesCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "UI");
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Robot_32CubiclesCode.mapOfGDgdjs_46Robot_9532CubiclesCode_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "HUD");
 }{for(var i = 0, len = gdjs.Robot_32CubiclesCode.GDHUD_95TimerObjects2.length ;i < len;++i) {
     gdjs.Robot_32CubiclesCode.GDHUD_95TimerObjects2[i].setColor("255,0,0");
 }

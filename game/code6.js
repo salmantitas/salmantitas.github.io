@@ -294,7 +294,7 @@ gdjs.Memory_32Match_322Code.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.
 }if (gdjs.Memory_32Match_322Code.condition0IsTrue_0.val) {
 gdjs.Memory_32Match_322Code.GDHUD_95TimerObjects2.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Memory_32Match_322Code.mapOfGDgdjs_46Memory_9532Match_95322Code_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "UI");
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Memory_32Match_322Code.mapOfGDgdjs_46Memory_9532Match_95322Code_46GDHUD_9595TimerObjects2Objects, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerX")), gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("timerY")), "HUD");
 }{for(var i = 0, len = gdjs.Memory_32Match_322Code.GDHUD_95TimerObjects2.length ;i < len;++i) {
     gdjs.Memory_32Match_322Code.GDHUD_95TimerObjects2[i].setColor("255,0,0");
 }
