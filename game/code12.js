@@ -498,7 +498,7 @@ for(var i = 0, len = gdjs.Drag_32_38_32DropCode.GDRH4Objects2.length ;i < len;++
 gdjs.Drag_32_38_32DropCode.condition0IsTrue_0.val = false;
 {
 {gdjs.Drag_32_38_32DropCode.conditionTrue_1 = gdjs.Drag_32_38_32DropCode.condition0IsTrue_0;
-gdjs.Drag_32_38_32DropCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12077196);
+gdjs.Drag_32_38_32DropCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12216652);
 }
 }if (gdjs.Drag_32_38_32DropCode.condition0IsTrue_0.val) {
 gdjs.Drag_32_38_32DropCode.GDCorrectObjects2.length = 0;
@@ -520,7 +520,7 @@ gdjs.Drag_32_38_32DropCode.condition0IsTrue_0.val = false;
 {
 gdjs.Drag_32_38_32DropCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 2, "winTimer");
 }if (gdjs.Drag_32_38_32DropCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Spare Parts Room", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Reception", false);
 }}
 
 }

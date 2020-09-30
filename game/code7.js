@@ -1045,7 +1045,7 @@ gdjs.Memory_32Match_323Code.GDstar_95particleObjects7.length = 0;
 gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = false;
 {
 {gdjs.Memory_32Match_323Code.conditionTrue_1 = gdjs.Memory_32Match_323Code.condition0IsTrue_0;
-gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11924892);
+gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12066180);
 }
 }if (gdjs.Memory_32Match_323Code.condition0IsTrue_0.val) {
 gdjs.copyArray(gdjs.Memory_32Match_323Code.GDcard1Objects6, gdjs.Memory_32Match_323Code.GDcard1Objects7);
@@ -1406,7 +1406,7 @@ gdjs.Memory_32Match_323Code.GDcard7Objects5.length = k;for(var i = 0, k = 0, l =
 gdjs.Memory_32Match_323Code.GDcard8Objects5.length = k;}if ( gdjs.Memory_32Match_323Code.condition0IsTrue_0.val ) {
 {
 {gdjs.Memory_32Match_323Code.conditionTrue_1 = gdjs.Memory_32Match_323Code.condition1IsTrue_0;
-gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11926092);
+gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12067380);
 }
 }}
 if (gdjs.Memory_32Match_323Code.condition1IsTrue_0.val) {
@@ -1711,7 +1711,7 @@ gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.
 }if ( gdjs.Memory_32Match_323Code.condition0IsTrue_0.val ) {
 {
 {gdjs.Memory_32Match_323Code.conditionTrue_1 = gdjs.Memory_32Match_323Code.condition1IsTrue_0;
-gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11919436);
+gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12060724);
 }
 }}
 if (gdjs.Memory_32Match_323Code.condition1IsTrue_0.val) {
@@ -1796,7 +1796,7 @@ gdjs.Memory_32Match_323Code.GDcard7Objects2.length = k;for(var i = 0, k = 0, l =
 gdjs.Memory_32Match_323Code.GDcard8Objects2.length = k;}if ( gdjs.Memory_32Match_323Code.condition0IsTrue_0.val ) {
 {
 {gdjs.Memory_32Match_323Code.conditionTrue_1 = gdjs.Memory_32Match_323Code.condition1IsTrue_0;
-gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11929020);
+gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12070308);
 }
 }}
 if (gdjs.Memory_32Match_323Code.condition1IsTrue_0.val) {
@@ -1823,7 +1823,7 @@ gdjs.Memory_32Match_323Code.eventsList17(runtimeScene);} //End of subevents
 gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = false;
 {
 {gdjs.Memory_32Match_323Code.conditionTrue_1 = gdjs.Memory_32Match_323Code.condition0IsTrue_0;
-gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11933492);
+gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12074780);
 }
 }if (gdjs.Memory_32Match_323Code.condition0IsTrue_0.val) {
 }
@@ -1860,7 +1860,7 @@ gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = gdjs.evtTools.input.isMouse
 gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = false;
 {
 {gdjs.Memory_32Match_323Code.conditionTrue_1 = gdjs.Memory_32Match_323Code.condition0IsTrue_0;
-gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11935428);
+gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12076716);
 }
 }if (gdjs.Memory_32Match_323Code.condition0IsTrue_0.val) {
 }
@@ -1876,7 +1876,7 @@ gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers()
 gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = false;
 {
 {gdjs.Memory_32Match_323Code.conditionTrue_1 = gdjs.Memory_32Match_323Code.condition0IsTrue_0;
-gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11932212);
+gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12073500);
 }
 }if (gdjs.Memory_32Match_323Code.condition0IsTrue_0.val) {
 }
@@ -1995,7 +1995,7 @@ gdjs.Memory_32Match_323Code.condition0IsTrue_0.val = gdjs.evtTools.object.picked
 }if ( gdjs.Memory_32Match_323Code.condition0IsTrue_0.val ) {
 {
 {gdjs.Memory_32Match_323Code.conditionTrue_1 = gdjs.Memory_32Match_323Code.condition1IsTrue_0;
-gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11936292);
+gdjs.Memory_32Match_323Code.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12077580);
 }
 }}
 if (gdjs.Memory_32Match_323Code.condition1IsTrue_0.val) {
