@@ -1,24 +1,36 @@
 gdjs.IntroCode = {};
-gdjs.IntroCode.GDHUD_95LocationNameObjects1= [];
-gdjs.IntroCode.GDHUD_95LocationNameObjects2= [];
-gdjs.IntroCode.GDHUD_95LocationNameObjects3= [];
-gdjs.IntroCode.GDHUD_95LocationNameObjects4= [];
-gdjs.IntroCode.GDHUD_95DescriptionObjects1= [];
-gdjs.IntroCode.GDHUD_95DescriptionObjects2= [];
-gdjs.IntroCode.GDHUD_95DescriptionObjects3= [];
-gdjs.IntroCode.GDHUD_95DescriptionObjects4= [];
+gdjs.IntroCode.GDDrawerObjects1= [];
+gdjs.IntroCode.GDDrawerObjects2= [];
+gdjs.IntroCode.GDDrawerObjects3= [];
+gdjs.IntroCode.GDDrawerObjects4= [];
 gdjs.IntroCode.GDHUD_95ObjectNameObjects1= [];
 gdjs.IntroCode.GDHUD_95ObjectNameObjects2= [];
 gdjs.IntroCode.GDHUD_95ObjectNameObjects3= [];
 gdjs.IntroCode.GDHUD_95ObjectNameObjects4= [];
-gdjs.IntroCode.GDBackToReceptionObjects1= [];
-gdjs.IntroCode.GDBackToReceptionObjects2= [];
-gdjs.IntroCode.GDBackToReceptionObjects3= [];
-gdjs.IntroCode.GDBackToReceptionObjects4= [];
+gdjs.IntroCode.GDHUD_95DescriptionObjects1= [];
+gdjs.IntroCode.GDHUD_95DescriptionObjects2= [];
+gdjs.IntroCode.GDHUD_95DescriptionObjects3= [];
+gdjs.IntroCode.GDHUD_95DescriptionObjects4= [];
+gdjs.IntroCode.GDHUD_95HintsObjects1= [];
+gdjs.IntroCode.GDHUD_95HintsObjects2= [];
+gdjs.IntroCode.GDHUD_95HintsObjects3= [];
+gdjs.IntroCode.GDHUD_95HintsObjects4= [];
 gdjs.IntroCode.GDHUD_95TimerObjects1= [];
 gdjs.IntroCode.GDHUD_95TimerObjects2= [];
 gdjs.IntroCode.GDHUD_95TimerObjects3= [];
 gdjs.IntroCode.GDHUD_95TimerObjects4= [];
+gdjs.IntroCode.GDHUD_95LocationNameObjects1= [];
+gdjs.IntroCode.GDHUD_95LocationNameObjects2= [];
+gdjs.IntroCode.GDHUD_95LocationNameObjects3= [];
+gdjs.IntroCode.GDHUD_95LocationNameObjects4= [];
+gdjs.IntroCode.GDHUD_95HintTextObjects1= [];
+gdjs.IntroCode.GDHUD_95HintTextObjects2= [];
+gdjs.IntroCode.GDHUD_95HintTextObjects3= [];
+gdjs.IntroCode.GDHUD_95HintTextObjects4= [];
+gdjs.IntroCode.GDBackToReceptionObjects1= [];
+gdjs.IntroCode.GDBackToReceptionObjects2= [];
+gdjs.IntroCode.GDBackToReceptionObjects3= [];
+gdjs.IntroCode.GDBackToReceptionObjects4= [];
 gdjs.IntroCode.GDBackToCafeteriaObjects1= [];
 gdjs.IntroCode.GDBackToCafeteriaObjects2= [];
 gdjs.IntroCode.GDBackToCafeteriaObjects3= [];
@@ -128,7 +140,7 @@ gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTex
 
 gdjs.IntroCode.condition0IsTrue_0.val = false;
 {
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 1 * 1 / 20 * 1 / 2, "textTimer");
+gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 1 / gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("typeRate")), "textTimer");
 }if (gdjs.IntroCode.condition0IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "textTimer");
 }
@@ -282,7 +294,8 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegi
 }if (gdjs.IntroCode.condition0IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTextObjects1);
 gdjs.copyArray(runtimeScene.getObjects("play"), gdjs.IntroCode.GDplayObjects1);
-{runtimeScene.getGame().getVariables().get("chippyOfficeDoorLocked").setNumber(1);
+{runtimeScene.getVariables().get("typeRate").setNumber(30.075);
+}{runtimeScene.getGame().getVariables().get("chippyOfficeDoorLocked").setNumber(1);
 }{runtimeScene.getGame().getVariables().get("sparePartsDoorLocked").setNumber(1);
 }{runtimeScene.getGame().getVariables().get("chippyOfficeKeyFound").setNumber(0);
 }{runtimeScene.getGame().getVariables().get("motherboardDoorLocked").setNumber(1);
@@ -293,11 +306,18 @@ gdjs.copyArray(runtimeScene.getObjects("play"), gdjs.IntroCode.GDplayObjects1);
 }{runtimeScene.getGame().getVariables().get("sparePartsSolved").setNumber(0);
 }{runtimeScene.getGame().getVariables().get("motherboardSolved").setNumber(0);
 }{runtimeScene.getGame().getVariables().get("memMatchState").setNumber(0);
-}{runtimeScene.getGame().getVariables().get("timerX").setNumber(355);
+}{runtimeScene.getGame().getVariables().get("hintReception").setNumber(1);
+}{runtimeScene.getGame().getVariables().get("hintChippy").setNumber(2);
+}{runtimeScene.getGame().getVariables().get("hintPicture").setNumber(1);
+}{runtimeScene.getGame().getVariables().get("hints").setNumber(3);
+}{runtimeScene.getGame().getVariables().get("timerX").setNumber(gdjs.evtTools.window.getGameResolutionWidth(runtimeScene) / 2 - 115);
 }{runtimeScene.getGame().getVariables().get("timerY").setNumber(10);
 }{gdjs.evtTools.sound.playSound(runtimeScene, "screenla.wav", false, 100, 1);
 }{for(var i = 0, len = gdjs.IntroCode.GDplayObjects1.length ;i < len;++i) {
     gdjs.IntroCode.GDplayObjects1[i].hide();
+}
+}{for(var i = 0, len = gdjs.IntroCode.GDTypingTextObjects1.length ;i < len;++i) {
+    gdjs.IntroCode.GDTypingTextObjects1[i].returnVariable(gdjs.IntroCode.GDTypingTextObjects1[i].getVariables().getFromIndex(0)).setString((gdjs.IntroCode.GDTypingTextObjects1[i].getString()));
 }
 }{for(var i = 0, len = gdjs.IntroCode.GDTypingTextObjects1.length ;i < len;++i) {
     gdjs.IntroCode.GDTypingTextObjects1[i].setString("");
@@ -356,26 +376,38 @@ gdjs.IntroCode.eventsList4(runtimeScene);
 gdjs.IntroCode.func = function(runtimeScene) {
 runtimeScene.getOnceTriggers().startNewFrame();
 
-gdjs.IntroCode.GDHUD_95LocationNameObjects1.length = 0;
-gdjs.IntroCode.GDHUD_95LocationNameObjects2.length = 0;
-gdjs.IntroCode.GDHUD_95LocationNameObjects3.length = 0;
-gdjs.IntroCode.GDHUD_95LocationNameObjects4.length = 0;
-gdjs.IntroCode.GDHUD_95DescriptionObjects1.length = 0;
-gdjs.IntroCode.GDHUD_95DescriptionObjects2.length = 0;
-gdjs.IntroCode.GDHUD_95DescriptionObjects3.length = 0;
-gdjs.IntroCode.GDHUD_95DescriptionObjects4.length = 0;
+gdjs.IntroCode.GDDrawerObjects1.length = 0;
+gdjs.IntroCode.GDDrawerObjects2.length = 0;
+gdjs.IntroCode.GDDrawerObjects3.length = 0;
+gdjs.IntroCode.GDDrawerObjects4.length = 0;
 gdjs.IntroCode.GDHUD_95ObjectNameObjects1.length = 0;
 gdjs.IntroCode.GDHUD_95ObjectNameObjects2.length = 0;
 gdjs.IntroCode.GDHUD_95ObjectNameObjects3.length = 0;
 gdjs.IntroCode.GDHUD_95ObjectNameObjects4.length = 0;
-gdjs.IntroCode.GDBackToReceptionObjects1.length = 0;
-gdjs.IntroCode.GDBackToReceptionObjects2.length = 0;
-gdjs.IntroCode.GDBackToReceptionObjects3.length = 0;
-gdjs.IntroCode.GDBackToReceptionObjects4.length = 0;
+gdjs.IntroCode.GDHUD_95DescriptionObjects1.length = 0;
+gdjs.IntroCode.GDHUD_95DescriptionObjects2.length = 0;
+gdjs.IntroCode.GDHUD_95DescriptionObjects3.length = 0;
+gdjs.IntroCode.GDHUD_95DescriptionObjects4.length = 0;
+gdjs.IntroCode.GDHUD_95HintsObjects1.length = 0;
+gdjs.IntroCode.GDHUD_95HintsObjects2.length = 0;
+gdjs.IntroCode.GDHUD_95HintsObjects3.length = 0;
+gdjs.IntroCode.GDHUD_95HintsObjects4.length = 0;
 gdjs.IntroCode.GDHUD_95TimerObjects1.length = 0;
 gdjs.IntroCode.GDHUD_95TimerObjects2.length = 0;
 gdjs.IntroCode.GDHUD_95TimerObjects3.length = 0;
 gdjs.IntroCode.GDHUD_95TimerObjects4.length = 0;
+gdjs.IntroCode.GDHUD_95LocationNameObjects1.length = 0;
+gdjs.IntroCode.GDHUD_95LocationNameObjects2.length = 0;
+gdjs.IntroCode.GDHUD_95LocationNameObjects3.length = 0;
+gdjs.IntroCode.GDHUD_95LocationNameObjects4.length = 0;
+gdjs.IntroCode.GDHUD_95HintTextObjects1.length = 0;
+gdjs.IntroCode.GDHUD_95HintTextObjects2.length = 0;
+gdjs.IntroCode.GDHUD_95HintTextObjects3.length = 0;
+gdjs.IntroCode.GDHUD_95HintTextObjects4.length = 0;
+gdjs.IntroCode.GDBackToReceptionObjects1.length = 0;
+gdjs.IntroCode.GDBackToReceptionObjects2.length = 0;
+gdjs.IntroCode.GDBackToReceptionObjects3.length = 0;
+gdjs.IntroCode.GDBackToReceptionObjects4.length = 0;
 gdjs.IntroCode.GDBackToCafeteriaObjects1.length = 0;
 gdjs.IntroCode.GDBackToCafeteriaObjects2.length = 0;
 gdjs.IntroCode.GDBackToCafeteriaObjects3.length = 0;
