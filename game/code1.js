@@ -1,151 +1,252 @@
-gdjs.IntroCode = {};
-gdjs.IntroCode.GDDrawerObjects1= [];
-gdjs.IntroCode.GDDrawerObjects2= [];
-gdjs.IntroCode.GDDrawerObjects3= [];
-gdjs.IntroCode.GDDrawerObjects4= [];
-gdjs.IntroCode.GDHUD_95ObjectNameObjects1= [];
-gdjs.IntroCode.GDHUD_95ObjectNameObjects2= [];
-gdjs.IntroCode.GDHUD_95ObjectNameObjects3= [];
-gdjs.IntroCode.GDHUD_95ObjectNameObjects4= [];
-gdjs.IntroCode.GDHUD_95DescriptionObjects1= [];
-gdjs.IntroCode.GDHUD_95DescriptionObjects2= [];
-gdjs.IntroCode.GDHUD_95DescriptionObjects3= [];
-gdjs.IntroCode.GDHUD_95DescriptionObjects4= [];
-gdjs.IntroCode.GDHUD_95HintsObjects1= [];
-gdjs.IntroCode.GDHUD_95HintsObjects2= [];
-gdjs.IntroCode.GDHUD_95HintsObjects3= [];
-gdjs.IntroCode.GDHUD_95HintsObjects4= [];
-gdjs.IntroCode.GDHUD_95TimerObjects1= [];
-gdjs.IntroCode.GDHUD_95TimerObjects2= [];
-gdjs.IntroCode.GDHUD_95TimerObjects3= [];
-gdjs.IntroCode.GDHUD_95TimerObjects4= [];
-gdjs.IntroCode.GDHUD_95LocationNameObjects1= [];
-gdjs.IntroCode.GDHUD_95LocationNameObjects2= [];
-gdjs.IntroCode.GDHUD_95LocationNameObjects3= [];
-gdjs.IntroCode.GDHUD_95LocationNameObjects4= [];
-gdjs.IntroCode.GDHUD_95HintTextObjects1= [];
-gdjs.IntroCode.GDHUD_95HintTextObjects2= [];
-gdjs.IntroCode.GDHUD_95HintTextObjects3= [];
-gdjs.IntroCode.GDHUD_95HintTextObjects4= [];
-gdjs.IntroCode.GDBackToReceptionObjects1= [];
-gdjs.IntroCode.GDBackToReceptionObjects2= [];
-gdjs.IntroCode.GDBackToReceptionObjects3= [];
-gdjs.IntroCode.GDBackToReceptionObjects4= [];
-gdjs.IntroCode.GDBackToCafeteriaObjects1= [];
-gdjs.IntroCode.GDBackToCafeteriaObjects2= [];
-gdjs.IntroCode.GDBackToCafeteriaObjects3= [];
-gdjs.IntroCode.GDBackToCafeteriaObjects4= [];
-gdjs.IntroCode.GDInventoryBackgroundObjects1= [];
-gdjs.IntroCode.GDInventoryBackgroundObjects2= [];
-gdjs.IntroCode.GDInventoryBackgroundObjects3= [];
-gdjs.IntroCode.GDInventoryBackgroundObjects4= [];
-gdjs.IntroCode.GDInventorySlotObjects1= [];
-gdjs.IntroCode.GDInventorySlotObjects2= [];
-gdjs.IntroCode.GDInventorySlotObjects3= [];
-gdjs.IntroCode.GDInventorySlotObjects4= [];
-gdjs.IntroCode.GDInventoryKeyObjects1= [];
-gdjs.IntroCode.GDInventoryKeyObjects2= [];
-gdjs.IntroCode.GDInventoryKeyObjects3= [];
-gdjs.IntroCode.GDInventoryKeyObjects4= [];
-gdjs.IntroCode.GDCorrectObjects1= [];
-gdjs.IntroCode.GDCorrectObjects2= [];
-gdjs.IntroCode.GDCorrectObjects3= [];
-gdjs.IntroCode.GDCorrectObjects4= [];
-gdjs.IntroCode.GDFadeObjects1= [];
-gdjs.IntroCode.GDFadeObjects2= [];
-gdjs.IntroCode.GDFadeObjects3= [];
-gdjs.IntroCode.GDFadeObjects4= [];
-gdjs.IntroCode.GDText_95IntroSkipObjects1= [];
-gdjs.IntroCode.GDText_95IntroSkipObjects2= [];
-gdjs.IntroCode.GDText_95IntroSkipObjects3= [];
-gdjs.IntroCode.GDText_95IntroSkipObjects4= [];
-gdjs.IntroCode.GDplayObjects1= [];
-gdjs.IntroCode.GDplayObjects2= [];
-gdjs.IntroCode.GDplayObjects3= [];
-gdjs.IntroCode.GDplayObjects4= [];
-gdjs.IntroCode.GDComputerObjects1= [];
-gdjs.IntroCode.GDComputerObjects2= [];
-gdjs.IntroCode.GDComputerObjects3= [];
-gdjs.IntroCode.GDComputerObjects4= [];
-gdjs.IntroCode.GDTypingTextObjects1= [];
-gdjs.IntroCode.GDTypingTextObjects2= [];
-gdjs.IntroCode.GDTypingTextObjects3= [];
-gdjs.IntroCode.GDTypingTextObjects4= [];
+gdjs.MainMenuCode = {};
+gdjs.MainMenuCode.GDDrawerObjects1= [];
+gdjs.MainMenuCode.GDDrawerObjects2= [];
+gdjs.MainMenuCode.GDDrawerObjects3= [];
+gdjs.MainMenuCode.GDHUD_95ObjectNameObjects1= [];
+gdjs.MainMenuCode.GDHUD_95ObjectNameObjects2= [];
+gdjs.MainMenuCode.GDHUD_95ObjectNameObjects3= [];
+gdjs.MainMenuCode.GDHUD_95DescriptionObjects1= [];
+gdjs.MainMenuCode.GDHUD_95DescriptionObjects2= [];
+gdjs.MainMenuCode.GDHUD_95DescriptionObjects3= [];
+gdjs.MainMenuCode.GDHUD_95HintsObjects1= [];
+gdjs.MainMenuCode.GDHUD_95HintsObjects2= [];
+gdjs.MainMenuCode.GDHUD_95HintsObjects3= [];
+gdjs.MainMenuCode.GDHUD_95TimerObjects1= [];
+gdjs.MainMenuCode.GDHUD_95TimerObjects2= [];
+gdjs.MainMenuCode.GDHUD_95TimerObjects3= [];
+gdjs.MainMenuCode.GDHUD_95LocationNameObjects1= [];
+gdjs.MainMenuCode.GDHUD_95LocationNameObjects2= [];
+gdjs.MainMenuCode.GDHUD_95LocationNameObjects3= [];
+gdjs.MainMenuCode.GDHUD_95HintTextObjects1= [];
+gdjs.MainMenuCode.GDHUD_95HintTextObjects2= [];
+gdjs.MainMenuCode.GDHUD_95HintTextObjects3= [];
+gdjs.MainMenuCode.GDBackToReceptionObjects1= [];
+gdjs.MainMenuCode.GDBackToReceptionObjects2= [];
+gdjs.MainMenuCode.GDBackToReceptionObjects3= [];
+gdjs.MainMenuCode.GDBackToCafeteriaObjects1= [];
+gdjs.MainMenuCode.GDBackToCafeteriaObjects2= [];
+gdjs.MainMenuCode.GDBackToCafeteriaObjects3= [];
+gdjs.MainMenuCode.GDInventoryBackgroundObjects1= [];
+gdjs.MainMenuCode.GDInventoryBackgroundObjects2= [];
+gdjs.MainMenuCode.GDInventoryBackgroundObjects3= [];
+gdjs.MainMenuCode.GDInventorySlotObjects1= [];
+gdjs.MainMenuCode.GDInventorySlotObjects2= [];
+gdjs.MainMenuCode.GDInventorySlotObjects3= [];
+gdjs.MainMenuCode.GDInventoryKeyObjects1= [];
+gdjs.MainMenuCode.GDInventoryKeyObjects2= [];
+gdjs.MainMenuCode.GDInventoryKeyObjects3= [];
+gdjs.MainMenuCode.GDCorrectObjects1= [];
+gdjs.MainMenuCode.GDCorrectObjects2= [];
+gdjs.MainMenuCode.GDCorrectObjects3= [];
+gdjs.MainMenuCode.GDFadeObjects1= [];
+gdjs.MainMenuCode.GDFadeObjects2= [];
+gdjs.MainMenuCode.GDFadeObjects3= [];
+gdjs.MainMenuCode.GDTitleObjects1= [];
+gdjs.MainMenuCode.GDTitleObjects2= [];
+gdjs.MainMenuCode.GDTitleObjects3= [];
+gdjs.MainMenuCode.GDDeskObjects1= [];
+gdjs.MainMenuCode.GDDeskObjects2= [];
+gdjs.MainMenuCode.GDDeskObjects3= [];
+gdjs.MainMenuCode.GDHUD_95Tut_951Objects1= [];
+gdjs.MainMenuCode.GDHUD_95Tut_951Objects2= [];
+gdjs.MainMenuCode.GDHUD_95Tut_951Objects3= [];
+gdjs.MainMenuCode.GDHUD_95Tut_952Objects1= [];
+gdjs.MainMenuCode.GDHUD_95Tut_952Objects2= [];
+gdjs.MainMenuCode.GDHUD_95Tut_952Objects3= [];
+gdjs.MainMenuCode.GDHUD_95Tut_953Objects1= [];
+gdjs.MainMenuCode.GDHUD_95Tut_953Objects2= [];
+gdjs.MainMenuCode.GDHUD_95Tut_953Objects3= [];
+gdjs.MainMenuCode.GDGreatObjects1= [];
+gdjs.MainMenuCode.GDGreatObjects2= [];
+gdjs.MainMenuCode.GDGreatObjects3= [];
+gdjs.MainMenuCode.GDbackgroundObjects1= [];
+gdjs.MainMenuCode.GDbackgroundObjects2= [];
+gdjs.MainMenuCode.GDbackgroundObjects3= [];
+gdjs.MainMenuCode.GDNewObject2Objects1= [];
+gdjs.MainMenuCode.GDNewObject2Objects2= [];
+gdjs.MainMenuCode.GDNewObject2Objects3= [];
 
-gdjs.IntroCode.conditionTrue_0 = {val:false};
-gdjs.IntroCode.condition0IsTrue_0 = {val:false};
-gdjs.IntroCode.condition1IsTrue_0 = {val:false};
-gdjs.IntroCode.condition2IsTrue_0 = {val:false};
-gdjs.IntroCode.conditionTrue_1 = {val:false};
-gdjs.IntroCode.condition0IsTrue_1 = {val:false};
-gdjs.IntroCode.condition1IsTrue_1 = {val:false};
-gdjs.IntroCode.condition2IsTrue_1 = {val:false};
+gdjs.MainMenuCode.conditionTrue_0 = {val:false};
+gdjs.MainMenuCode.condition0IsTrue_0 = {val:false};
+gdjs.MainMenuCode.condition1IsTrue_0 = {val:false};
+gdjs.MainMenuCode.condition2IsTrue_0 = {val:false};
+gdjs.MainMenuCode.conditionTrue_1 = {val:false};
+gdjs.MainMenuCode.condition0IsTrue_1 = {val:false};
+gdjs.MainMenuCode.condition1IsTrue_1 = {val:false};
+gdjs.MainMenuCode.condition2IsTrue_1 = {val:false};
 
 
-gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDFadeObjects1Objects = Hashtable.newFrom({"Fade": gdjs.IntroCode.GDFadeObjects1});gdjs.IntroCode.eventsList0 = function(runtimeScene) {
+gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDDeskObjects2Objects = Hashtable.newFrom({"Desk": gdjs.MainMenuCode.GDDeskObjects2});gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDGreatObjects2Objects = Hashtable.newFrom({"Great": gdjs.MainMenuCode.GDGreatObjects2});gdjs.MainMenuCode.eventsList0 = function(runtimeScene) {
 
 {
 
 
-gdjs.IntroCode.condition0IsTrue_0.val = false;
-{
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-gdjs.IntroCode.GDFadeObjects1.length = 0;
 
-{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDFadeObjects1Objects, 0, 0, "Fade");
-}{for(var i = 0, len = gdjs.IntroCode.GDFadeObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDFadeObjects1[i].getBehavior("Tween").addObjectOpacityTween("fade_out", 0, "linear", 1000, false);
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Desk"), gdjs.MainMenuCode.GDDeskObjects2);
+
+gdjs.MainMenuCode.condition0IsTrue_0.val = false;
+gdjs.MainMenuCode.condition1IsTrue_0.val = false;
+{
+gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDDeskObjects2Objects, runtimeScene, true, false);
+}if ( gdjs.MainMenuCode.condition0IsTrue_0.val ) {
+{
+gdjs.MainMenuCode.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+}}
+if (gdjs.MainMenuCode.condition1IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Intro", false);
+}}
+
+}
+
+
+{
+
+
+gdjs.MainMenuCode.condition0IsTrue_0.val = false;
+{
+{gdjs.MainMenuCode.conditionTrue_1 = gdjs.MainMenuCode.condition0IsTrue_0;
+gdjs.MainMenuCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12113180);
+}
+}if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
+gdjs.MainMenuCode.GDGreatObjects2.length = 0;
+
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDGreatObjects2Objects, gdjs.evtTools.window.getGameResolutionWidth(runtimeScene) / 2 - 200, gdjs.evtTools.window.getGameResolutionHeight(runtimeScene) / 2 - 200, "UI");
+}{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "messageTimer");
+}{for(var i = 0, len = gdjs.MainMenuCode.GDGreatObjects2.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDGreatObjects2[i].setZOrder(100);
 }
 }}
 
 }
 
 
-};gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList1 = function(runtimeScene) {
-
 {
 
 
-gdjs.IntroCode.condition0IsTrue_0.val = false;
+gdjs.MainMenuCode.condition0IsTrue_0.val = false;
 {
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Reception", false);
+gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("displaySplash")), "messageTimer");
+}if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
+gdjs.copyArray(runtimeScene.getObjects("Great"), gdjs.MainMenuCode.GDGreatObjects2);
+gdjs.copyArray(runtimeScene.getObjects("HUD_Tut_2"), gdjs.MainMenuCode.GDHUD_95Tut_952Objects2);
+{for(var i = 0, len = gdjs.MainMenuCode.GDGreatObjects2.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDGreatObjects2[i].deleteFromScene(runtimeScene);
+}
+}{for(var i = 0, len = gdjs.MainMenuCode.GDHUD_95Tut_952Objects2.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDHUD_95Tut_952Objects2[i].getBehavior("Tween").addObjectPositionYTween("MoveUp", 900, "linear", 500, false);
+}
+}{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "messageTimer");
 }}
 
 }
 
 
-};gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects = Hashtable.newFrom({"play": gdjs.IntroCode.GDplayObjects1});gdjs.IntroCode.eventsList2 = function(runtimeScene) {
-
 {
 
+gdjs.copyArray(runtimeScene.getObjects("HUD_Tut_2"), gdjs.MainMenuCode.GDHUD_95Tut_952Objects1);
 
+gdjs.MainMenuCode.condition0IsTrue_0.val = false;
 {
-gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTextObjects3);
-{for(var i = 0, len = gdjs.IntroCode.GDTypingTextObjects3.length ;i < len;++i) {
-    gdjs.IntroCode.GDTypingTextObjects3[i].setString(gdjs.IntroCode.GDTypingTextObjects3[i].getString() + (gdjs.evtTools.string.subStr((gdjs.RuntimeObject.getVariableString(gdjs.IntroCode.GDTypingTextObjects3[i].getVariables().getFromIndex(0))), gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("charPos")), 1)));
+for(var i = 0, k = 0, l = gdjs.MainMenuCode.GDHUD_95Tut_952Objects1.length;i<l;++i) {
+    if ( gdjs.MainMenuCode.GDHUD_95Tut_952Objects1[i].getBehavior("Tween").hasFinished("MoveUp") ) {
+        gdjs.MainMenuCode.condition0IsTrue_0.val = true;
+        gdjs.MainMenuCode.GDHUD_95Tut_952Objects1[k] = gdjs.MainMenuCode.GDHUD_95Tut_952Objects1[i];
+        ++k;
+    }
 }
-}{runtimeScene.getVariables().get("charPos").add(1);
+gdjs.MainMenuCode.GDHUD_95Tut_952Objects1.length = k;}if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
+gdjs.copyArray(runtimeScene.getObjects("HUD_Tut_3"), gdjs.MainMenuCode.GDHUD_95Tut_953Objects1);
+{for(var i = 0, len = gdjs.MainMenuCode.GDHUD_95Tut_953Objects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDHUD_95Tut_953Objects1[i].getBehavior("Tween").addObjectPositionXTween("MoveLeft", 1400, "linear", 500, false);
+}
 }}
 
 }
 
 
-};gdjs.IntroCode.eventsList3 = function(runtimeScene) {
+};gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDDeskObjects1Objects = Hashtable.newFrom({"Desk": gdjs.MainMenuCode.GDDeskObjects1});gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDFadeObjects1Objects = Hashtable.newFrom({"Fade": gdjs.MainMenuCode.GDFadeObjects1});gdjs.MainMenuCode.eventsList1 = function(runtimeScene) {
 
 {
 
 
-gdjs.IntroCode.condition0IsTrue_0.val = false;
+gdjs.MainMenuCode.condition0IsTrue_0.val = false;
 {
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 1 / gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("typeRate")), "textTimer");
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "textTimer");
+gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+}if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
+gdjs.MainMenuCode.GDFadeObjects1.length = 0;
+
+{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDFadeObjects1Objects, 0, 0, "Fade");
+}{for(var i = 0, len = gdjs.MainMenuCode.GDFadeObjects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDFadeObjects1[i].getBehavior("Tween").addObjectOpacityTween("fade_out", 0, "linear", 1000, false);
 }
+}}
+
+}
+
+
+};gdjs.MainMenuCode.eventsList2 = function(runtimeScene) {
+
+{
+
+
+gdjs.MainMenuCode.condition0IsTrue_0.val = false;
+{
+gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+}if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
+gdjs.copyArray(runtimeScene.getObjects("Desk"), gdjs.MainMenuCode.GDDeskObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_Tut_1"), gdjs.MainMenuCode.GDHUD_95Tut_951Objects1);
+{runtimeScene.getVariables().get("trigger").setNumber(0);
+}{for(var i = 0, len = gdjs.MainMenuCode.GDHUD_95Tut_951Objects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDHUD_95Tut_951Objects1[i].getBehavior("Tween").addObjectPositionXTween("MoveRight", 60, "linear", 2000, false);
+}
+}{runtimeScene.getGame().getVariables().get("displaySplash").setNumber(0.5);
+}{for(var i = 0, len = gdjs.MainMenuCode.GDDeskObjects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDDeskObjects1[i].hide();
+}
+}}
+
+}
+
+
+{
+
+
+{
+gdjs.copyArray(runtimeScene.getObjects("Drawer"), gdjs.MainMenuCode.GDDrawerObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Title"), gdjs.MainMenuCode.GDTitleObjects1);
+{for(var i = 0, len = gdjs.MainMenuCode.GDDrawerObjects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDDrawerObjects1[i].setFillColor("173;160;249");
+}
+}{for(var i = 0, len = gdjs.MainMenuCode.GDDrawerObjects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDDrawerObjects1[i].drawRoundedRectangle((( gdjs.MainMenuCode.GDTitleObjects1.length === 0 ) ? 0 :gdjs.MainMenuCode.GDTitleObjects1[0].getX()) - 10, 15, (( gdjs.MainMenuCode.GDTitleObjects1.length === 0 ) ? 0 :gdjs.MainMenuCode.GDTitleObjects1[0].getX()) + (( gdjs.MainMenuCode.GDTitleObjects1.length === 0 ) ? 0 :gdjs.MainMenuCode.GDTitleObjects1[0].getWidth()) + 10, 250, 20);
+}
+}}
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+gdjs.MainMenuCode.condition0IsTrue_0.val = false;
+{
+gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("trigger")) == 1;
+}if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
+
 { //Subevents
-gdjs.IntroCode.eventsList2(runtimeScene);} //End of subevents
+gdjs.MainMenuCode.eventsList0(runtimeScene);} //End of subevents
 }
 
 }
@@ -154,50 +255,24 @@ gdjs.IntroCode.eventsList2(runtimeScene);} //End of subevents
 {
 
 
-gdjs.IntroCode.condition0IsTrue_0.val = false;
+
+}
+
+
 {
-{gdjs.IntroCode.conditionTrue_1 = gdjs.IntroCode.condition0IsTrue_0;
-gdjs.IntroCode.condition0IsTrue_1.val = false;
-gdjs.IntroCode.condition1IsTrue_1.val = false;
+
+gdjs.copyArray(runtimeScene.getObjects("Desk"), gdjs.MainMenuCode.GDDeskObjects1);
+
+gdjs.MainMenuCode.condition0IsTrue_0.val = false;
+gdjs.MainMenuCode.condition1IsTrue_0.val = false;
 {
-gdjs.IntroCode.condition0IsTrue_1.val = gdjs.evtTools.input.anyKeyPressed(runtimeScene);
-if( gdjs.IntroCode.condition0IsTrue_1.val ) {
-    gdjs.IntroCode.conditionTrue_1.val = true;
-}
-}
+gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.MainMenuCode.mapOfGDgdjs_46MainMenuCode_46GDDeskObjects1Objects, runtimeScene, true, false);
+}if ( gdjs.MainMenuCode.condition0IsTrue_0.val ) {
 {
-gdjs.IntroCode.condition1IsTrue_1.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
-if( gdjs.IntroCode.condition1IsTrue_1.val ) {
-    gdjs.IntroCode.conditionTrue_1.val = true;
-}
-}
-{
-}
-}
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTextObjects2);
-{for(var i = 0, len = gdjs.IntroCode.GDTypingTextObjects2.length ;i < len;++i) {
-    gdjs.IntroCode.GDTypingTextObjects2[i].setString((gdjs.RuntimeObject.getVariableString(gdjs.IntroCode.GDTypingTextObjects2[i].getVariables().getFromIndex(0))));
-}
-}{runtimeScene.getVariables().get("typing").setNumber(0);
+gdjs.MainMenuCode.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Right");
 }}
-
-}
-
-
-};gdjs.IntroCode.eventsList4 = function(runtimeScene) {
-
-{
-
-
-gdjs.IntroCode.condition0IsTrue_0.val = false;
-{
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().get("click").setNumber(0);
-}{runtimeScene.getVariables().get("charPos").setNumber(0);
-}{runtimeScene.getVariables().get("lineState").setString("");
-}{runtimeScene.getVariables().get("typing").setNumber(1);
+if (gdjs.MainMenuCode.condition1IsTrue_0.val) {
+{runtimeScene.getVariables().get("trigger").setNumber(1);
 }}
 
 }
@@ -213,245 +288,85 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegi
 {
 
 
-gdjs.IntroCode.condition0IsTrue_0.val = false;
-{
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("typing")) == 1;
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-
-{ //Subevents
-gdjs.IntroCode.eventsList3(runtimeScene);} //End of subevents
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTextObjects2);
-
-gdjs.IntroCode.condition0IsTrue_0.val = false;
-{
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("charPos")) == gdjs.evtTools.string.strLen((gdjs.RuntimeObject.getVariableString(((gdjs.IntroCode.GDTypingTextObjects2.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.IntroCode.GDTypingTextObjects2[0].getVariables()).getFromIndex(0))));
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-{runtimeScene.getVariables().get("typing").setNumber(0);
-}}
-
-}
-
-
-{
-
-
-
-}
-
-
-{
-
-
-gdjs.IntroCode.condition0IsTrue_0.val = false;
-{
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().get("typing")) == 0;
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-gdjs.copyArray(runtimeScene.getObjects("play"), gdjs.IntroCode.GDplayObjects1);
-{for(var i = 0, len = gdjs.IntroCode.GDplayObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDplayObjects1[i].hide(false);
-}
-}}
-
-}
-
-
-};gdjs.IntroCode.eventsList5 = function(runtimeScene) {
-
-{
-
-
-
-}
-
-
-{
-
-
-
-}
-
-
-{
-
-
-gdjs.IntroCode.eventsList0(runtimeScene);
-}
-
-
-{
-
-
-gdjs.IntroCode.condition0IsTrue_0.val = false;
-{
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTextObjects1);
-gdjs.copyArray(runtimeScene.getObjects("play"), gdjs.IntroCode.GDplayObjects1);
-{runtimeScene.getVariables().get("typeRate").setNumber(30.075);
-}{runtimeScene.getGame().getVariables().get("chippyOfficeDoorLocked").setNumber(1);
-}{runtimeScene.getGame().getVariables().get("sparePartsDoorLocked").setNumber(1);
-}{runtimeScene.getGame().getVariables().get("chippyOfficeKeyFound").setNumber(0);
-}{runtimeScene.getGame().getVariables().get("motherboardDoorLocked").setNumber(1);
-}{runtimeScene.getGame().getVariables().get("robotControl").setNumber(0);
-}{runtimeScene.getGame().getVariables().get("accountingDoorLocked").setNumber(1);
-}{runtimeScene.getGame().getVariables().get("countdown").setNumber(1 * 60 * 60);
-}{runtimeScene.getGame().getVariables().get("monsterSolved").setNumber(0);
-}{runtimeScene.getGame().getVariables().get("sparePartsSolved").setNumber(0);
-}{runtimeScene.getGame().getVariables().get("motherboardSolved").setNumber(0);
-}{runtimeScene.getGame().getVariables().get("memMatchState").setNumber(0);
-}{runtimeScene.getGame().getVariables().get("hintReception").setNumber(1);
-}{runtimeScene.getGame().getVariables().get("hintChippy").setNumber(2);
-}{runtimeScene.getGame().getVariables().get("hintPicture").setNumber(1);
-}{runtimeScene.getGame().getVariables().get("hints").setNumber(3);
-}{runtimeScene.getGame().getVariables().get("timerX").setNumber(gdjs.evtTools.window.getGameResolutionWidth(runtimeScene) / 2 - 115);
-}{runtimeScene.getGame().getVariables().get("timerY").setNumber(10);
-}{gdjs.evtTools.sound.playSound(runtimeScene, "screenla.wav", false, 100, 1);
-}{for(var i = 0, len = gdjs.IntroCode.GDplayObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDplayObjects1[i].hide();
-}
-}{for(var i = 0, len = gdjs.IntroCode.GDTypingTextObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDTypingTextObjects1[i].returnVariable(gdjs.IntroCode.GDTypingTextObjects1[i].getVariables().getFromIndex(0)).setString((gdjs.IntroCode.GDTypingTextObjects1[i].getString()));
-}
-}{for(var i = 0, len = gdjs.IntroCode.GDTypingTextObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDTypingTextObjects1[i].setString("");
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("play"), gdjs.IntroCode.GDplayObjects1);
-
-gdjs.IntroCode.condition0IsTrue_0.val = false;
-{
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects, runtimeScene, true, false);
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-/* Reuse gdjs.IntroCode.GDplayObjects1 */
-{for(var i = 0, len = gdjs.IntroCode.GDplayObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDplayObjects1[i].setColor("51;255;0");
-}
-}
-{ //Subevents
-gdjs.IntroCode.eventsList1(runtimeScene);} //End of subevents
-}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("play"), gdjs.IntroCode.GDplayObjects1);
-
-gdjs.IntroCode.condition0IsTrue_0.val = false;
-{
-gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDplayObjects1Objects, runtimeScene, true, true);
-}if (gdjs.IntroCode.condition0IsTrue_0.val) {
-/* Reuse gdjs.IntroCode.GDplayObjects1 */
-{for(var i = 0, len = gdjs.IntroCode.GDplayObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDplayObjects1[i].setColor("21;105;0");
-}
-}}
-
-}
-
-
-{
-
-
-gdjs.IntroCode.eventsList4(runtimeScene);
+gdjs.MainMenuCode.eventsList1(runtimeScene);
 }
 
 
 };
 
-gdjs.IntroCode.func = function(runtimeScene) {
+gdjs.MainMenuCode.func = function(runtimeScene) {
 runtimeScene.getOnceTriggers().startNewFrame();
 
-gdjs.IntroCode.GDDrawerObjects1.length = 0;
-gdjs.IntroCode.GDDrawerObjects2.length = 0;
-gdjs.IntroCode.GDDrawerObjects3.length = 0;
-gdjs.IntroCode.GDDrawerObjects4.length = 0;
-gdjs.IntroCode.GDHUD_95ObjectNameObjects1.length = 0;
-gdjs.IntroCode.GDHUD_95ObjectNameObjects2.length = 0;
-gdjs.IntroCode.GDHUD_95ObjectNameObjects3.length = 0;
-gdjs.IntroCode.GDHUD_95ObjectNameObjects4.length = 0;
-gdjs.IntroCode.GDHUD_95DescriptionObjects1.length = 0;
-gdjs.IntroCode.GDHUD_95DescriptionObjects2.length = 0;
-gdjs.IntroCode.GDHUD_95DescriptionObjects3.length = 0;
-gdjs.IntroCode.GDHUD_95DescriptionObjects4.length = 0;
-gdjs.IntroCode.GDHUD_95HintsObjects1.length = 0;
-gdjs.IntroCode.GDHUD_95HintsObjects2.length = 0;
-gdjs.IntroCode.GDHUD_95HintsObjects3.length = 0;
-gdjs.IntroCode.GDHUD_95HintsObjects4.length = 0;
-gdjs.IntroCode.GDHUD_95TimerObjects1.length = 0;
-gdjs.IntroCode.GDHUD_95TimerObjects2.length = 0;
-gdjs.IntroCode.GDHUD_95TimerObjects3.length = 0;
-gdjs.IntroCode.GDHUD_95TimerObjects4.length = 0;
-gdjs.IntroCode.GDHUD_95LocationNameObjects1.length = 0;
-gdjs.IntroCode.GDHUD_95LocationNameObjects2.length = 0;
-gdjs.IntroCode.GDHUD_95LocationNameObjects3.length = 0;
-gdjs.IntroCode.GDHUD_95LocationNameObjects4.length = 0;
-gdjs.IntroCode.GDHUD_95HintTextObjects1.length = 0;
-gdjs.IntroCode.GDHUD_95HintTextObjects2.length = 0;
-gdjs.IntroCode.GDHUD_95HintTextObjects3.length = 0;
-gdjs.IntroCode.GDHUD_95HintTextObjects4.length = 0;
-gdjs.IntroCode.GDBackToReceptionObjects1.length = 0;
-gdjs.IntroCode.GDBackToReceptionObjects2.length = 0;
-gdjs.IntroCode.GDBackToReceptionObjects3.length = 0;
-gdjs.IntroCode.GDBackToReceptionObjects4.length = 0;
-gdjs.IntroCode.GDBackToCafeteriaObjects1.length = 0;
-gdjs.IntroCode.GDBackToCafeteriaObjects2.length = 0;
-gdjs.IntroCode.GDBackToCafeteriaObjects3.length = 0;
-gdjs.IntroCode.GDBackToCafeteriaObjects4.length = 0;
-gdjs.IntroCode.GDInventoryBackgroundObjects1.length = 0;
-gdjs.IntroCode.GDInventoryBackgroundObjects2.length = 0;
-gdjs.IntroCode.GDInventoryBackgroundObjects3.length = 0;
-gdjs.IntroCode.GDInventoryBackgroundObjects4.length = 0;
-gdjs.IntroCode.GDInventorySlotObjects1.length = 0;
-gdjs.IntroCode.GDInventorySlotObjects2.length = 0;
-gdjs.IntroCode.GDInventorySlotObjects3.length = 0;
-gdjs.IntroCode.GDInventorySlotObjects4.length = 0;
-gdjs.IntroCode.GDInventoryKeyObjects1.length = 0;
-gdjs.IntroCode.GDInventoryKeyObjects2.length = 0;
-gdjs.IntroCode.GDInventoryKeyObjects3.length = 0;
-gdjs.IntroCode.GDInventoryKeyObjects4.length = 0;
-gdjs.IntroCode.GDCorrectObjects1.length = 0;
-gdjs.IntroCode.GDCorrectObjects2.length = 0;
-gdjs.IntroCode.GDCorrectObjects3.length = 0;
-gdjs.IntroCode.GDCorrectObjects4.length = 0;
-gdjs.IntroCode.GDFadeObjects1.length = 0;
-gdjs.IntroCode.GDFadeObjects2.length = 0;
-gdjs.IntroCode.GDFadeObjects3.length = 0;
-gdjs.IntroCode.GDFadeObjects4.length = 0;
-gdjs.IntroCode.GDText_95IntroSkipObjects1.length = 0;
-gdjs.IntroCode.GDText_95IntroSkipObjects2.length = 0;
-gdjs.IntroCode.GDText_95IntroSkipObjects3.length = 0;
-gdjs.IntroCode.GDText_95IntroSkipObjects4.length = 0;
-gdjs.IntroCode.GDplayObjects1.length = 0;
-gdjs.IntroCode.GDplayObjects2.length = 0;
-gdjs.IntroCode.GDplayObjects3.length = 0;
-gdjs.IntroCode.GDplayObjects4.length = 0;
-gdjs.IntroCode.GDComputerObjects1.length = 0;
-gdjs.IntroCode.GDComputerObjects2.length = 0;
-gdjs.IntroCode.GDComputerObjects3.length = 0;
-gdjs.IntroCode.GDComputerObjects4.length = 0;
-gdjs.IntroCode.GDTypingTextObjects1.length = 0;
-gdjs.IntroCode.GDTypingTextObjects2.length = 0;
-gdjs.IntroCode.GDTypingTextObjects3.length = 0;
-gdjs.IntroCode.GDTypingTextObjects4.length = 0;
+gdjs.MainMenuCode.GDDrawerObjects1.length = 0;
+gdjs.MainMenuCode.GDDrawerObjects2.length = 0;
+gdjs.MainMenuCode.GDDrawerObjects3.length = 0;
+gdjs.MainMenuCode.GDHUD_95ObjectNameObjects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95ObjectNameObjects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95ObjectNameObjects3.length = 0;
+gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95DescriptionObjects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95DescriptionObjects3.length = 0;
+gdjs.MainMenuCode.GDHUD_95HintsObjects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95HintsObjects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95HintsObjects3.length = 0;
+gdjs.MainMenuCode.GDHUD_95TimerObjects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95TimerObjects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95TimerObjects3.length = 0;
+gdjs.MainMenuCode.GDHUD_95LocationNameObjects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95LocationNameObjects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95LocationNameObjects3.length = 0;
+gdjs.MainMenuCode.GDHUD_95HintTextObjects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95HintTextObjects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95HintTextObjects3.length = 0;
+gdjs.MainMenuCode.GDBackToReceptionObjects1.length = 0;
+gdjs.MainMenuCode.GDBackToReceptionObjects2.length = 0;
+gdjs.MainMenuCode.GDBackToReceptionObjects3.length = 0;
+gdjs.MainMenuCode.GDBackToCafeteriaObjects1.length = 0;
+gdjs.MainMenuCode.GDBackToCafeteriaObjects2.length = 0;
+gdjs.MainMenuCode.GDBackToCafeteriaObjects3.length = 0;
+gdjs.MainMenuCode.GDInventoryBackgroundObjects1.length = 0;
+gdjs.MainMenuCode.GDInventoryBackgroundObjects2.length = 0;
+gdjs.MainMenuCode.GDInventoryBackgroundObjects3.length = 0;
+gdjs.MainMenuCode.GDInventorySlotObjects1.length = 0;
+gdjs.MainMenuCode.GDInventorySlotObjects2.length = 0;
+gdjs.MainMenuCode.GDInventorySlotObjects3.length = 0;
+gdjs.MainMenuCode.GDInventoryKeyObjects1.length = 0;
+gdjs.MainMenuCode.GDInventoryKeyObjects2.length = 0;
+gdjs.MainMenuCode.GDInventoryKeyObjects3.length = 0;
+gdjs.MainMenuCode.GDCorrectObjects1.length = 0;
+gdjs.MainMenuCode.GDCorrectObjects2.length = 0;
+gdjs.MainMenuCode.GDCorrectObjects3.length = 0;
+gdjs.MainMenuCode.GDFadeObjects1.length = 0;
+gdjs.MainMenuCode.GDFadeObjects2.length = 0;
+gdjs.MainMenuCode.GDFadeObjects3.length = 0;
+gdjs.MainMenuCode.GDTitleObjects1.length = 0;
+gdjs.MainMenuCode.GDTitleObjects2.length = 0;
+gdjs.MainMenuCode.GDTitleObjects3.length = 0;
+gdjs.MainMenuCode.GDDeskObjects1.length = 0;
+gdjs.MainMenuCode.GDDeskObjects2.length = 0;
+gdjs.MainMenuCode.GDDeskObjects3.length = 0;
+gdjs.MainMenuCode.GDHUD_95Tut_951Objects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95Tut_951Objects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95Tut_951Objects3.length = 0;
+gdjs.MainMenuCode.GDHUD_95Tut_952Objects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95Tut_952Objects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95Tut_952Objects3.length = 0;
+gdjs.MainMenuCode.GDHUD_95Tut_953Objects1.length = 0;
+gdjs.MainMenuCode.GDHUD_95Tut_953Objects2.length = 0;
+gdjs.MainMenuCode.GDHUD_95Tut_953Objects3.length = 0;
+gdjs.MainMenuCode.GDGreatObjects1.length = 0;
+gdjs.MainMenuCode.GDGreatObjects2.length = 0;
+gdjs.MainMenuCode.GDGreatObjects3.length = 0;
+gdjs.MainMenuCode.GDbackgroundObjects1.length = 0;
+gdjs.MainMenuCode.GDbackgroundObjects2.length = 0;
+gdjs.MainMenuCode.GDbackgroundObjects3.length = 0;
+gdjs.MainMenuCode.GDNewObject2Objects1.length = 0;
+gdjs.MainMenuCode.GDNewObject2Objects2.length = 0;
+gdjs.MainMenuCode.GDNewObject2Objects3.length = 0;
 
-gdjs.IntroCode.eventsList5(runtimeScene);
+gdjs.MainMenuCode.eventsList2(runtimeScene);
 return;
 
 }
 
-gdjs['IntroCode'] = gdjs.IntroCode;
+gdjs['MainMenuCode'] = gdjs.MainMenuCode;
