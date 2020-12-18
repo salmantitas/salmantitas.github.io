@@ -285,6 +285,12 @@ gdjs.MapCode.GDButtonNObjects3= [];
 gdjs.MapCode.GDButtonNObjects4= [];
 gdjs.MapCode.GDButtonNObjects5= [];
 gdjs.MapCode.GDButtonNObjects6= [];
+gdjs.MapCode.GDJournalTextObjects1= [];
+gdjs.MapCode.GDJournalTextObjects2= [];
+gdjs.MapCode.GDJournalTextObjects3= [];
+gdjs.MapCode.GDJournalTextObjects4= [];
+gdjs.MapCode.GDJournalTextObjects5= [];
+gdjs.MapCode.GDJournalTextObjects6= [];
 
 gdjs.MapCode.conditionTrue_0 = {val:false};
 gdjs.MapCode.condition0IsTrue_0 = {val:false};
@@ -555,7 +561,7 @@ gdjs.MapCode.condition0IsTrue_0.val = false;
 {
 gdjs.MapCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.MapCode.mapOfGDgdjs_46MapCode_46GDScreenlaObjects4Objects, runtimeScene, true, false);
 }if (gdjs.MapCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Reception");
+{gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Screenla");
 }}
 
 }
@@ -1008,7 +1014,7 @@ gdjs.MapCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.Ma
 }if (gdjs.MapCode.condition0IsTrue_0.val) {
 /* Reuse gdjs.MapCode.GDHUD_95HintsObjects3 */
 {for(var i = 0, len = gdjs.MapCode.GDHUD_95HintsObjects3.length ;i < len;++i) {
-    gdjs.MapCode.GDHUD_95HintsObjects3[i].setColor("0;0;0");
+    gdjs.MapCode.GDHUD_95HintsObjects3[i].setColor("255;255;255");
 }
 }}
 
@@ -1055,6 +1061,9 @@ gdjs.MapCode.GDHUD_95HintsObjects3.length = 0;
 }
 }{for(var i = 0, len = gdjs.MapCode.GDHUD_95HintTextObjects3.length ;i < len;++i) {
     gdjs.MapCode.GDHUD_95HintTextObjects3[i].setZOrder(200);
+}
+}{for(var i = 0, len = gdjs.MapCode.GDHUD_95HintsObjects3.length ;i < len;++i) {
+    gdjs.MapCode.GDHUD_95HintsObjects3[i].setZOrder(1);
 }
 }}
 
@@ -1162,7 +1171,7 @@ gdjs.MapCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins
 gdjs.MapCode.GDInventoryBackgroundObjects3.length = 0;
 
 {runtimeScene.getVariables().get("picked_item").setString("");
-}{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.MapCode.mapOfGDgdjs_46MapCode_46GDInventoryBackgroundObjects3Objects, 17, 804, "Inventory");
+}{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.MapCode.mapOfGDgdjs_46MapCode_46GDInventoryBackgroundObjects3Objects, 17, 604, "Inventory");
 }{for(var i = 0, len = gdjs.MapCode.GDInventoryBackgroundObjects3.length ;i < len;++i) {
     gdjs.MapCode.GDInventoryBackgroundObjects3[i].setZOrder(17);
 }
@@ -2176,6 +2185,12 @@ gdjs.MapCode.GDButtonNObjects3.length = 0;
 gdjs.MapCode.GDButtonNObjects4.length = 0;
 gdjs.MapCode.GDButtonNObjects5.length = 0;
 gdjs.MapCode.GDButtonNObjects6.length = 0;
+gdjs.MapCode.GDJournalTextObjects1.length = 0;
+gdjs.MapCode.GDJournalTextObjects2.length = 0;
+gdjs.MapCode.GDJournalTextObjects3.length = 0;
+gdjs.MapCode.GDJournalTextObjects4.length = 0;
+gdjs.MapCode.GDJournalTextObjects5.length = 0;
+gdjs.MapCode.GDJournalTextObjects6.length = 0;
 
 gdjs.MapCode.eventsList30(runtimeScene);
 return;
