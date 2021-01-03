@@ -1012,7 +1012,7 @@ gdjs.ReceptionCode.GDDrawerObjects1.length = 0;
 {for(var i = 0, len = gdjs.ReceptionCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
     gdjs.ReceptionCode.GDHUD_95DescriptionObjects1[i].setPosition(12,32);
 }
-}{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.ReceptionCode.mapOfGDgdjs_46ReceptionCode_46GDDrawerObjects1Objects, 0, 0, "HUD");
+}{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.ReceptionCode.mapOfGDgdjs_46ReceptionCode_46GDDrawerObjects1Objects, 0, 0, "UI");
 }{for(var i = 0, len = gdjs.ReceptionCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
     gdjs.ReceptionCode.GDHUD_95DescriptionObjects1[i].setString("");
 }

@@ -687,7 +687,7 @@ for(var i = 0, len = gdjs.Spare_32PartsCode.GDRH4Objects2.length ;i < len;++i) {
 gdjs.Spare_32PartsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.Spare_32PartsCode.conditionTrue_1 = gdjs.Spare_32PartsCode.condition0IsTrue_0;
-gdjs.Spare_32PartsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12097460);
+gdjs.Spare_32PartsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12089756);
 }
 }if (gdjs.Spare_32PartsCode.condition0IsTrue_0.val) {
 gdjs.Spare_32PartsCode.GDCorrectObjects2.length = 0;
