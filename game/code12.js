@@ -1488,7 +1488,7 @@ gdjs.Motherboard_32RoomCode.condition0IsTrue_0.val = false;
 {
 gdjs.Motherboard_32RoomCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown")) <= 0;
 }if (gdjs.Motherboard_32RoomCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Slideshow_Start", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
 }}
 
 }

@@ -100,7 +100,7 @@ gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
 {gdjs.Puzzle_32Robot_32PictureCode.conditionTrue_1 = gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0;
-gdjs.Puzzle_32Robot_32PictureCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(13248420);
+gdjs.Puzzle_32Robot_32PictureCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11946676);
 }
 }if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
 gdjs.Puzzle_32Robot_32PictureCode.GDSplash_95KeyObjects2.length = 0;
@@ -976,7 +976,7 @@ gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("countdown")) <= 0;
 }if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Slideshow_Start", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
 }}
 
 }

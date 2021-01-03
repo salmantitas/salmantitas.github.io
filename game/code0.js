@@ -228,7 +228,7 @@ gdjs.Slideshow_95StartCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVari
 }if ( gdjs.Slideshow_95StartCode.condition0IsTrue_0.val ) {
 {
 {gdjs.Slideshow_95StartCode.conditionTrue_1 = gdjs.Slideshow_95StartCode.condition1IsTrue_0;
-gdjs.Slideshow_95StartCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(13031308);
+gdjs.Slideshow_95StartCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11726196);
 }
 }}
 if (gdjs.Slideshow_95StartCode.condition1IsTrue_0.val) {
