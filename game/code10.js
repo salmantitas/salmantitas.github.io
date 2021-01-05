@@ -362,7 +362,7 @@ gdjs.copyArray(runtimeScene.getObjects("Correct"), gdjs.Robot_32CubiclesCode.GDC
 {for(var i = 0, len = gdjs.Robot_32CubiclesCode.GDCorrectObjects1.length ;i < len;++i) {
     gdjs.Robot_32CubiclesCode.GDCorrectObjects1[i].deleteFromScene(runtimeScene);
 }
-}{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Reception", false);
+}{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Map", false);
 }}
 
 }
@@ -437,6 +437,13 @@ gdjs.Robot_32CubiclesCode.GDCorrectObjects2.length = 0;
 }{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Robot_32CubiclesCode.mapOfGDgdjs_46Robot_9532CubiclesCode_46GDCorrectObjects2Objects, 270, 270, "UI");
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "correctTimer");
 }}
+
+}
+
+
+{
+
+
 
 }
 

@@ -100,7 +100,7 @@ gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
 {gdjs.Puzzle_32Robot_32PictureCode.conditionTrue_1 = gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0;
-gdjs.Puzzle_32Robot_32PictureCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11938972);
+gdjs.Puzzle_32Robot_32PictureCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11485492);
 }
 }if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
 gdjs.Puzzle_32Robot_32PictureCode.GDSplash_95KeyObjects2.length = 0;
@@ -127,7 +127,7 @@ gdjs.copyArray(runtimeScene.getObjects("Splash_Key"), gdjs.Puzzle_32Robot_32Pict
 }{for(var i = 0, len = gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
     gdjs.Puzzle_32Robot_32PictureCode.GDHUD_95DescriptionObjects1[i].setString("");
 }
-}{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Reception", false);
+}{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Map", false);
 }}
 
 }

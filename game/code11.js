@@ -687,7 +687,7 @@ for(var i = 0, len = gdjs.Spare_32PartsCode.GDRH4Objects2.length ;i < len;++i) {
 gdjs.Spare_32PartsCode.condition0IsTrue_0.val = false;
 {
 {gdjs.Spare_32PartsCode.conditionTrue_1 = gdjs.Spare_32PartsCode.condition0IsTrue_0;
-gdjs.Spare_32PartsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12089756);
+gdjs.Spare_32PartsCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11672588);
 }
 }if (gdjs.Spare_32PartsCode.condition0IsTrue_0.val) {
 gdjs.Spare_32PartsCode.GDCorrectObjects2.length = 0;
@@ -709,7 +709,7 @@ gdjs.Spare_32PartsCode.condition0IsTrue_0.val = false;
 {
 gdjs.Spare_32PartsCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElapsedTime(runtimeScene, 2, "winTimer");
 }if (gdjs.Spare_32PartsCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Reception", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Map", false);
 }}
 
 }
@@ -790,6 +790,13 @@ gdjs.copyArray(runtimeScene.getObjects("Match"), gdjs.Spare_32PartsCode.GDMatchO
     gdjs.Spare_32PartsCode.GDMatchObjects2[i].setString(gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().get("match")));
 }
 }}
+
+}
+
+
+{
+
+
 
 }
 

@@ -880,15 +880,11 @@ for(var i = 0, k = 0, l = gdjs.Chippy_39s_32OfficeCode.GDInventorySlotObjects3.l
 }
 gdjs.Chippy_39s_32OfficeCode.GDInventorySlotObjects3.length = k;}if (gdjs.Chippy_39s_32OfficeCode.condition0IsTrue_0.val) {
 /* Reuse gdjs.Chippy_39s_32OfficeCode.GDInventorySlotObjects3 */
-gdjs.copyArray(runtimeScene.getObjects("RobotChippy"), gdjs.Chippy_39s_32OfficeCode.GDRobotChippyObjects3);
 gdjs.Chippy_39s_32OfficeCode.GDInventoryKeyObjects3.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Chippy_39s_32OfficeCode.mapOfGDgdjs_46Chippy_9539s_9532OfficeCode_46GDInventoryKeyObjects3Objects, (( gdjs.Chippy_39s_32OfficeCode.GDInventorySlotObjects3.length === 0 ) ? 0 :gdjs.Chippy_39s_32OfficeCode.GDInventorySlotObjects3[0].getPointX("Left")), (( gdjs.Chippy_39s_32OfficeCode.GDInventorySlotObjects3.length === 0 ) ? 0 :gdjs.Chippy_39s_32OfficeCode.GDInventorySlotObjects3[0].getPointY("Top")), "UI");
 }{for(var i = 0, len = gdjs.Chippy_39s_32OfficeCode.GDInventoryKeyObjects3.length ;i < len;++i) {
     gdjs.Chippy_39s_32OfficeCode.GDInventoryKeyObjects3[i].setZOrder(20);
-}
-}{for(var i = 0, len = gdjs.Chippy_39s_32OfficeCode.GDRobotChippyObjects3.length ;i < len;++i) {
-    gdjs.Chippy_39s_32OfficeCode.GDRobotChippyObjects3[i].returnVariable(gdjs.Chippy_39s_32OfficeCode.GDRobotChippyObjects3[i].getVariables().getFromIndex(1)).setString("Chippy Blipman is not moving. There is a tiny keyhole in his chestplate. And you have a key!");
 }
 }}
 

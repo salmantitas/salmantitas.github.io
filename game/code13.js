@@ -362,7 +362,7 @@ gdjs.copyArray(runtimeScene.getObjects("Correct"), gdjs.Accounting_32OfficeCode.
 {for(var i = 0, len = gdjs.Accounting_32OfficeCode.GDCorrectObjects1.length ;i < len;++i) {
     gdjs.Accounting_32OfficeCode.GDCorrectObjects1[i].deleteFromScene(runtimeScene);
 }
-}{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Reception", false);
+}{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Map", false);
 }}
 
 }
@@ -470,6 +470,13 @@ gdjs.Accounting_32OfficeCode.GDCorrectObjects2.length = 0;
 }{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Accounting_32OfficeCode.mapOfGDgdjs_46Accounting_9532OfficeCode_46GDCorrectObjects2Objects, 270, 270, "UI");
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "correctTimer");
 }}
+
+}
+
+
+{
+
+
 
 }
 

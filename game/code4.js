@@ -743,7 +743,7 @@ gdjs.ScreenlaCode.condition0IsTrue_0.val = false;
 gdjs.ScreenlaCode.condition1IsTrue_0.val = false;
 {
 {gdjs.ScreenlaCode.conditionTrue_1 = gdjs.ScreenlaCode.condition0IsTrue_0;
-gdjs.ScreenlaCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11889084);
+gdjs.ScreenlaCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11423420);
 }
 }if ( gdjs.ScreenlaCode.condition0IsTrue_0.val ) {
 {
