@@ -848,7 +848,7 @@ gdjs.Memory_32MatchCode.GDstar_95particleObjects7.length = 0;
 gdjs.Memory_32MatchCode.condition0IsTrue_0.val = false;
 {
 {gdjs.Memory_32MatchCode.conditionTrue_1 = gdjs.Memory_32MatchCode.condition0IsTrue_0;
-gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11594204);
+gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12215116);
 }
 }if (gdjs.Memory_32MatchCode.condition0IsTrue_0.val) {
 gdjs.copyArray(gdjs.Memory_32MatchCode.GDcard1Objects6, gdjs.Memory_32MatchCode.GDcard1Objects7);
@@ -1085,7 +1085,7 @@ gdjs.Memory_32MatchCode.GDcard3Objects5.length = k;for(var i = 0, k = 0, l = gdj
 gdjs.Memory_32MatchCode.GDcard4Objects5.length = k;}if ( gdjs.Memory_32MatchCode.condition0IsTrue_0.val ) {
 {
 {gdjs.Memory_32MatchCode.conditionTrue_1 = gdjs.Memory_32MatchCode.condition1IsTrue_0;
-gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11595412);
+gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12216316);
 }
 }}
 if (gdjs.Memory_32MatchCode.condition1IsTrue_0.val) {
@@ -1290,7 +1290,7 @@ gdjs.Memory_32MatchCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.time
 }if ( gdjs.Memory_32MatchCode.condition0IsTrue_0.val ) {
 {
 {gdjs.Memory_32MatchCode.conditionTrue_1 = gdjs.Memory_32MatchCode.condition1IsTrue_0;
-gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11587876);
+gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12209660);
 }
 }}
 if (gdjs.Memory_32MatchCode.condition1IsTrue_0.val) {
@@ -1343,7 +1343,7 @@ gdjs.Memory_32MatchCode.GDcard3Objects2.length = k;for(var i = 0, k = 0, l = gdj
 gdjs.Memory_32MatchCode.GDcard4Objects2.length = k;}if ( gdjs.Memory_32MatchCode.condition0IsTrue_0.val ) {
 {
 {gdjs.Memory_32MatchCode.conditionTrue_1 = gdjs.Memory_32MatchCode.condition1IsTrue_0;
-gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11599108);
+gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12219244);
 }
 }}
 if (gdjs.Memory_32MatchCode.condition1IsTrue_0.val) {
@@ -1370,7 +1370,7 @@ gdjs.Memory_32MatchCode.eventsList17(runtimeScene);} //End of subevents
 gdjs.Memory_32MatchCode.condition0IsTrue_0.val = false;
 {
 {gdjs.Memory_32MatchCode.conditionTrue_1 = gdjs.Memory_32MatchCode.condition0IsTrue_0;
-gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11603852);
+gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12223716);
 }
 }if (gdjs.Memory_32MatchCode.condition0IsTrue_0.val) {
 }
@@ -1407,7 +1407,7 @@ gdjs.Memory_32MatchCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButt
 gdjs.Memory_32MatchCode.condition0IsTrue_0.val = false;
 {
 {gdjs.Memory_32MatchCode.conditionTrue_1 = gdjs.Memory_32MatchCode.condition0IsTrue_0;
-gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11605948);
+gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12225652);
 }
 }if (gdjs.Memory_32MatchCode.condition0IsTrue_0.val) {
 }
@@ -1423,7 +1423,7 @@ gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().tri
 gdjs.Memory_32MatchCode.condition0IsTrue_0.val = false;
 {
 {gdjs.Memory_32MatchCode.conditionTrue_1 = gdjs.Memory_32MatchCode.condition0IsTrue_0;
-gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11602572);
+gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12222436);
 }
 }if (gdjs.Memory_32MatchCode.condition0IsTrue_0.val) {
 }
@@ -1538,7 +1538,7 @@ gdjs.Memory_32MatchCode.condition0IsTrue_0.val = gdjs.evtTools.object.pickedObje
 }if ( gdjs.Memory_32MatchCode.condition0IsTrue_0.val ) {
 {
 {gdjs.Memory_32MatchCode.conditionTrue_1 = gdjs.Memory_32MatchCode.condition1IsTrue_0;
-gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11606684);
+gdjs.Memory_32MatchCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12226516);
 }
 }}
 if (gdjs.Memory_32MatchCode.condition1IsTrue_0.val) {

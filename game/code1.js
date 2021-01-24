@@ -648,7 +648,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = false;
 gdjs.IntroCode.condition1IsTrue_0.val = false;
 {
 {gdjs.IntroCode.conditionTrue_1 = gdjs.IntroCode.condition0IsTrue_0;
-gdjs.IntroCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11263884);
+gdjs.IntroCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11955500);
 }
 }if ( gdjs.IntroCode.condition0IsTrue_0.val ) {
 {
