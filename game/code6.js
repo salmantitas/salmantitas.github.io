@@ -100,7 +100,7 @@ gdjs.Puzzle_32Robot_32PictureCode.mapOfGDgdjs_46Puzzle_9532Robot_9532PictureCode
 gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val = false;
 {
 {gdjs.Puzzle_32Robot_32PictureCode.conditionTrue_1 = gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0;
-gdjs.Puzzle_32Robot_32PictureCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12132988);
+gdjs.Puzzle_32Robot_32PictureCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12210636);
 }
 }if (gdjs.Puzzle_32Robot_32PictureCode.condition0IsTrue_0.val) {
 gdjs.Puzzle_32Robot_32PictureCode.GDSplash_95KeyObjects2.length = 0;
