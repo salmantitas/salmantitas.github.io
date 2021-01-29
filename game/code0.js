@@ -145,7 +145,7 @@ gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElaps
 }if ( gdjs.MainMenuCode.condition0IsTrue_0.val ) {
 {
 {gdjs.MainMenuCode.conditionTrue_1 = gdjs.MainMenuCode.condition1IsTrue_0;
-gdjs.MainMenuCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11991036);
+gdjs.MainMenuCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12296412);
 }
 }}
 if (gdjs.MainMenuCode.condition1IsTrue_0.val) {
@@ -195,7 +195,7 @@ if (gdjs.MainMenuCode.condition1IsTrue_0.val) {
 gdjs.MainMenuCode.condition0IsTrue_0.val = false;
 {
 {gdjs.MainMenuCode.conditionTrue_1 = gdjs.MainMenuCode.condition0IsTrue_0;
-gdjs.MainMenuCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(11994508);
+gdjs.MainMenuCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12299884);
 }
 }if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
 gdjs.MainMenuCode.GDGreatObjects2.length = 0;
