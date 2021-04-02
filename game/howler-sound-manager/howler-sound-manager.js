@@ -1,431 +1,415 @@
-/*
- * GDevelop JS Platform
- * Copyright 2013-present Florian Rival (Florian.Rival@gmail.com). All rights reserved.
- * This project is released under the MIT License.
- */
-
-/**
- * A thin wrapper around a Howl object with:
- * * Extra methods `paused`, `stopped`, `getRate`/`setRate` and `canBeDestroyed` methods.
- * * Automatic clamping when calling `setRate` to ensure a valid value is passed to Howler.js.
- *
- * See https://github.com/goldfire/howler.js#methods for the full documentation.
- *
- * @memberof gdjs
- * @class HowlerSound
- */
-gdjs.HowlerSound = function (o) {
-  Howl.call(this, o);
-  this._paused = false;
-  this._stopped = true;
-  this._canBeDestroyed = false;
-  this._rate = o.rate || 1;
-
-  //Add custom events listener to keep
-  //track of the sound status.
-  var that = this;
-  this.on('end', function () {
-    if (!that.loop()) {
-      that._canBeDestroyed = true;
-      that._paused = false;
-      that._stopped = true;
-    }
-  });
-  this.on('playerror', function (id, error) {
-    console.error(
-      "Can't play a sound, considering it as stopped. Error is:",
-      error
-    );
-    that._paused = false;
-    that._stopped = true;
-  });
-
-  // Track play/pause event to be sure the status is
-  // sync'ed with the sound - though this should be redundant
-  // with `play`/`pause` methods already doing that. Keeping
-  // that to be sure that the status is always correct.
-  this.on('play', function () {
-    that._paused = false;
-    that._stopped = false;
-  });
-  this.on('pause', function () {
-    that._paused = true;
-    that._stopped = false;
-  });
-};
-gdjs.HowlerSound.prototype = Object.create(Howl.prototype);
-
-// Redefine `stop`/`play`/`pause` to ensure the status of the sound
-// is immediately updated (so that calling `stopped` just after
-// `play` will return false).
-
-gdjs.HowlerSound.prototype.stop = function () {
-  this._paused = false;
-  this._stopped = true;
-  return Howl.prototype.stop.call(this);
-};
-gdjs.HowlerSound.prototype.play = function () {
-  this._paused = false;
-  this._stopped = false;
-  return Howl.prototype.play.call(this);
-};
-gdjs.HowlerSound.prototype.pause = function () {
-  this._paused = true;
-  this._stopped = false;
-  return Howl.prototype.pause.call(this);
-};
-
-// Add methods to query the status of the sound:
-
-gdjs.HowlerSound.prototype.paused = function () {
-  return this._paused;
-};
-gdjs.HowlerSound.prototype.stopped = function () {
-  return this._stopped;
-};
-gdjs.HowlerSound.prototype.canBeDestroyed = function () {
-  return this._canBeDestroyed;
-};
-
-// Methods to safely update the rate of the sound:
-
-gdjs.HowlerSound.prototype.getRate = function () {
-  return this._rate;
-};
-gdjs.HowlerSound.prototype.setRate = function (rate) {
-  this._rate = gdjs.HowlerSoundManager.clampRate(rate);
-  this.rate(this._rate);
-};
-
-/**
- * HowlerSoundManager is used to manage the sounds and musics of a RuntimeScene.
- *
- * It is basically a container to associate channels to sounds and keep a list
- * of all sounds being played.
- *
- * @memberof gdjs
- * @class HowlerSoundManager
- */
-gdjs.HowlerSoundManager = function (resources) {
-  this._resources = resources;
-  this._availableResources = {}; //Map storing "audio" resources for faster access.
-
-  this._globalVolume = 100;
-
-  this._sounds = {};
-  this._musics = {};
-  this._freeSounds = []; //Sounds without an assigned channel.
-  this._freeMusics = []; //Musics without an assigned channel.
-
-  this._pausedSounds = [];
-  this._paused = false;
-
-  var that = this;
-  this._checkForPause = function () {
-    if (that._paused) {
-      this.pause();
-      that._pausedSounds.push(this);
-    }
+var gdjs;
+(function(gdjs2) {
+  const HowlParameters = {
+    preload: true,
+    onplayerror: (_, error) => console.error("Can't play an audio file: ", error),
+    onloaderror: (_, error) => console.error("Error while loading an audio file: ", error)
   };
-
-  document.addEventListener('deviceready', function () {
-    // pause/resume sounds in Cordova when the app is being paused/resumed
-    document.addEventListener(
-      'pause',
-      function () {
-        var soundList = that._freeSounds.concat(that._freeMusics);
-        for (var key in that._sounds) {
-          if (that._sounds.hasOwnProperty(key)) {
-            soundList.push(that._sounds[key]);
-          }
-        }
-        for (var key in that._musics) {
-          if (that._musics.hasOwnProperty(key)) {
-            soundList.push(that._musics[key]);
-          }
-        }
-        for (var i = 0; i < soundList.length; i++) {
-          var sound = soundList[i];
-          if (!sound.paused() && !sound.stopped()) {
-            sound.pause();
-            that._pausedSounds.push(sound);
-          }
-        }
-        that._paused = true;
-      },
-      false
-    );
-    document.addEventListener(
-      'resume',
-      function () {
-        for (var i = 0; i < that._pausedSounds.length; i++) {
-          var sound = that._pausedSounds[i];
-          if (!sound.stopped()) {
-            sound.play();
-          }
-        }
-        that._pausedSounds.length = 0;
-        that._paused = false;
-      },
-      false
-    );
-  });
-};
-
-gdjs.SoundManager = gdjs.HowlerSoundManager; //Register the class to let the engine use it.
-
-/**
- * Update the resources data of the game. Useful for hot-reloading, should not be used otherwise.
- *
- * @param {ResourceData[]} resources The resources data of the game.
- */
-gdjs.HowlerSoundManager.prototype.setResources = function (resources) {
-  this._resources = resources;
-};
-
-/**
- * Ensure rate is in a range valid for Howler.js
- * @return The clamped rate
- * @private
- */
-gdjs.HowlerSoundManager.clampRate = function (rate) {
-  if (rate > 4.0) return 4.0;
-  if (rate < 0.5) return 0.5;
-
-  return rate;
-};
-
-/**
- * Return the file associated to the given sound name.
- *
- * Names and files are loaded from resources when preloadAudio is called. If no
- * file is associated to the given name, then the name will be considered as a
- * filename and will be returned.
- *
- * @private
- * @return The associated filename
- */
-gdjs.HowlerSoundManager.prototype._getFileFromSoundName = function (soundName) {
-  if (
-    this._availableResources.hasOwnProperty(soundName) &&
-    this._availableResources[soundName].file
-  ) {
-    return this._availableResources[soundName].file;
+  class HowlerSound {
+    constructor(howl) {
+      this._id = null;
+      this._oncePlay = [];
+      this._onPlay = [];
+      this._howl = howl;
+    }
+    isLoaded() {
+      return this._howl.state() === "loaded";
+    }
+    play() {
+      if (this.isLoaded()) {
+        const newID = this._howl.play(this._id === null ? "__default" : this._id);
+        this._id = newID;
+        this._onPlay.forEach((func) => {
+          this.on("play", func);
+          func(newID);
+        });
+        this._oncePlay.forEach((func) => func(newID));
+        this._onPlay = [];
+        this._oncePlay = [];
+      } else
+        this._howl.once("load", () => this.play());
+      return this;
+    }
+    pause() {
+      if (this._id !== null)
+        this._howl.pause(this._id);
+      return this;
+    }
+    stop() {
+      if (this._id !== null)
+        this._howl.stop(this._id);
+      return this;
+    }
+    playing() {
+      return (this._id !== null ? this._howl.playing(this._id) : false) || !this.isLoaded();
+    }
+    paused() {
+      return !this.playing();
+    }
+    stopped() {
+      return this.paused() && this.getSeek() === 0;
+    }
+    getRate() {
+      if (this._id === null)
+        return 0;
+      return this._howl.rate(this._id);
+    }
+    setRate(rate) {
+      if (this._id !== null) {
+        rate = gdjs2.HowlerSoundManager.clampRate(rate);
+        this._howl.rate(rate, this._id);
+      }
+      return this;
+    }
+    getLoop() {
+      if (this._id === null)
+        return false;
+      return this._howl.loop(this._id);
+    }
+    setLoop(loop) {
+      if (this._id !== null)
+        this._howl.loop(loop, this._id);
+      return this;
+    }
+    getVolume() {
+      if (this._id === null)
+        return 100;
+      return this._howl.volume(this._id);
+    }
+    setVolume(volume) {
+      if (this._id !== null)
+        this._howl.volume(volume, this._id);
+      return this;
+    }
+    getMute() {
+      if (this._id === null)
+        return false;
+      return this._howl.mute(this._id);
+    }
+    setMute(mute) {
+      if (this._id !== null)
+        this._howl.mute(mute, this._id);
+      return this;
+    }
+    getSeek() {
+      if (this._id === null)
+        return 0;
+      return this._howl.seek(this._id);
+    }
+    setSeek(seek) {
+      if (this._id !== null)
+        this._howl.seek(seek, this._id);
+      return this;
+    }
+    getSpatialPosition(axis) {
+      if (this._id === null)
+        return 0;
+      return this._howl.pos(this._id)[axis === "x" ? 0 : axis === "y" ? 1 : 2];
+    }
+    setSpatialPosition(x, y, z) {
+      if (this._id !== null)
+        this._howl.pos(x, y, z, this._id);
+      return this;
+    }
+    fade(from, to, duration) {
+      if (this._id !== null)
+        this._howl.fade(from, to, duration, this._id);
+      return this;
+    }
+    on(event, handler) {
+      if (event === "play") {
+        if (this._id === null)
+          this._onPlay.push(handler);
+        else
+          this._howl.on(event, handler, this._id);
+      } else if (this._id === null)
+        this.once("play", () => this.on(event, handler));
+      else
+        this._howl.on(event, handler, this._id);
+      return this;
+    }
+    once(event, handler) {
+      if (event === "play") {
+        if (this._id === null)
+          this._oncePlay.push(handler);
+        else
+          this._howl.once(event, handler, this._id);
+      } else if (this._id === null)
+        this.once("play", () => this.once(event, handler));
+      else
+        this._howl.once(event, handler, this._id);
+      return this;
+    }
+    off(event, handler) {
+      if (this._id !== null)
+        this._howl.off(event, handler, this._id);
+      return this;
+    }
   }
-
-  return soundName;
-};
-
-/**
- * Store the sound in the specified array, put it at the first index that
- * is free, or add it at the end if no element is free
- * ("free" means that the gdjs.HowlerSound can be destroyed).
- *
- * @param {Array} arr The array containing the sounds.
- * @param {gdjs.HowlerSound} arr The gdjs.HowlerSound to add.
- * @return The gdjs.HowlerSound that have been added (i.e: the second parameter).
- * @private
- */
-gdjs.HowlerSoundManager.prototype._storeSoundInArray = function (arr, sound) {
-  //Try to recycle an old sound.
-  var index = null;
-  for (var i = 0, len = arr.length; i < len; ++i) {
-    if (arr[i] !== null && arr[i].canBeDestroyed()) {
-      arr[index] = sound;
+  gdjs2.HowlerSound = HowlerSound;
+  class HowlerSoundManager {
+    constructor(resources) {
+      this._loadedMusics = {};
+      this._loadedSounds = {};
+      this._availableResources = {};
+      this._globalVolume = 100;
+      this._sounds = {};
+      this._musics = {};
+      this._freeSounds = [];
+      this._freeMusics = [];
+      this._pausedSounds = [];
+      this._paused = false;
+      this._resources = resources;
+      const that = this;
+      document.addEventListener("deviceready", function() {
+        document.addEventListener("pause", function() {
+          const soundList = that._freeSounds.concat(that._freeMusics);
+          for (let key in that._sounds) {
+            if (that._sounds.hasOwnProperty(key)) {
+              soundList.push(that._sounds[key]);
+            }
+          }
+          for (let key in that._musics) {
+            if (that._musics.hasOwnProperty(key)) {
+              soundList.push(that._musics[key]);
+            }
+          }
+          for (let i = 0; i < soundList.length; i++) {
+            const sound = soundList[i];
+            if (!sound.paused() && !sound.stopped()) {
+              sound.pause();
+              that._pausedSounds.push(sound);
+            }
+          }
+          that._paused = true;
+        }, false);
+        document.addEventListener("resume", function() {
+          for (let i = 0; i < that._pausedSounds.length; i++) {
+            const sound = that._pausedSounds[i];
+            if (!sound.stopped()) {
+              sound.play();
+            }
+          }
+          that._pausedSounds.length = 0;
+          that._paused = false;
+        }, false);
+      });
+    }
+    setResources(resources) {
+      this._resources = resources;
+    }
+    static clampRate(rate) {
+      if (rate > 4) {
+        return 4;
+      }
+      if (rate < 0.5) {
+        return 0.5;
+      }
+      return rate;
+    }
+    _getFileFromSoundName(soundName) {
+      if (this._availableResources.hasOwnProperty(soundName) && this._availableResources[soundName].file) {
+        return this._availableResources[soundName].file;
+      }
+      return soundName;
+    }
+    _storeSoundInArray(arr, sound) {
+      for (var i = 0, len = arr.length; i < len; ++i) {
+        if (arr[i] !== null && arr[i].stopped()) {
+          arr[i] = sound;
+          return sound;
+        }
+      }
+      arr.push(sound);
       return sound;
     }
-  }
-
-  arr.push(sound);
-  return sound;
-};
-
-gdjs.HowlerSoundManager.prototype.playSound = function (
-  soundName,
-  loop,
-  volume,
-  pitch
-) {
-  var soundFile = this._getFileFromSoundName(soundName);
-
-  var sound = new gdjs.HowlerSound({
-    src: [soundFile], //TODO: ogg, mp3...
-    loop: loop,
-    volume: volume / 100,
-    rate: gdjs.HowlerSoundManager.clampRate(pitch),
-  });
-
-  this._storeSoundInArray(this._freeSounds, sound).play();
-
-  sound.on('play', this._checkForPause);
-};
-
-gdjs.HowlerSoundManager.prototype.playSoundOnChannel = function (
-  soundName,
-  channel,
-  loop,
-  volume,
-  pitch
-) {
-  var oldSound = this._sounds[channel];
-  if (oldSound) {
-    oldSound.unload();
-  }
-
-  var soundFile = this._getFileFromSoundName(soundName);
-
-  var sound = new gdjs.HowlerSound({
-    src: [soundFile], //TODO: ogg, mp3...
-    loop: loop,
-    volume: volume / 100,
-    rate: gdjs.HowlerSoundManager.clampRate(pitch),
-  });
-
-  sound.play();
-  this._sounds[channel] = sound;
-
-  sound.on('play', this._checkForPause);
-};
-
-gdjs.HowlerSoundManager.prototype.getSoundOnChannel = function (channel) {
-  return this._sounds[channel];
-};
-
-gdjs.HowlerSoundManager.prototype.playMusic = function (
-  soundName,
-  loop,
-  volume,
-  pitch
-) {
-  var soundFile = this._getFileFromSoundName(soundName);
-
-  var sound = new gdjs.HowlerSound({
-    src: [soundFile], //TODO: ogg, mp3...
-    loop: loop,
-    html5: true, //Force HTML5 audio so we don't wait for the full file to be loaded on Android.
-    volume: volume / 100,
-    rate: gdjs.HowlerSoundManager.clampRate(pitch),
-  });
-
-  this._storeSoundInArray(this._freeMusics, sound).play();
-
-  sound.on('play', this._checkForPause);
-};
-
-gdjs.HowlerSoundManager.prototype.playMusicOnChannel = function (
-  soundName,
-  channel,
-  loop,
-  volume,
-  pitch
-) {
-  var oldMusic = this._musics[channel];
-  if (oldMusic) {
-    oldMusic.unload();
-  }
-
-  var soundFile = this._getFileFromSoundName(soundName);
-
-  var music = new gdjs.HowlerSound({
-    src: [soundFile], //TODO: ogg, mp3...
-    loop: loop,
-    html5: true, //Force HTML5 audio so we don't wait for the full file to be loaded on Android.
-    volume: volume / 100,
-    rate: gdjs.HowlerSoundManager.clampRate(pitch),
-  });
-
-  music.play();
-  this._musics[channel] = music;
-
-  music.on('play', this._checkForPause);
-};
-
-gdjs.HowlerSoundManager.prototype.getMusicOnChannel = function (channel) {
-  return this._musics[channel];
-};
-
-gdjs.HowlerSoundManager.prototype.setGlobalVolume = function (volume) {
-  this._globalVolume = volume;
-  if (this._globalVolume > 100) this._globalVolume = 100;
-  if (this._globalVolume < 0) this._globalVolume = 0;
-  Howler.volume(this._globalVolume / 100);
-};
-
-gdjs.HowlerSoundManager.prototype.getGlobalVolume = function () {
-  return this._globalVolume;
-};
-
-gdjs.HowlerSoundManager.prototype.clearAll = function () {
-  for (var i = 0; i < this._freeSounds.length; ++i) {
-    if (this._freeSounds[i]) this._freeSounds[i].unload();
-  }
-  for (var i = 0; i < this._freeMusics.length; ++i) {
-    if (this._freeMusics[i]) this._freeMusics[i].unload();
-  }
-  this._freeSounds.length = 0;
-  this._freeMusics.length = 0;
-
-  for (var p in this._sounds) {
-    if (this._sounds.hasOwnProperty(p) && this._sounds[p]) {
-      this._sounds[p].unload();
-      delete this._sounds[p];
-    }
-  }
-  for (var p in this._musics) {
-    if (this._musics.hasOwnProperty(p) && this._musics[p]) {
-      this._musics[p].unload();
-      delete this._musics[p];
-    }
-  }
-  this._pausedSounds.length = 0;
-};
-
-gdjs.HowlerSoundManager.prototype.preloadAudio = function (
-  onProgress,
-  onComplete,
-  resources
-) {
-  resources = resources || this._resources;
-
-  //Construct the list of files to be loaded.
-  //For one loaded file, it can have one or more resources
-  //that use it.
-  var files = {};
-  for (var i = 0, len = resources.length; i < len; ++i) {
-    var res = resources[i];
-    if (res.file && res.kind === 'audio') {
-      if (!!this._availableResources[res.name]) {
-        continue;
+    createHowlerSound(soundName, isMusic) {
+      const soundFile = this._getFileFromSoundName(soundName);
+      const cacheContainer = isMusic ? this._loadedMusics : this._loadedSounds;
+      if (!cacheContainer.hasOwnProperty(soundFile)) {
+        cacheContainer[soundFile] = new Howl(Object.assign({
+          src: [soundFile],
+          html5: isMusic
+        }, HowlParameters));
       }
-
-      this._availableResources[res.name] = res;
-
-      files[res.file] = (files[res.file] || []).concat(res);
+      return new gdjs2.HowlerSound(cacheContainer[soundFile]);
+    }
+    loadAudio(soundName, isMusic) {
+      const soundFile = this._getFileFromSoundName(soundName);
+      const cacheContainer = isMusic ? this._loadedMusics : this._loadedSounds;
+      if (cacheContainer.hasOwnProperty(soundFile))
+        return;
+      cacheContainer[soundFile] = new Howl(Object.assign({
+        src: [soundFile],
+        html5: isMusic
+      }, HowlParameters));
+    }
+    unloadAudio(soundName, isMusic) {
+      const soundFile = this._getFileFromSoundName(soundName);
+      const cacheContainer = isMusic ? this._loadedMusics : this._loadedSounds;
+      if (!cacheContainer[soundFile])
+        return;
+      const howl = cacheContainer[soundFile];
+      function clearContainer(howlerSoundContainer) {
+        for (let i in howlerSoundContainer) {
+          if (howlerSoundContainer[i] && howlerSoundContainer[i]._howl === howl) {
+            howlerSoundContainer[i].stop();
+            delete howlerSoundContainer[i];
+          }
+        }
+      }
+      clearContainer(this._freeMusics);
+      clearContainer(this._freeSounds);
+      clearContainer(Object.values(this._musics));
+      clearContainer(Object.values(this._sounds));
+      clearContainer(this._pausedSounds);
+      cacheContainer[soundFile].unload();
+      delete cacheContainer[soundFile];
+    }
+    unloadAll() {
+      Howler.unload();
+      this._freeSounds.length = 0;
+      this._freeMusics.length = 0;
+      this._sounds = {};
+      this._musics = {};
+      this._pausedSounds.length = 0;
+      this._loadedMusics = {};
+      this._loadedSounds = {};
+    }
+    playSound(soundName, loop, volume, pitch) {
+      var sound = this.createHowlerSound(soundName, false);
+      this._storeSoundInArray(this._freeSounds, sound).play();
+      sound.once("play", () => {
+        sound.setLoop(loop).setVolume(volume / 100).setRate(pitch);
+        if (this._paused) {
+          sound.pause();
+          this._pausedSounds.push(sound);
+        }
+      });
+    }
+    playSoundOnChannel(soundName, channel, loop, volume, pitch) {
+      if (this._sounds[channel])
+        this._sounds[channel].stop();
+      var sound = this.createHowlerSound(soundName, false).play();
+      this._sounds[channel] = sound;
+      sound.once("play", () => {
+        sound.setLoop(loop).setVolume(volume / 100).setRate(pitch);
+        if (this._paused) {
+          sound.pause();
+          this._pausedSounds.push(sound);
+        }
+      });
+    }
+    getSoundOnChannel(channel) {
+      return this._sounds[channel];
+    }
+    playMusic(soundName, loop, volume, pitch) {
+      var music = this.createHowlerSound(soundName, true);
+      this._storeSoundInArray(this._freeMusics, music).play();
+      music.once("play", () => {
+        music.setLoop(loop).setVolume(volume / 100).setRate(pitch);
+        if (this._paused) {
+          music.pause();
+          this._pausedSounds.push(music);
+        }
+      });
+    }
+    playMusicOnChannel(soundName, channel, loop, volume, pitch) {
+      if (this._musics[channel])
+        this._musics[channel].stop();
+      const music = this.createHowlerSound(soundName, true).play();
+      this._musics[channel] = music;
+      music.once("play", () => {
+        music.setLoop(loop).setVolume(volume / 100).setRate(pitch);
+        if (this._paused) {
+          music.pause();
+          this._pausedSounds.push(music);
+        }
+      });
+    }
+    getMusicOnChannel(channel) {
+      return this._musics[channel];
+    }
+    setGlobalVolume(volume) {
+      this._globalVolume = volume;
+      if (this._globalVolume > 100) {
+        this._globalVolume = 100;
+      }
+      if (this._globalVolume < 0) {
+        this._globalVolume = 0;
+      }
+      Howler.volume(this._globalVolume / 100);
+    }
+    getGlobalVolume() {
+      return this._globalVolume;
+    }
+    clearAll() {
+      Howler.stop();
+      this._freeSounds.length = 0;
+      this._freeMusics.length = 0;
+      this._sounds = {};
+      this._musics = {};
+      this._pausedSounds.length = 0;
+    }
+    preloadAudio(onProgress, onComplete, resources) {
+      resources = resources || this._resources;
+      const files = {};
+      for (var i = 0, len = resources.length; i < len; ++i) {
+        let res = resources[i];
+        if (res.file && res.kind === "audio") {
+          if (!!this._availableResources[res.name]) {
+            continue;
+          }
+          this._availableResources[res.name] = res;
+          files[res.file] = (files[res.file] || []).concat(res);
+        }
+      }
+      const totalCount = Object.keys(files).length;
+      if (totalCount === 0)
+        return onComplete(totalCount);
+      let loadedCount = 0;
+      const onLoad = (_, error) => {
+        if (error)
+          console.error("There was an error while loading an audio file:", error);
+        loadedCount++;
+        if (loadedCount === totalCount)
+          return onComplete(totalCount);
+        onProgress(loadedCount, totalCount);
+      };
+      const preloadAudioFile = (file, onLoadCallback, isMusic) => {
+        const container = isMusic ? this._loadedMusics : this._loadedSounds;
+        container[file] = new Howl(Object.assign({}, HowlParameters, {
+          src: [file],
+          onload: onLoadCallback,
+          onloaderror: onLoadCallback,
+          html5: isMusic
+        }));
+      };
+      for (let file in files) {
+        if (files.hasOwnProperty(file)) {
+          const fileData = files[file][0];
+          if (!fileData.preloadAsSound && !fileData.preloadAsMusic) {
+            onLoad();
+          } else if (fileData.preloadAsSound && fileData.preloadAsMusic) {
+            let loadedOnce = false;
+            const callback = (_, error) => {
+              if (!loadedOnce) {
+                loadedOnce = true;
+                return;
+              }
+              onLoad(_, error);
+            };
+            preloadAudioFile(file, callback, true);
+            preloadAudioFile(file, callback, false);
+          } else if (fileData.preloadAsSound) {
+            preloadAudioFile(file, onLoad, false);
+          } else if (fileData.preloadAsMusic)
+            preloadAudioFile(file, onLoad, true);
+        }
+      }
     }
   }
-
-  var totalCount = Object.keys(files).length;
-  if (totalCount === 0) return onComplete(totalCount); //Nothing to load.
-
-  var loadedCount = 0;
-  var that = this;
-  function onLoad() {
-    loadedCount++;
-    if (loadedCount === totalCount) {
-      return onComplete(totalCount);
-    }
-
-    onProgress(loadedCount, totalCount);
-  }
-
-  for (var file in files) {
-    if (files.hasOwnProperty(file)) {
-      var httpRequest = new XMLHttpRequest();
-      httpRequest.addEventListener('load', onLoad);
-      httpRequest.addEventListener('error', onLoad);
-      httpRequest.addEventListener('abort', onLoad);
-      httpRequest.open('GET', file);
-      httpRequest.send();
-    }
-  }
-};
+  gdjs2.HowlerSoundManager = HowlerSoundManager;
+  gdjs2.SoundManager = HowlerSoundManager;
+})(gdjs || (gdjs = {}));
+//# sourceMappingURL=howler-sound-manager.js.map

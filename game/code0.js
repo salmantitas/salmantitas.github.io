@@ -145,7 +145,7 @@ gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.timerElaps
 }if ( gdjs.MainMenuCode.condition0IsTrue_0.val ) {
 {
 {gdjs.MainMenuCode.conditionTrue_1 = gdjs.MainMenuCode.condition1IsTrue_0;
-gdjs.MainMenuCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12296412);
+gdjs.MainMenuCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12061996);
 }
 }}
 if (gdjs.MainMenuCode.condition1IsTrue_0.val) {
@@ -192,10 +192,36 @@ if (gdjs.MainMenuCode.condition1IsTrue_0.val) {
 {
 
 
+{
+gdjs.copyArray(runtimeScene.getObjects("Drawer"), gdjs.MainMenuCode.GDDrawerObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.MainMenuCode.GDHUD_95DescriptionObjects1);
+{for(var i = 0, len = gdjs.MainMenuCode.GDDrawerObjects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDDrawerObjects1[i].drawRoundedRectangle((( gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length === 0 ) ? 0 :gdjs.MainMenuCode.GDHUD_95DescriptionObjects1[0].getX()) - 10, (( gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length === 0 ) ? 0 :gdjs.MainMenuCode.GDHUD_95DescriptionObjects1[0].getY()) - 10, (( gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length === 0 ) ? 0 :gdjs.MainMenuCode.GDHUD_95DescriptionObjects1[0].getX()) + (( gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length === 0 ) ? 0 :gdjs.MainMenuCode.GDHUD_95DescriptionObjects1[0].getWidth()) + 10, (( gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length === 0 ) ? 0 :gdjs.MainMenuCode.GDHUD_95DescriptionObjects1[0].getY()) + (( gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length === 0 ) ? 0 :gdjs.MainMenuCode.GDHUD_95DescriptionObjects1[0].getHeight()) + 10, 10);
+}
+}{for(var i = 0, len = gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDHUD_95DescriptionObjects1[i].setString("The reception desk has flashing message for you!");
+}
+}}
+
+}
+
+
+};gdjs.MainMenuCode.eventsList4 = function(runtimeScene) {
+
+{
+
+
+
+}
+
+
+{
+
+
 gdjs.MainMenuCode.condition0IsTrue_0.val = false;
 {
 {gdjs.MainMenuCode.conditionTrue_1 = gdjs.MainMenuCode.condition0IsTrue_0;
-gdjs.MainMenuCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12299884);
+gdjs.MainMenuCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12065444);
 }
 }if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
 gdjs.MainMenuCode.GDGreatObjects2.length = 0;
@@ -282,12 +308,15 @@ gdjs.copyArray(runtimeScene.getObjects("HUD_Tut_3"), gdjs.MainMenuCode.GDHUD_95T
 {for(var i = 0, len = gdjs.MainMenuCode.GDHUD_95Tut_953Objects1.length ;i < len;++i) {
     gdjs.MainMenuCode.GDHUD_95Tut_953Objects1[i].getBehavior("Tween").addObjectPositionXTween("MoveLeft", 1400, "linear", 500, false);
 }
-}}
+}
+{ //Subevents
+gdjs.MainMenuCode.eventsList3(runtimeScene);} //End of subevents
+}
 
 }
 
 
-};gdjs.MainMenuCode.eventsList4 = function(runtimeScene) {
+};gdjs.MainMenuCode.eventsList5 = function(runtimeScene) {
 
 {
 
@@ -311,12 +340,24 @@ gdjs.MainMenuCode.condition0IsTrue_0.val = false;
 gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 }if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("Desk"), gdjs.MainMenuCode.GDDeskObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Drawer"), gdjs.MainMenuCode.GDDrawerObjects1);
+gdjs.copyArray(runtimeScene.getObjects("HUD_Description"), gdjs.MainMenuCode.GDHUD_95DescriptionObjects1);
 {runtimeScene.getVariables().get("trigger").setNumber(-(1));
 }{runtimeScene.getGame().getVariables().get("displaySplash").setNumber(0.5);
 }{for(var i = 0, len = gdjs.MainMenuCode.GDDeskObjects1.length ;i < len;++i) {
     gdjs.MainMenuCode.GDDeskObjects1[i].hide();
 }
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "titleTimer");
+}{for(var i = 0, len = gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDHUD_95DescriptionObjects1[i].setPosition(12,32);
+}
+}{for(var i = 0, len = gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDHUD_95DescriptionObjects1[i].setString("");
+}
+}{for(var i = 0, len = gdjs.MainMenuCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
+    gdjs.MainMenuCode.GDHUD_95DescriptionObjects1[i].setZOrder((( gdjs.MainMenuCode.GDDrawerObjects1.length === 0 ) ? 0 :gdjs.MainMenuCode.GDDrawerObjects1[0].getZOrder()) + 1);
+}
+}{runtimeScene.getGame().getVariables().get("skipToStart").setNumber(0);
 }}
 
 }
@@ -364,7 +405,7 @@ gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumbe
 }if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
 
 { //Subevents
-gdjs.MainMenuCode.eventsList3(runtimeScene);} //End of subevents
+gdjs.MainMenuCode.eventsList4(runtimeScene);} //End of subevents
 }
 
 }
@@ -373,6 +414,20 @@ gdjs.MainMenuCode.eventsList3(runtimeScene);} //End of subevents
 {
 
 
+
+}
+
+
+{
+
+
+gdjs.MainMenuCode.condition0IsTrue_0.val = false;
+{
+gdjs.MainMenuCode.condition0IsTrue_0.val = gdjs.evtTools.input.wasKeyReleased(runtimeScene, "Num0");
+}if (gdjs.MainMenuCode.condition0IsTrue_0.val) {
+{runtimeScene.getGame().getVariables().get("skipToStart").setNumber(1);
+}{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Intro", false);
+}}
 
 }
 
@@ -455,7 +510,7 @@ gdjs.MainMenuCode.GDtest_95triggerObjects1.length = 0;
 gdjs.MainMenuCode.GDtest_95triggerObjects2.length = 0;
 gdjs.MainMenuCode.GDtest_95triggerObjects3.length = 0;
 
-gdjs.MainMenuCode.eventsList4(runtimeScene);
+gdjs.MainMenuCode.eventsList5(runtimeScene);
 return;
 
 }

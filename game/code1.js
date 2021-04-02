@@ -121,11 +121,31 @@ gdjs.IntroCode.eventsList0 = function(runtimeScene) {
 {
 
 
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
+
+}
+
+
+{
+
+
 {
 gdjs.copyArray(runtimeScene.getObjects("TypingText"), gdjs.IntroCode.GDTypingTextObjects2);
 gdjs.copyArray(runtimeScene.getObjects("play"), gdjs.IntroCode.GDplayObjects2);
 {runtimeScene.getVariables().get("typeRate").setNumber(30.075);
-}{gdjs.evtTools.sound.playSound(runtimeScene, "screenla.wav", false, 100, 1);
 }{for(var i = 0, len = gdjs.IntroCode.GDplayObjects2.length ;i < len;++i) {
     gdjs.IntroCode.GDplayObjects2[i].hide();
 }
@@ -579,7 +599,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = false;
 {
 gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if (gdjs.IntroCode.condition0IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Map", false);
+{runtimeScene.getGame().getVariables().get("skipToStart").setNumber(1);
 }}
 
 }
@@ -648,7 +668,7 @@ gdjs.IntroCode.condition0IsTrue_0.val = false;
 gdjs.IntroCode.condition1IsTrue_0.val = false;
 {
 {gdjs.IntroCode.conditionTrue_1 = gdjs.IntroCode.condition0IsTrue_0;
-gdjs.IntroCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12338524);
+gdjs.IntroCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(12115780);
 }
 }if ( gdjs.IntroCode.condition0IsTrue_0.val ) {
 {
@@ -698,6 +718,19 @@ gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.
 {for(var i = 0, len = gdjs.IntroCode.GDplayObjects1.length ;i < len;++i) {
     gdjs.IntroCode.GDplayObjects1[i].setColor("21;105;0");
 }
+}}
+
+}
+
+
+{
+
+
+gdjs.IntroCode.condition0IsTrue_0.val = false;
+{
+gdjs.IntroCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().get("skipToStart")) == 1;
+}if (gdjs.IntroCode.condition0IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Map", false);
 }}
 
 }

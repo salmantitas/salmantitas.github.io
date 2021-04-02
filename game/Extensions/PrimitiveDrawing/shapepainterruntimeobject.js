@@ -1,278 +1,199 @@
-/*
- *  GDevelop JS Platform
- *  2013 Florian Rival (Florian.Rival@gmail.com)
- */
-
-/**
- * @typedef {Object} RGBColor Represents a color in RGB Format
- * @property {number} r The Red component of the color, from 0 to 255.
- * @property {number} g The Green component of the color, from 0 to 255.
- * @property {number} b The Blue component of the color, from 0 to 255.
- */
-
-/**
- * @typedef {Object} ShapePainterObjectDataType Initial properties for a for {@link gdjs.ShapePainterRuntimeObject}.
- * @property {RGBColor} fillColor The color (in RGB format) of the inner part of the painted shape
- * @property {RGBColor} outlineColor The color (in RGB format) of the outline of the painted shape
- * @property {number} fillOpacity The opacity of the inner part of the painted shape
- * @property {number} outlineOpacity The opacity of the outline of the painted shape
- * @property {number} outlineSize The size of the outline of the painted shape, in pixels.
- * @property {boolean} absoluteCoordinates Use absolute coordinates?
- * @property {boolean} clearBetweenFrames Clear the previous render before the next draw?
- */
-
-/**
- * @typedef {ObjectData & ShapePainterObjectDataType} ShapePainterObjectData
- */
-
-/**
- * The ShapePainterRuntimeObject allows to draw graphics shapes on screen.
- *
- * @class ShapePainterRuntimeObject
- * @extends RuntimeObject
- * @memberof gdjs
- * @param {gdjs.RuntimeScene} runtimeScene The {@link gdjs.RuntimeScene} the object belongs to
- * @param {ShapePainterObjectData} shapePainterObjectData The initial properties of the object
- */
-gdjs.ShapePainterRuntimeObject = function(runtimeScene, shapePainterObjectData)
-{
-    gdjs.RuntimeObject.call(this, runtimeScene, shapePainterObjectData);
-
-    /** @type {number} */
-    this._fillColor = parseInt(gdjs.rgbToHex(shapePainterObjectData.fillColor.r, shapePainterObjectData.fillColor.g, shapePainterObjectData.fillColor.b), 16);
-
-    /** @type {number} */
-    this._outlineColor = parseInt(gdjs.rgbToHex(shapePainterObjectData.outlineColor.r, shapePainterObjectData.outlineColor.g, shapePainterObjectData.outlineColor.b), 16);
-
-    /** @type {number} */
-    this._fillOpacity = shapePainterObjectData.fillOpacity;
-
-    /** @type {number} */
-    this._outlineOpacity = shapePainterObjectData.outlineOpacity;
-
-    /** @type {number} */
-    this._outlineSize = shapePainterObjectData.outlineSize;
-
-    /** @type {boolean} */
-    this._absoluteCoordinates = shapePainterObjectData.absoluteCoordinates;
-
-    /** @type {boolean} */
-    this._clearBetweenFrames = shapePainterObjectData.clearBetweenFrames;
-
-    if (this._renderer)
-        gdjs.ShapePainterRuntimeObjectRenderer.call(this._renderer, this, runtimeScene);
-    else
-        /** @type {gdjs.ShapePainterRuntimeObjectRenderer} */
-        this._renderer = new gdjs.ShapePainterRuntimeObjectRenderer(this, runtimeScene);
-
-    // *ALWAYS* call `this.onCreated()` at the very end of your object constructor.
-    this.onCreated();
-};
-
-gdjs.ShapePainterRuntimeObject.prototype = Object.create( gdjs.RuntimeObject.prototype );
-gdjs.registerObject("PrimitiveDrawing::Drawer", gdjs.ShapePainterRuntimeObject);
-
-gdjs.ShapePainterRuntimeObject.prototype.getRendererObject = function() {
-    return this._renderer.getRendererObject();
-};
-
-/**
- * @param {ShapePainterObjectData} oldObjectData
- * @param {ShapePainterObjectData} newObjectData
- */
-gdjs.ShapePainterRuntimeObject.prototype.updateFromObjectData = function(oldObjectData, newObjectData) {
-    if (oldObjectData.fillColor.r !== newObjectData.fillColor.r ||
-        oldObjectData.fillColor.g !== newObjectData.fillColor.g ||
-        oldObjectData.fillColor.b !== newObjectData.fillColor.b) {
-        this.setFillColor(
-            '' + newObjectData.fillColor.r + ';' +
-            newObjectData.fillColor.g  + ';' +
-            newObjectData.fillColor.b
-        );
+var gdjs;
+(function(gdjs2) {
+  class ShapePainterRuntimeObject extends gdjs2.RuntimeObject {
+    constructor(runtimeScene, shapePainterObjectData) {
+      super(runtimeScene, shapePainterObjectData);
+      this._fillColor = parseInt(gdjs2.rgbToHex(shapePainterObjectData.fillColor.r, shapePainterObjectData.fillColor.g, shapePainterObjectData.fillColor.b), 16);
+      this._outlineColor = parseInt(gdjs2.rgbToHex(shapePainterObjectData.outlineColor.r, shapePainterObjectData.outlineColor.g, shapePainterObjectData.outlineColor.b), 16);
+      this._fillOpacity = shapePainterObjectData.fillOpacity;
+      this._outlineOpacity = shapePainterObjectData.outlineOpacity;
+      this._outlineSize = shapePainterObjectData.outlineSize;
+      this._absoluteCoordinates = shapePainterObjectData.absoluteCoordinates;
+      this._clearBetweenFrames = shapePainterObjectData.clearBetweenFrames;
+      this._renderer = new gdjs2.ShapePainterRuntimeObjectRenderer(this, runtimeScene);
+      this.onCreated();
     }
-    if (oldObjectData.outlineColor.r !== newObjectData.outlineColor.r ||
-        oldObjectData.outlineColor.g !== newObjectData.outlineColor.g ||
-        oldObjectData.outlineColor.b !== newObjectData.outlineColor.b) {
-        this.setOutlineColor(
-            '' + newObjectData.outlineColor.r + ';' +
-            newObjectData.outlineColor.g  + ';' +
-            newObjectData.outlineColor.b
-        );
+    getRendererObject() {
+      return this._renderer.getRendererObject();
     }
-    if (oldObjectData.fillOpacity !== newObjectData.fillOpacity) {
+    updateFromObjectData(oldObjectData, newObjectData) {
+      if (oldObjectData.fillColor.r !== newObjectData.fillColor.r || oldObjectData.fillColor.g !== newObjectData.fillColor.g || oldObjectData.fillColor.b !== newObjectData.fillColor.b) {
+        this.setFillColor("" + newObjectData.fillColor.r + ";" + newObjectData.fillColor.g + ";" + newObjectData.fillColor.b);
+      }
+      if (oldObjectData.outlineColor.r !== newObjectData.outlineColor.r || oldObjectData.outlineColor.g !== newObjectData.outlineColor.g || oldObjectData.outlineColor.b !== newObjectData.outlineColor.b) {
+        this.setOutlineColor("" + newObjectData.outlineColor.r + ";" + newObjectData.outlineColor.g + ";" + newObjectData.outlineColor.b);
+      }
+      if (oldObjectData.fillOpacity !== newObjectData.fillOpacity) {
         this.setFillOpacity(newObjectData.fillOpacity);
-    }
-    if (oldObjectData.outlineOpacity !== newObjectData.outlineOpacity) {
+      }
+      if (oldObjectData.outlineOpacity !== newObjectData.outlineOpacity) {
         this.setOutlineOpacity(newObjectData.outlineOpacity);
-    }
-    if (oldObjectData.outlineSize !== newObjectData.outlineSize) {
+      }
+      if (oldObjectData.outlineSize !== newObjectData.outlineSize) {
         this.setOutlineSize(newObjectData.outlineSize);
-    }
-    if (oldObjectData.absoluteCoordinates !== newObjectData.absoluteCoordinates) {
+      }
+      if (oldObjectData.absoluteCoordinates !== newObjectData.absoluteCoordinates) {
         this._absoluteCoordinates = newObjectData.absoluteCoordinates;
         this._renderer.updateXPosition();
         this._renderer.updateYPosition();
+      }
+      if (oldObjectData.clearBetweenFrames !== newObjectData.clearBetweenFrames) {
+        this._clearBetweenFrames = newObjectData.clearBetweenFrames;
+      }
+      return true;
     }
-    if (oldObjectData.clearBetweenFrames !== newObjectData.clearBetweenFrames) {
-        this._clearBetweenFrames = newObjectData.clearBetweenFrames
-    }
-
-    return true;
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.stepBehaviorsPreEvents = function(runtimeScene) {
-    //We redefine stepBehaviorsPreEvents just to clear the graphics before running events.
-    if(this._clearBetweenFrames){
+    stepBehaviorsPreEvents(runtimeScene) {
+      if (this._clearBetweenFrames) {
         this._renderer.clear();
+      }
+      super.stepBehaviorsPreEvents(runtimeScene);
     }
-
-    gdjs.RuntimeObject.prototype.stepBehaviorsPreEvents.call(this, runtimeScene);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.getVisibilityAABB = function() {
-    return this._absoluteCoordinates ? null : this.getAABB();
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawRectangle = function(x1, y1, x2, y2) {
-    this._renderer.drawRectangle(x1, y1, x2, y2);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawCircle = function(x, y, radius) {
-    this._renderer.drawCircle(x, y, radius);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawLine = function(x1, y1, x2, y2, thickness) {
-    this._renderer.drawLine(x1, y1, x2, y2, thickness);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawLineV2 = function(x1, y1, x2, y2, thickness) {
-    this._renderer.drawLineV2(x1, y1, x2, y2, thickness);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawEllipse = function(centerX, centerY, width, height) {
-    this._renderer.drawEllipse(centerX, centerY, width, height);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawRoundedRectangle = function(startX1, startY1, endX2, endY2, radius) {
-    this._renderer.drawRoundedRectangle(startX1, startY1, endX2, endY2, radius);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawStar = function(centerX, centerY, points, radius, innerRadius, rotation) {
-    this._renderer.drawStar(centerX, centerY, points, radius, innerRadius, rotation);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawArc = function(centerX, centerY, radius, startAngle, endAngle, anticlockwise, closePath) {
-    this._renderer.drawArc(centerX, centerY, radius, startAngle, endAngle, anticlockwise, closePath);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawBezierCurve = function(x1, y1, cpX, cpY, cpX2, cpY2, x2, y2) {
-    this._renderer.drawBezierCurve(x1, y1, cpX, cpY, cpX2, cpY2, x2, y2);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawQuadraticCurve = function(x1, y1, cpX, cpY, x2, y2) {
-    this._renderer.drawQuadraticCurve(x1, y1, cpX, cpY, x2, y2);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.beginFillPath = function(x1, y1) {
-    this._renderer.beginFillPath();
-    this._renderer.drawPathMoveTo(x1, y1);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.endFillPath = function() {
-    this._renderer.endFillPath();
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawPathMoveTo = function(x1, y1) {
-    this._renderer.drawPathMoveTo(x1, y1);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawPathLineTo = function(x1, y1) {
-    this._renderer.drawPathLineTo(x1, y1, this._outlineSize);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawPathBezierCurveTo = function(cpX, cpY, cpX2, cpY2, toX, toY) {
-    this._renderer.drawPathBezierCurveTo(cpX, cpY, cpX2, cpY2, toX, toY);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawPathArc = function(cx, cy, radius, startAngle, endAngle, anticlockwise) {
-    this._renderer.drawPathArc(cx, cy, radius, startAngle, endAngle, anticlockwise);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.drawPathQuadraticCurveTo = function(cpX, cpY, toX, toY) {
-    this._renderer.drawPathQuadraticCurveTo(cpX, cpY, toX, toY);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.closePath = function() {
-    this._renderer.closePath();
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.setClearBetweenFrames = function(value) {
-    this._clearBetweenFrames = value;
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.isClearedBetweenFrames = function() {
-    return this._clearBetweenFrames;
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.setFillColor = function(rgbColor) {
-    var colors = rgbColor.split(";");
-    if ( colors.length < 3 ) return;
-
-    this._fillColor = parseInt(gdjs.rgbToHex(parseInt(colors[0], 10), parseInt(colors[1], 10), parseInt(colors[2], 10)), 16);
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.setOutlineColor = function(rgbColor) {
-    var colors = rgbColor.split(";");
-    if ( colors.length < 3 ) return;
-
-    this._outlineColor = parseInt(gdjs.rgbToHex(parseInt(colors[0], 10), parseInt(colors[1], 10), parseInt(colors[2], 10)), 16);
-    this._renderer.updateOutline();
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.setOutlineSize = function(size) {
-    this._outlineSize = size;
-    this._renderer.updateOutline();
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.getOutlineSize = function() {
-    return this._outlineSize;
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.setFillOpacity = function(opacity) {
-    this._fillOpacity = opacity;
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.getFillOpacity = function() {
-    return this._fillOpacity;
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.setOutlineOpacity = function(opacity) {
-    this._outlineOpacity = opacity;
-    this._renderer.updateOutline();
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.getOutlineOpacity = function() {
-    return this._outlineOpacity;
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.setX = function(x) {
-    if ( x === this.x ) return;
-
-    gdjs.RuntimeObject.prototype.setX.call(this, x);
-    this._renderer.updateXPosition();
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.setY = function(y) {
-    if ( y === this.y ) return;
-
-    gdjs.RuntimeObject.prototype.setY.call(this, y);
-    this._renderer.updateYPosition();
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.getWidth = function() {
-    return 32;
-};
-
-gdjs.ShapePainterRuntimeObject.prototype.getHeight = function() {
-    return 32;
-};
+    getVisibilityAABB() {
+      return this._absoluteCoordinates ? null : this.getAABB();
+    }
+    drawRectangle(x1, y1, x2, y2) {
+      this._renderer.drawRectangle(x1, y1, x2, y2);
+    }
+    drawCircle(x, y, radius) {
+      this._renderer.drawCircle(x, y, radius);
+    }
+    drawLine(x1, y1, x2, y2, thickness) {
+      this._renderer.drawLine(x1, y1, x2, y2, thickness);
+    }
+    drawLineV2(x1, y1, x2, y2, thickness) {
+      this._renderer.drawLineV2(x1, y1, x2, y2, thickness);
+    }
+    drawEllipse(centerX, centerY, width, height) {
+      this._renderer.drawEllipse(centerX, centerY, width, height);
+    }
+    drawRoundedRectangle(startX1, startY1, endX2, endY2, radius) {
+      this._renderer.drawRoundedRectangle(startX1, startY1, endX2, endY2, radius);
+    }
+    drawStar(centerX, centerY, points, radius, innerRadius, rotation) {
+      this._renderer.drawStar(centerX, centerY, points, radius, innerRadius, rotation);
+    }
+    drawArc(centerX, centerY, radius, startAngle, endAngle, anticlockwise, closePath) {
+      this._renderer.drawArc(centerX, centerY, radius, startAngle, endAngle, anticlockwise, closePath);
+    }
+    drawBezierCurve(x1, y1, cpX, cpY, cpX2, cpY2, x2, y2) {
+      this._renderer.drawBezierCurve(x1, y1, cpX, cpY, cpX2, cpY2, x2, y2);
+    }
+    drawQuadraticCurve(x1, y1, cpX, cpY, x2, y2) {
+      this._renderer.drawQuadraticCurve(x1, y1, cpX, cpY, x2, y2);
+    }
+    beginFillPath(x1, y1) {
+      this._renderer.beginFillPath();
+      this._renderer.drawPathMoveTo(x1, y1);
+    }
+    endFillPath() {
+      this._renderer.endFillPath();
+    }
+    drawPathMoveTo(x1, y1) {
+      this._renderer.drawPathMoveTo(x1, y1);
+    }
+    drawPathLineTo(x1, y1) {
+      this._renderer.drawPathLineTo(x1, y1);
+    }
+    drawPathBezierCurveTo(cpX, cpY, cpX2, cpY2, toX, toY) {
+      this._renderer.drawPathBezierCurveTo(cpX, cpY, cpX2, cpY2, toX, toY);
+    }
+    drawPathArc(cx, cy, radius, startAngle, endAngle, anticlockwise) {
+      this._renderer.drawPathArc(cx, cy, radius, startAngle, endAngle, anticlockwise);
+    }
+    drawPathQuadraticCurveTo(cpX, cpY, toX, toY) {
+      this._renderer.drawPathQuadraticCurveTo(cpX, cpY, toX, toY);
+    }
+    closePath() {
+      this._renderer.closePath();
+    }
+    setClearBetweenFrames(value) {
+      this._clearBetweenFrames = value;
+    }
+    isClearedBetweenFrames() {
+      return this._clearBetweenFrames;
+    }
+    setCoordinatesRelative(value) {
+      this._absoluteCoordinates = !value;
+    }
+    areCoordinatesRelative() {
+      return !this._absoluteCoordinates;
+    }
+    setFillColor(rgbColor) {
+      const colors = rgbColor.split(";");
+      if (colors.length < 3) {
+        return;
+      }
+      this._fillColor = parseInt(gdjs2.rgbToHex(parseInt(colors[0], 10), parseInt(colors[1], 10), parseInt(colors[2], 10)), 16);
+    }
+    getFillColorR() {
+      return gdjs2.hexNumberToRGB(this._fillColor).r;
+    }
+    getFillColorG() {
+      return gdjs2.hexNumberToRGB(this._fillColor).g;
+    }
+    getFillColorB() {
+      return gdjs2.hexNumberToRGB(this._fillColor).b;
+    }
+    setOutlineColor(rgbColor) {
+      const colors = rgbColor.split(";");
+      if (colors.length < 3) {
+        return;
+      }
+      this._outlineColor = parseInt(gdjs2.rgbToHex(parseInt(colors[0], 10), parseInt(colors[1], 10), parseInt(colors[2], 10)), 16);
+      this._renderer.updateOutline();
+    }
+    getOutlineColorR() {
+      return gdjs2.hexNumberToRGB(this._outlineColor).r;
+    }
+    getOutlineColorG() {
+      return gdjs2.hexNumberToRGB(this._outlineColor).g;
+    }
+    getOutlineColorB() {
+      return gdjs2.hexNumberToRGB(this._outlineColor).b;
+    }
+    setOutlineSize(size) {
+      this._outlineSize = size;
+      this._renderer.updateOutline();
+    }
+    getOutlineSize() {
+      return this._outlineSize;
+    }
+    setFillOpacity(opacity) {
+      this._fillOpacity = opacity;
+    }
+    getFillOpacity() {
+      return this._fillOpacity;
+    }
+    setOutlineOpacity(opacity) {
+      this._outlineOpacity = opacity;
+      this._renderer.updateOutline();
+    }
+    getOutlineOpacity() {
+      return this._outlineOpacity;
+    }
+    setX(x) {
+      if (x === this.x) {
+        return;
+      }
+      super.setX(x);
+      this._renderer.updateXPosition();
+    }
+    setY(y) {
+      if (y === this.y) {
+        return;
+      }
+      super.setY(y);
+      this._renderer.updateYPosition();
+    }
+    getWidth() {
+      return 32;
+    }
+    getHeight() {
+      return 32;
+    }
+  }
+  gdjs2.ShapePainterRuntimeObject = ShapePainterRuntimeObject;
+  gdjs2.registerObject("PrimitiveDrawing::Drawer", gdjs2.ShapePainterRuntimeObject);
+  ShapePainterRuntimeObject.supportsReinitialization = false;
+})(gdjs || (gdjs = {}));
+//# sourceMappingURL=shapepainterruntimeobject.js.map

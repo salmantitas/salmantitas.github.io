@@ -1139,7 +1139,7 @@ gdjs.Chippy_39s_32OfficeCode.GDDrawerObjects1.length = 0;
 {for(var i = 0, len = gdjs.Chippy_39s_32OfficeCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
     gdjs.Chippy_39s_32OfficeCode.GDHUD_95DescriptionObjects1[i].setPosition(12,32);
 }
-}{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Chippy_39s_32OfficeCode.mapOfGDgdjs_46Chippy_9539s_9532OfficeCode_46GDDrawerObjects1Objects, 0, 0, "UI");
+}{gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.Chippy_39s_32OfficeCode.mapOfGDgdjs_46Chippy_9539s_9532OfficeCode_46GDDrawerObjects1Objects, -(0), -(0), "UI");
 }{for(var i = 0, len = gdjs.Chippy_39s_32OfficeCode.GDHUD_95DescriptionObjects1.length ;i < len;++i) {
     gdjs.Chippy_39s_32OfficeCode.GDHUD_95DescriptionObjects1[i].setString("");
 }
