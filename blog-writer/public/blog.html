@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog : </title>
+
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/editor.css">
+        <link rel="stylesheet" href="css/blog.css">
+
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <img src="img/logo.png" class="logo" alt="logo">
+            <ul class="links-container">
+                <li class = "link-item"><a href="/" class="link">home</a></li>
+                <li class = "link-item"><a href="/editor" class="link">editor</a></li>
+            </ul>
+        </nav>
+
+        <div class="banner">
+            <input type="file" accept="image/*" id="banner-upload" hidden>
+            <label for="banner-upload" class="banner-upload-btn"><img src="img/upload.png" alt="upload banner"></label>
+        </div>
+
+        <div class="blog">
+            <h1 class="title"></h1>
+            <p class="published"><span>published at - </span></p>
+
+            <div class = "article">
+                
+            </div>
+        </div>
+
+        <h1 class="sub-heading">Read more</h1>
+
+        <!-- blog section -->
+        <section class="blog-section">
+
+            <!--
+            <div class="blog-card">
+                <img src="img/header.png" class="blog-image" alt="">
+                <h1 class="blog-title">Lorem Ipsum dolor sit amet consectetur.</h1>
+                <p class="blog-overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="/" class="btn dark">read</a>
+            </div>
+            -->
+        </section>
+
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+            import { getFirestore } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js"; // maybe wrong
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+        </script>
+
+        <script type="module" src="js/firebase.js"></script>
+        <script src="js/blog.js"></script>
+        
+    </body>
+</html>
