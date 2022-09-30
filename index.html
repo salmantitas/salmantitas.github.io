@@ -1,80 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-         <link rel = "stylesheet" href="style.css"> 
-         <link rel = "stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
-         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z7G264JBT"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<head>
+    <!-- CSS-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
-            gtag('config', 'G-1Z7G264JBT');
-        </script>
-    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z7G264JBT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    <body>
-        
-        <div class = "section-top">
-            <div class="content">
-                <h1>Salman Mehedy Titas</h1>
+        gtag('config', 'G-1Z7G264JBT');
+    </script>
 
-                <div id="text"></div>
+    <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3417287016818476"
+        crossorigin="anonymous"></script>
 
-                <script type="text/javascript">
+    <title>Home</title>
+</head>
 
-                    var i = 0, text;
-                    text = "Website Under Construction"
+<body>
 
-                    function typing() {
-                        if (i<text.length) {
-                            document.getElementById("text").innerHTML += text.charAt(i);
-                            i++;
-                            setTimeout(typing, 50);
-                        }
-                    }
-                    
-                    typing();
-                    
-                </script>
+    <div class="section-top">
+        <div class="content">
+            <h1>Salman Mehedy Titas</h1>
 
-                <a href="auth.html" class = "auth">Author</a>
-                <a href="prog.html" class = "prog">Programmer</a>
-                <a href="misc.html" class = "misc">Miscellaneous</a>
-            </div>
-
-            <div class="social">
-                <a class = "socbtn" href="https://www.facebook.com/smtitas">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-
-                <a class = "socbtn" href="https://www.twitter.com/salmantitas">
-                    <i class="fab fa-twitter"></i>
-                </a>
-
-                <a class = "socbtn" href="https://www.goodreads.com/smtitas">
-                    <i class="fab fa-goodreads"></i>
-                </a>
-
-                <a class = "socbtn" href="https://www.github.com/salmantitas">
-                    <i class="fab fa-github"></i>
-                </a>
-
-                <a class = "socbtn" href="https://www.instagram.com/salmantitas/">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-                <a class = "socbtn" href="https://www.youtube.com/channel/UC1a4GbUm1Q94PxFe-5ABkbw?view_as=subscriber">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </div>
-
+            <a href="blog.html" class="auth">Read Blog</a>
         </div>
-    
-        <!--- Credits --->
-        <p>I'm hosted with GitHub Pages.</p>
+    </div>
 
-    </body>
+    <nav class="social">
+        <a class="socbtn" href="https://www.facebook.com/smtitas">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a class="socbtn" href="https://www.twitter.com/salmantitas">
+            <i class="fab fa-twitter"></i>
+        </a>
+
+        <a class="socbtn" href="https://www.goodreads.com/smtitas">
+            <i class="fab fa-goodreads"></i>
+        </a>
+
+        <a class="socbtn" href="https://www.github.com/salmantitas">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a class="socbtn" href="https://www.instagram.com/salmantitas/">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a class="socbtn" href="https://www.youtube.com/channel/UC1a4GbUm1Q94PxFe-5ABkbw?view_as=subscriber">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </nav>
+
+</body>
+
 </html>

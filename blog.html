@@ -1,28 +1,79 @@
 <!DOCTYPE html>
-<html>
-<title>Blog</title>
-<link rel="stylesheet" href="blogStyles.css">
 
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z7G264JBT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog: Homepage</title>
 
-        gtag('config', 'G-1Z7G264JBT');
-    </script>
-</head>
+        <!-- CSS -->
 
-<body>
-    
-    <div class="text">
-        <iframe width="100%" height="100%"
-            src="https://docs.google.com/document/d/e/2PACX-1vSag3JK8YbZC3zwlunP2KitEQCVqJZH2DoOiWsBPo2Xv1rMRh9cOGkYjoWyo1mXkQvjlLLnxJgj6QRk/pub?embedded=true">
-        </iframe>
-    </div>
+        <link rel = "stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="blog.css">
 
-</body>
+         <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z7G264JBT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
+            gtag('config', 'G-1Z7G264JBT');
+        </script>
+
+         <!-- Google Adsense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3417287016818476"
+        crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <h1 class="logo">Salman Mehedy Titas</h1>
+            <ul class="links-container">
+                <li class = "link-item"><a href="index.html" class="link">home</a></li>
+            </ul>
+
+        </nav>
+
+        <!-- blog section -->
+        <section class="blog-section">
+
+            <div class="blog-card">
+                <img src="temp.png" class="blog-image" alt="">
+                <h1 class="blog-title">Silence Unbroken - Prologue</h1>
+                <p class="blog-overview">
+                    Only the Seven and One have walked these halls. A robed woman – one of the seven - walked downward the elevated hallway, towards...
+                </p>
+                <a href="post0.html" class="btn dark">Read</a>
+            </div>
+        </section>
+
+        <nav class="social">
+            <a class = "socbtn" href="https://www.facebook.com/smtitas">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a class = "socbtn" href="https://www.twitter.com/salmantitas">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a class = "socbtn" href="https://www.goodreads.com/smtitas">
+                <i class="fab fa-goodreads"></i>
+            </a>
+
+            <a class = "socbtn" href="https://www.github.com/salmantitas">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a class = "socbtn" href="https://www.instagram.com/salmantitas/">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a class = "socbtn" href="https://www.youtube.com/channel/UC1a4GbUm1Q94PxFe-5ABkbw?view_as=subscriber">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </nav>
+    </body>
 </html>
