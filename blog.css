@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-a
+
 body {
     width: 100%;
     position: relative;
@@ -13,39 +13,6 @@ body {
 ::selection{
     background: #1b1b1b;
     color: #fff;
-}
-
-.navbar {
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5vw;
-    background: black;
-    z-index: 9;
-}
-
-h1 {
-    color: #fff;
-    text-transform: uppercase;
-
-}
-
-.links-container {
-    display: flex;
-    list-style: none;
-}
-
-.link {
-    padding: 10px;
-    margin-left: 10px;
-    text-decoration: none;
-    text-transform: capitalize;
-    color: white;
 }
 
 .header {
@@ -69,17 +36,6 @@ h1 {
     font-size: 80px;
     line-height: 60px;
     margin-bottom: 80px; 
-}
-
-.heading .small{
-    display: block;
-    font-size: 40px;
-}
-
-.heading .no-fill{
-    font-style: italic;
-    color: transparent;
-    -webkit-text-stroke: 2px #fff;
 }
 
 .btn{
@@ -122,40 +78,4 @@ h1 {
     background: #fff;
     color: #1b1b1b;
     border: solid #1b1b1b;
-}
-
-.social{
-    width: 100%;
-    background: black;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    float: bottom;
-}
-
-.socbtn{
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background: wheat;
-    margin: 25px;
-    border-radius: 30%;
-    box-shadow: 0 5px 15px -5px #00000070;
-    color: black;
-    position: relative;
-}
-
-.socbtn i{
-    line-height: 50px;
-    font-size: 26px;
-    transition: .2s linear;
-}
-
-.socbtn:hover {
-    background-color: #000;
-}
-
-.socbtn:hover i{
-    transform: scale(2);
-    color: wheat;
 }

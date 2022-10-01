@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    background: black;
+    z-index: 9;
+}
+
+.logo {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.links-container {
+    display: flex;
+    list-style: none;
+}
+
+.link {
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+}
+
+.social{
+    width: 100%;
+    background: black;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    float: bottom;
+}
+
+.socbtn{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: wheat;
+    margin: 25px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: black;
+    position: relative;
+}
+
+.socbtn i{
+    line-height: 50px;
+    font-size: 26px;
+    transition: .2s linear;
+}
+
+.socbtn:hover {
+    background-color: #000;
+}
+
+.socbtn:hover i{
+    transform: scale(2);
+    color: wheat;
+}

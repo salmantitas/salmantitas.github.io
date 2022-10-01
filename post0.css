@@ -1,9 +1,10 @@
 .blog, .article {
-    margin-top: 100px;
+    margin-top: 10vh;
     position: relative;
     height: fit-content;
     padding-bottom: 0;
-    max-width: 800px;
+    max-width: 800px; 
+    margin-bottom: 15vh;
 }
 
 .article {
