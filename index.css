@@ -22,6 +22,7 @@ body, html{
     transform: translate(-20%, -80%);
     text-transform: uppercase;
     text-align: center;
+    display: block;
 }
 
 .content h1{
@@ -41,6 +42,10 @@ body, html{
     transform: translateX(-7%);
     text-transform: uppercase;
     font-family: "montserrat";
+}
+
+.links{
+    margin-top: 3%;
 }
 
 .content a{
@@ -78,6 +83,19 @@ a.prog{
 a.prog:hover{
     background: #00ff00;
     color: black;
+}
+
+a.burning-skies{
+    border-radius: 25px;
+    background: none;
+    border: solid #ff00ff;
+    color: #00ffff;
+}
+
+a.burning-skies:hover{
+    background: #ff00ff;
+    color: black;
+    border-color: #00ffff;
 }
 
 a.misc{
